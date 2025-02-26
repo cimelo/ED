@@ -10,12 +10,14 @@ circunstances:
 %
 
 SUBDESIGN reset (
-	cout_mod4, mode, hrst, key_dig: INPUT;
-	srst, udrst, nrst_mode : OUTPUT;
+	cout_mod4, mode, hrst, key_dig,
+		inc, dec, cout5 : INPUT;
+	srst, udrst, nrst_mode, rst5 : OUTPUT;
 )
 
 BEGIN
 	srst = LCELL(cout_mod4 # mode # hrst);
 	udrst = LCELL(key_dig) # LCELL(srst);
-	nrst_mode = !(cout_mod4 # hrst);
+	nrst_mode = !(cout_mod4 # hrst # cout5);
+	rst5 = inc # dec # key_dig # cout5;
 END;

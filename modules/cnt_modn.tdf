@@ -23,11 +23,12 @@ BEGIN
 
     IF rst THEN
         aux = GND;
-        cnt[] = 0;
+        cnt[].clrn = GND;
+		cnt[] = 0;
 	ELSIF cnt[] == N THEN
 		aux = VCC;
-        cnt[] = 0;
 		cnt[].clrn = GND;
+		cnt[] = 0;
     ELSE
         cnt[] = cnt[] + 1;
     END IF;
