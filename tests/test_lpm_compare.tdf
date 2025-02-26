@@ -1,0 +1,24 @@
+TITLE "Test lpm_compare";
+
+INCLUDE "eq_n.inc";
+
+SUBDESIGN test_lpm_compare (
+	clk : INPUT;
+	led[1] : OUTPUT;
+)
+
+VARIABLE
+	cmp : eq_n
+	WITH ( N = 4 );
+	data[2..1][4..1] : DFF;
+
+BEGIN
+	data[][].clk = clk;
+	data[1][] = 12;
+	data[2][] = 12;
+
+	cmp.a[] = data[1][];
+	cmp.b[] = data[2][];
+	
+	led[1] = cmp.eq;
+END;

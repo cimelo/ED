@@ -1,0 +1,12 @@
+TITLE "Test LPM_COMPARE";
+
+INCLUDE "lpm_compare.inc";
+
+SUBDESIGN (
+	q : OUTPUT;
+)
+
+VARIABLE
+	
+BEGIN
+END;

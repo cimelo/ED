@@ -1,0 +1,17 @@
+TITLE "Failure Module";
+
+INCLUDE "count_modn.inc";
+
+SUBDESIGN module_failure (
+	fai, tfai, clk_1s : INPUT;
+	f, tf : OUTPUT;
+)
+
+VARIABLE
+	tf : TFFE; -- Total failure
+	cnt1 : count_modn
+	WITH ( N = 1 );
+
+BEGIN
+	
+END;

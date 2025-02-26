@@ -1,0 +1,9 @@
+TITLE "Equality Checker";
+
+SUBDESIGN (
+	ss[4..1], pass[4..1] : INPUT;
+	
+)
+
+BEGIN
+END;

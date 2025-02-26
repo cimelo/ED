@@ -1,0 +1,17 @@
+TITLE "Mode";
+
+SUBDESIGN mode (
+	key_mode, nrst : INPUT;
+	mode, nmode : OUTPUT;
+)
+
+VARIABLE
+	tff1 : TFF;
+
+BEGIN
+	tff1.clk = key_mode;
+	tff1 = VCC;
+	tff1.clrn = nrst;
+	mode = tff1;
+	nmode = !tff1;
+END;

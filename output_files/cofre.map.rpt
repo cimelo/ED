@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cofre
-Wed Feb 26 11:02:08 2025
+Wed Feb 26 14:07:05 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -18,14 +18,15 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  10. Parameter Settings for User Entity Instance: display_controller:inst8|lpm_decode:decode
  11. Parameter Settings for User Entity Instance: display_controller:inst8|display_selector:dspl_sel|lpm_counter:cnt_inst
  12. Parameter Settings for User Entity Instance: display_controller:inst8|display_selector:dspl_sel|cnt_modn:cnt_mod4
- 13. Parameter Settings for User Entity Instance: cnt_modn:cnt_rst5
- 14. Parameter Settings for User Entity Instance: clk_500m_1s:cl1|lpm_counter:cnt_inst
- 15. Parameter Settings for User Entity Instance: cnt_modn:cnt_dig
- 16. Parameter Settings for User Entity Instance: ram_io:ram_show|lpm_mux:mux[2]
- 17. Parameter Settings for User Entity Instance: ram_io:ram_show|lpm_mux:mux[1]
- 18. Parameter Settings for User Entity Instance: ram_io:ram_pass|lpm_mux:mux[2]
- 19. Parameter Settings for User Entity Instance: ram_io:ram_pass|lpm_mux:mux[1]
- 20. Analysis & Synthesis Messages
+ 13. Parameter Settings for User Entity Instance: clk_500m_1s:cl1|lpm_counter:cnt_inst
+ 14. Parameter Settings for User Entity Instance: cnt_modn:cnt_dig
+ 15. Parameter Settings for User Entity Instance: cnt_modn:cnt_rst5
+ 16. Parameter Settings for User Entity Instance: eq_checker:inst2|cnt_modn:cnt4
+ 17. Parameter Settings for User Entity Instance: ram_io:ram_pass|lpm_mux:mux[2]
+ 18. Parameter Settings for User Entity Instance: ram_io:ram_pass|lpm_mux:mux[1]
+ 19. Parameter Settings for User Entity Instance: ram_io:ram_show|lpm_mux:mux[2]
+ 20. Parameter Settings for User Entity Instance: ram_io:ram_show|lpm_mux:mux[1]
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -52,13 +53,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Feb 26 11:02:08 2025       ;
+; Analysis & Synthesis Status ; Successful - Wed Feb 26 14:07:05 2025       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; cofre                                       ;
 ; Top-level Entity Name       ; cofre                                       ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 130                                         ;
-; Total pins                  ; 23                                          ;
+; Total logic elements        ; 170                                         ;
+; Total pins                  ; 22                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -167,6 +168,8 @@ https://fpgasoftware.intel.com/eula.
 ; modules/lucid_ram.tdf            ; yes             ; User AHDL File                     ; /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/lucid_ram.tdf                      ;         ;
 ; modules/reset.tdf                ; yes             ; User AHDL File                     ; /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/reset.tdf                          ;         ;
 ; modules/ram_io.tdf               ; yes             ; User AHDL File                     ; /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/ram_io.tdf                         ;         ;
+; modules/mode.tdf                 ; yes             ; User AHDL File                     ; /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/mode.tdf                           ;         ;
+; modules/eq_checker.tdf           ; yes             ; User AHDL File                     ; /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/eq_checker.tdf                     ;         ;
 ; lpm_decode.inc                   ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
 ; display_selector.inc             ; yes             ; Auto-Found AHDL File               ; /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/display_selector.inc               ;         ;
 ; lpm_counter.inc                  ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
@@ -199,33 +202,33 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 130   ;
-;     -- Combinational with no register       ; 54    ;
-;     -- Register only                        ; 16    ;
-;     -- Combinational with a register        ; 60    ;
+; Total logic elements                        ; 170   ;
+;     -- Combinational with no register       ; 73    ;
+;     -- Register only                        ; 32    ;
+;     -- Combinational with a register        ; 65    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 37    ;
-;     -- 3 input functions                    ; 10    ;
-;     -- 2 input functions                    ; 47    ;
-;     -- 1 input functions                    ; 20    ;
+;     -- 4 input functions                    ; 51    ;
+;     -- 3 input functions                    ; 16    ;
+;     -- 2 input functions                    ; 50    ;
+;     -- 1 input functions                    ; 21    ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 95    ;
+;     -- normal mode                          ; 135   ;
 ;     -- arithmetic mode                      ; 35    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 0     ;
-;     -- asynchronous clear/load mode         ; 27    ;
+;     -- asynchronous clear/load mode         ; 48    ;
 ;                                             ;       ;
-; Total registers                             ; 76    ;
+; Total registers                             ; 97    ;
 ; Total logic cells in carry chains           ; 37    ;
-; I/O pins                                    ; 23    ;
+; I/O pins                                    ; 22    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 51    ;
-; Total fan-out                               ; 439   ;
-; Average fan-out                             ; 2.87  ;
+; Maximum fan-out                             ; 67    ;
+; Total fan-out                               ; 593   ;
+; Average fan-out                             ; 3.09  ;
 +---------------------------------------------+-------+
 
 
@@ -234,9 +237,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node            ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                    ; Entity Name        ; Library Name ;
 +---------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; |cofre                                ; 130 (2)     ; 76           ; 0          ; 23   ; 0            ; 54 (1)       ; 16 (0)            ; 60 (1)           ; 37 (0)          ; 0 (0)      ; |cofre                                                                                                 ; cofre              ; work         ;
+; |cofre                                ; 170 (0)     ; 97           ; 0          ; 22   ; 0            ; 73 (0)       ; 32 (0)            ; 65 (0)           ; 37 (0)          ; 0 (0)      ; |cofre                                                                                                 ; cofre              ; work         ;
 ;    |bcd2ss:inst11|                    ; 11 (11)     ; 0            ; 0          ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cofre|bcd2ss:inst11                                                                                   ; bcd2ss             ; work         ;
-;    |clk_500m_1s:cl1|                  ; 28 (5)      ; 27           ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 27 (5)           ; 23 (0)          ; 0 (0)      ; |cofre|clk_500m_1s:cl1                                                                                 ; clk_500m_1s        ; work         ;
+;    |clk_500m_1s:cl1|                  ; 29 (6)      ; 27           ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 27 (5)           ; 23 (0)          ; 0 (0)      ; |cofre|clk_500m_1s:cl1                                                                                 ; clk_500m_1s        ; work         ;
 ;       |lpm_counter:cnt_inst|          ; 23 (0)      ; 22           ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 22 (0)           ; 23 (0)          ; 0 (0)      ; |cofre|clk_500m_1s:cl1|lpm_counter:cnt_inst                                                            ; lpm_counter        ; work         ;
 ;          |cntr_92j:auto_generated|    ; 23 (23)     ; 22           ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 22 (22)          ; 23 (23)         ; 0 (0)      ; |cofre|clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated                                    ; cntr_92j           ; work         ;
 ;    |cnt_modn:cnt_dig|                 ; 5 (5)       ; 3            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |cofre|cnt_modn:cnt_dig                                                                                ; cnt_modn           ; work         ;
@@ -253,6 +256,13 @@ https://fpgasoftware.intel.com/eula.
 ;             |cntr_jti:auto_generated| ; 14 (14)     ; 13           ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 13 (13)          ; 14 (14)         ; 0 (0)      ; |cofre|display_controller:inst8|display_selector:dspl_sel|lpm_counter:cnt_inst|cntr_jti:auto_generated ; cntr_jti           ; work         ;
 ;       |lpm_decode:decode|             ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cofre|display_controller:inst8|lpm_decode:decode                                                      ; lpm_decode         ; work         ;
 ;          |decode_gpe:auto_generated|  ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cofre|display_controller:inst8|lpm_decode:decode|decode_gpe:auto_generated                            ; decode_gpe         ; work         ;
+;    |eq_checker:inst2|                 ; 12 (8)      ; 5            ; 0          ; 0    ; 0            ; 7 (6)        ; 0 (0)             ; 5 (2)            ; 0 (0)           ; 0 (0)      ; |cofre|eq_checker:inst2                                                                                ; eq_checker         ; work         ;
+;       |cnt_modn:cnt4|                 ; 4 (4)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |cofre|eq_checker:inst2|cnt_modn:cnt4                                                                  ; cnt_modn           ; work         ;
+;    |mode:inst|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|mode:inst                                                                                       ; mode               ; work         ;
+;    |ram_io:ram_pass|                  ; 28 (0)      ; 16           ; 0          ; 0    ; 0            ; 12 (0)       ; 16 (0)            ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cofre|ram_io:ram_pass                                                                                 ; ram_io             ; work         ;
+;       |lpm_mux:mux[2]|                ; 8 (0)       ; 0            ; 0          ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cofre|ram_io:ram_pass|lpm_mux:mux[2]                                                                  ; lpm_mux            ; work         ;
+;          |mux_k9c:auto_generated|     ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cofre|ram_io:ram_pass|lpm_mux:mux[2]|mux_k9c:auto_generated                                           ; mux_k9c            ; work         ;
+;       |lucid_ram:ram|                 ; 20 (20)     ; 16           ; 0          ; 0    ; 0            ; 4 (4)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cofre|ram_io:ram_pass|lucid_ram:ram                                                                   ; lucid_ram          ; work         ;
 ;    |ram_io:ram_show|                  ; 29 (0)      ; 16           ; 0          ; 0    ; 0            ; 13 (0)       ; 16 (0)            ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cofre|ram_io:ram_show                                                                                 ; ram_io             ; work         ;
 ;       |lpm_mux:mux[1]|                ; 10 (0)      ; 0            ; 0          ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cofre|ram_io:ram_show|lpm_mux:mux[1]                                                                  ; lpm_mux            ; work         ;
 ;          |mux_k9c:auto_generated|     ; 10 (10)     ; 0            ; 0          ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cofre|ram_io:ram_show|lpm_mux:mux[1]|mux_k9c:auto_generated                                           ; mux_k9c            ; work         ;
@@ -279,12 +289,12 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 76    ;
+; Total registers                              ; 97    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 27    ;
+; Number of registers using Asynchronous Clear ; 48    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 19    ;
+; Number of registers using Clock Enable       ; 36    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -345,16 +355,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cnt_modn:cnt_rst5 ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; N              ; 5     ; Untyped                               ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: clk_500m_1s:cl1|lpm_counter:cnt_inst ;
 +------------------------+-------------------+--------------------------------------+
@@ -392,41 +392,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ram_io:ram_show|lpm_mux:mux[2] ;
-+------------------------+---------+------------------------------------------+
-; Parameter Name         ; Value   ; Type                                     ;
-+------------------------+---------+------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                             ;
-; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                           ;
-; LPM_WIDTH              ; 4       ; Untyped                                  ;
-; LPM_SIZE               ; 4       ; Untyped                                  ;
-; LPM_WIDTHS             ; 2       ; Untyped                                  ;
-; LPM_PIPELINE           ; 0       ; Untyped                                  ;
-; CBXI_PARAMETER         ; mux_k9c ; Untyped                                  ;
-; DEVICE_FAMILY          ; MAX II  ; Untyped                                  ;
-+------------------------+---------+------------------------------------------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cnt_modn:cnt_rst5 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; N              ; 5     ; Untyped                               ;
++----------------+-------+---------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ram_io:ram_show|lpm_mux:mux[1] ;
-+------------------------+---------+------------------------------------------+
-; Parameter Name         ; Value   ; Type                                     ;
-+------------------------+---------+------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                             ;
-; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                           ;
-; LPM_WIDTH              ; 4       ; Untyped                                  ;
-; LPM_SIZE               ; 4       ; Untyped                                  ;
-; LPM_WIDTHS             ; 2       ; Untyped                                  ;
-; LPM_PIPELINE           ; 0       ; Untyped                                  ;
-; CBXI_PARAMETER         ; mux_k9c ; Untyped                                  ;
-; DEVICE_FAMILY          ; MAX II  ; Untyped                                  ;
-+------------------------+---------+------------------------------------------+
+; Parameter Settings for User Entity Instance: eq_checker:inst2|cnt_modn:cnt4 ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; N              ; 4     ; Untyped                                            ;
++----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -468,13 +450,51 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram_io:ram_show|lpm_mux:mux[2] ;
++------------------------+---------+------------------------------------------+
+; Parameter Name         ; Value   ; Type                                     ;
++------------------------+---------+------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                           ;
+; LPM_WIDTH              ; 4       ; Untyped                                  ;
+; LPM_SIZE               ; 4       ; Untyped                                  ;
+; LPM_WIDTHS             ; 2       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0       ; Untyped                                  ;
+; CBXI_PARAMETER         ; mux_k9c ; Untyped                                  ;
+; DEVICE_FAMILY          ; MAX II  ; Untyped                                  ;
++------------------------+---------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram_io:ram_show|lpm_mux:mux[1] ;
++------------------------+---------+------------------------------------------+
+; Parameter Name         ; Value   ; Type                                     ;
++------------------------+---------+------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                           ;
+; LPM_WIDTH              ; 4       ; Untyped                                  ;
+; LPM_SIZE               ; 4       ; Untyped                                  ;
+; LPM_WIDTHS             ; 2       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0       ; Untyped                                  ;
+; CBXI_PARAMETER         ; mux_k9c ; Untyped                                  ;
+; DEVICE_FAMILY          ; MAX II  ; Untyped                                  ;
++------------------------+---------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Feb 26 11:01:55 2025
+    Info: Processing started: Wed Feb 26 14:06:53 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cofre -c cofre
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -504,7 +524,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file tests/t
     Info (12023): Found entity 1: test_up_down
 Info (12021): Found 1 design units, including 1 entities, in source file modules/ram_io.tdf
     Info (12023): Found entity 1: ram_io File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/ram_io.tdf Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file modules/mode.tdf
+    Info (12023): Found entity 1: mode File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/mode.tdf Line: 3
+Warning (287004): Group name "ss" is missing brackets ([ ]) File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/eq_checker.tdf Line: 30
+Warning (287004): Group name "pass" is missing brackets ([ ]) File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/eq_checker.tdf Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file modules/eq_checker.tdf
+    Info (12023): Found entity 1: eq_checker File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/eq_checker.tdf Line: 5
 Info (12127): Elaborating entity "cofre" for the top level hierarchy
+Warning (275089): Not all bits in bus "led[5..1]" are used
+Warning (275080): Converted elements in bus name "led" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "led[5]" to "led5"
+    Warning (275081): Converted element name(s) from "led[1]" to "led1"
+    Warning (275081): Converted element name(s) from "led[2]" to "led2"
+    Warning (275081): Converted element name(s) from "led[3]" to "led3"
 Warning (275008): Primitive "GND" of instance "g1" not used
 Info (12128): Elaborating entity "display_controller" for hierarchy "display_controller:inst8"
 Info (12128): Elaborating entity "lpm_decode" for hierarchy "display_controller:inst8|lpm_decode:decode" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/display_controller.tdf Line: 19
@@ -526,7 +558,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cntr
     Info (12023): Found entity 1: cntr_jti File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/db/cntr_jti.tdf Line: 26
 Info (12128): Elaborating entity "cntr_jti" for hierarchy "display_controller:inst8|display_selector:dspl_sel|lpm_counter:cnt_inst|cntr_jti:auto_generated" File: /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
 Info (12128): Elaborating entity "cnt_modn" for hierarchy "display_controller:inst8|display_selector:dspl_sel|cnt_modn:cnt_mod4" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/display_selector.tdf Line: 20
-Info (12128): Elaborating entity "cnt_modn" for hierarchy "cnt_modn:cnt_rst5"
+Info (12128): Elaborating entity "mode" for hierarchy "mode:inst"
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:db4"
 Info (12128): Elaborating entity "clk_500m_1s" for hierarchy "clk_500m_1s:cl1"
 Warning (287013): Variable or input pin "ena_500m" is defined but never used. File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/clk_500m_1s.tdf Line: 8
 Info (12128): Elaborating entity "lpm_counter" for hierarchy "clk_500m_1s:cl1|lpm_counter:cnt_inst" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/clk_500m_1s.tdf Line: 12
@@ -540,35 +573,35 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cntr
 Info (12128): Elaborating entity "cntr_92j" for hierarchy "clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated" File: /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
 Info (12128): Elaborating entity "reset" for hierarchy "reset:inst10"
 Info (12128): Elaborating entity "cnt_modn" for hierarchy "cnt_modn:cnt_dig"
-Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:db3"
-Info (12128): Elaborating entity "bcd2ss" for hierarchy "bcd2ss:inst11"
-Info (12128): Elaborating entity "ram_io" for hierarchy "ram_io:ram_show"
-Info (12128): Elaborating entity "lucid_ram" for hierarchy "ram_io:ram_show|lucid_ram:ram" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/ram_io.tdf Line: 18
-Info (12128): Elaborating entity "lpm_mux" for hierarchy "ram_io:ram_show|lpm_mux:mux[2]" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/ram_io.tdf Line: 19
-Info (12130): Elaborated megafunction instantiation "ram_io:ram_show|lpm_mux:mux[2]" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/ram_io.tdf Line: 19
-Info (12133): Instantiated megafunction "ram_io:ram_show|lpm_mux:mux[2]" with the following parameter: File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/ram_io.tdf Line: 19
+Info (12128): Elaborating entity "cnt_modn" for hierarchy "cnt_modn:cnt_rst5"
+Info (12128): Elaborating entity "eq_checker" for hierarchy "eq_checker:inst2"
+Info (12128): Elaborating entity "cnt_modn" for hierarchy "eq_checker:inst2|cnt_modn:cnt4" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/eq_checker.tdf Line: 14
+Info (12128): Elaborating entity "ram_io" for hierarchy "ram_io:ram_pass"
+Info (12128): Elaborating entity "lucid_ram" for hierarchy "ram_io:ram_pass|lucid_ram:ram" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/ram_io.tdf Line: 18
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "ram_io:ram_pass|lpm_mux:mux[2]" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/ram_io.tdf Line: 19
+Info (12130): Elaborated megafunction instantiation "ram_io:ram_pass|lpm_mux:mux[2]" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/ram_io.tdf Line: 19
+Info (12133): Instantiated megafunction "ram_io:ram_pass|lpm_mux:mux[2]" with the following parameter: File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/ram_io.tdf Line: 19
     Info (12134): Parameter "LPM_WIDTH" = "4"
     Info (12134): Parameter "LPM_SIZE" = "4"
     Info (12134): Parameter "LPM_WIDTHS" = "2"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_k9c.tdf
     Info (12023): Found entity 1: mux_k9c File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/db/mux_k9c.tdf Line: 23
-Info (12128): Elaborating entity "mux_k9c" for hierarchy "ram_io:ram_show|lpm_mux:mux[2]|mux_k9c:auto_generated" File: /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Info (12128): Elaborating entity "mux_k9c" for hierarchy "ram_io:ram_pass|lpm_mux:mux[2]|mux_k9c:auto_generated" File: /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Info (12128): Elaborating entity "up_down" for hierarchy "up_down:ud1"
-Info (12128): Elaborating entity "ram_io" for hierarchy "ram_io:ram_pass"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "led[4]" is stuck at GND
+Info (12128): Elaborating entity "ram_io" for hierarchy "ram_io:ram_show"
+Info (12128): Elaborating entity "bcd2ss" for hierarchy "bcd2ss:inst11"
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "lc1"
-    Info (17048): Logic cell "reset:inst10|$00001" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/reset.tdf Line: 20
+    Info (17048): Logic cell "clk_500m_1s:cl1|clk_62m" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/clk_500m_1s.tdf Line: 30
     Info (17048): Logic cell "reset:inst10|$00002" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/reset.tdf Line: 20
-Info (21057): Implemented 153 device resources after synthesis - the final resource count might be different
+    Info (17048): Logic cell "reset:inst10|$00003" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/reset.tdf Line: 20
+Info (21057): Implemented 192 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 130 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 349 megabytes
-    Info: Processing ended: Wed Feb 26 11:02:08 2025
-    Info: Elapsed time: 00:00:13
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 170 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 352 megabytes
+    Info: Processing ended: Wed Feb 26 14:07:05 2025
+    Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:29
 
 

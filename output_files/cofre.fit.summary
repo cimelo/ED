@@ -1,11 +1,11 @@
-Fitter Status : Successful - Wed Feb 26 11:02:10 2025
+Fitter Status : Successful - Wed Feb 26 14:07:08 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : cofre
 Top-level Entity Name : cofre
 Family : MAX II
 Device : EPM240T100I5
 Timing Models : Final
-Total logic elements : 120 / 240 ( 50 % )
-Total pins : 23 / 80 ( 29 % )
+Total logic elements : 152 / 240 ( 63 % )
+Total pins : 22 / 80 ( 28 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

@@ -27,7 +27,7 @@ BEGIN
 	tffc[5].clk = tffc[4];
 	
 	
-	clk_62m = tffc[1];
+	clk_62m = LCELL(tffc[1]);
 	clk_500m = tffc[4];
 	clk_1s = tffc[5];
 END;

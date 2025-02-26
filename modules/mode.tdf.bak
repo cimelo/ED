@@ -1,0 +1,13 @@
+TITLE "Mode";
+
+SUBDESIGN (
+	key_mode : INPUT;
+	mode : OUTPUT;
+)
+
+VARIABLE
+	tff1 : TFF;
+
+BEGIN
+
+END;

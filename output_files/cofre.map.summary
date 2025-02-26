@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Wed Feb 26 11:02:08 2025
+Analysis & Synthesis Status : Successful - Wed Feb 26 14:07:05 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : cofre
 Top-level Entity Name : cofre
 Family : MAX II
-Total logic elements : 130
-Total pins : 23
+Total logic elements : 170
+Total pins : 22
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

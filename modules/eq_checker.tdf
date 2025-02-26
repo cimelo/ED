@@ -1,0 +1,50 @@
+TITLE "Equality Checker";
+
+INCLUDE "cnt_modn.inc";
+
+SUBDESIGN eq_checker (
+	ss[4..1], pass[4..1], srst, hrst,
+		mode, chkd, chkt : INPUT;
+	suc, fai, tfai : OUTPUT;
+)
+
+VARIABLE
+	dff_eqd : DFFE; -- Responsible for verifying each digit
+	dff_eqt : DFFE;  -- Responsible for the end of digits
+	cnt4 : cnt_modn
+	WITH ( N = 4 );
+	aux_fai : NODE;
+	atff[2..1] : TFF;
+	
+BEGIN
+	DEFAULTS
+		aux_fai = GND;
+	END DEFAULTS;
+	
+	dff_eqd.ena = !mode;
+	dff_eqt.ena = !mode;
+	
+	dff_eqd.clk = chkd;
+	dff_eqd.ena = !( dff_eqd # !mode);
+	dff_eqd.clrn = !srst;
+	dff_eqd = (ss != pass);
+	
+	dff_eqt.clk = !dff_eqd;
+	dff_eqt.clrn = !(hrst # mode);
+	dff_eqt.clk = chkt;
+	dff_eqt = !dff_eqd;
+
+	aux_fai = !dff_eqt & chkd & dff_eqd;
+	cnt4.ena = VCC;
+	cnt4.clk = aux_fai;
+	cnt4.rst = hrst # mode;
+	
+	atff[].clrn = srst;
+	atff[] = VCC;
+	atff[1].clk = fai;
+	atff[2].clk = tfai;
+	
+	suc = dff_eqt;
+	fai = aux_fai;
+	tfai = cnt4.cout;
+END;
