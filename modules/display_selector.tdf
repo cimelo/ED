@@ -6,7 +6,7 @@ CONSTANT AVALUE = 5000;
 CONSTANT FREQ = CEIL(LOG2(AVALUE));
 
 SUBDESIGN display_selector (
-    clk_50M: INPUT;
+    clk_50M : INPUT;
     q[2..1], clk_10k : OUTPUT;
 )
 
@@ -24,6 +24,7 @@ BEGIN
     cnt_inst.clock = clk_50M;
     tff1.clk = cnt_inst.cout;
     tff1 = VCC;
+	cnt_mod4.ena = VCC;
     cnt_mod4.clk = tff1;
 	clk_10k = tff1.q;
     cnt_mod4.rst = GND;

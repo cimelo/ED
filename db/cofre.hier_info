@@ -156,6 +156,9 @@ clk => cnt[2].CLK
 clk => cnt[1].CLK
 rst => _.IN0
 rst => _.IN0
+ena => cnt[3].ENA
+ena => cnt[2].ENA
+ena => cnt[1].ENA
 q[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
 q[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
@@ -460,12 +463,15 @@ udrst <= $00001.DB_MAX_OUTPUT_PORT_TYPE
 nrst_mode <= nrst_mode.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cofre|cnt_modn:inst9
+|cofre|cnt_modn:cnt_dig
 clk => cnt[3].CLK
 clk => cnt[2].CLK
 clk => cnt[1].CLK
 rst => _.IN0
 rst => _.IN0
+ena => cnt[3].ENA
+ena => cnt[2].ENA
+ena => cnt[1].ENA
 q[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
 q[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
@@ -481,7 +487,7 @@ o <= d1.DB_MAX_OUTPUT_PORT_TYPE
 
 |cofre|clk_500m_1s:cl1
 clk_50M => lpm_counter:cnt_inst.clock
-ena_500m => tffc[4].ENA
+ena_500m => ~NO_FANOUT~
 clk_62m <= tffc[1].DB_MAX_OUTPUT_PORT_TYPE
 clk_500m <= tffc[4].DB_MAX_OUTPUT_PORT_TYPE
 clk_1s <= tffc[5].DB_MAX_OUTPUT_PORT_TYPE

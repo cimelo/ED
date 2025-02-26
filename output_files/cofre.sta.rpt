@@ -1,5 +1,5 @@
 Timing Analyzer report for cofre
-Tue Feb 25 22:22:00 2025
+Wed Feb 26 07:56:36 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -97,10 +97,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -204,72 +205,72 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------------------------------------------------------+--------+---------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'debouncer:db1|d1'                                                                                                                 ;
-+--------+-----------------------+--------------------+-------------------------+------------------+--------------+------------+------------+
-; Slack  ; From Node             ; To Node            ; Launch Clock            ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------------------+--------------------+-------------------------+------------------+--------------+------------+------------+
-; -8.826 ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 11.079     ;
-; -8.648 ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.901     ;
-; -8.525 ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.778     ;
-; -8.506 ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.759     ;
-; -8.433 ; debouncer:db5|d1      ; up_down:ud1|cnt[3] ; clk                     ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 11.623     ;
-; -8.369 ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.622     ;
-; -8.347 ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.600     ;
-; -8.328 ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.581     ;
-; -8.255 ; debouncer:db5|d1      ; up_down:ud1|cnt[4] ; clk                     ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 11.445     ;
-; -8.068 ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.321     ;
-; -8.049 ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.302     ;
-; -7.976 ; debouncer:db5|d1      ; up_down:ud1|cnt[2] ; clk                     ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 11.166     ;
-; -7.153 ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.406      ;
-; -6.852 ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.105      ;
-; -6.833 ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.086      ;
-; -6.760 ; debouncer:db5|d1      ; up_down:ud1|cnt[1] ; clk                     ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 9.950      ;
-; -5.306 ; up_down:ud1|cnt[1]    ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.973      ;
-; -5.242 ; up_down:ud1|cnt[1]    ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.909      ;
-; -5.146 ; up_down:ud1|cnt[2]    ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.813      ;
-; -5.142 ; up_down:ud1|cnt[4]    ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.809      ;
-; -5.131 ; up_down:ud1|cnt[3]    ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.798      ;
-; -5.090 ; up_down:ud1|cnt[1]    ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.757      ;
-; -5.082 ; up_down:ud1|cnt[2]    ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.749      ;
-; -4.994 ; up_down:ud1|cnt[4]    ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.661      ;
-; -4.964 ; up_down:ud1|cnt[4]    ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.631      ;
-; -4.953 ; up_down:ud1|cnt[3]    ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.620      ;
-; -4.933 ; up_down:ud1|cnt[3]    ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.600      ;
-; -4.930 ; up_down:ud1|cnt[4]    ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.597      ;
-; -4.930 ; up_down:ud1|cnt[2]    ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.597      ;
-; -4.869 ; up_down:ud1|cnt[3]    ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.536      ;
-; -4.830 ; up_down:ud1|cnt[1]    ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.497      ;
-; -4.633 ; up_down:ud1|cnt[2]    ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.300      ;
-; -3.079 ; debouncer:db4|d1      ; up_down:ud1|cnt[3] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 9.493      ;
-; -2.901 ; debouncer:db4|d1      ; up_down:ud1|cnt[4] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 9.315      ;
-; -2.658 ; debouncer:db2|d1      ; up_down:ud1|cnt[3] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 1.000        ; 0.936      ; 4.261      ;
-; -2.622 ; debouncer:db4|d1      ; up_down:ud1|cnt[2] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 9.036      ;
-; -2.579 ; debouncer:db4|d1      ; up_down:ud1|cnt[3] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 9.493      ;
-; -2.401 ; debouncer:db4|d1      ; up_down:ud1|cnt[4] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 9.315      ;
-; -2.373 ; debouncer:db2|d1      ; up_down:ud1|cnt[1] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 1.000        ; 0.936      ; 3.976      ;
-; -2.201 ; debouncer:db2|d1      ; up_down:ud1|cnt[2] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 1.000        ; 0.936      ; 3.804      ;
-; -2.122 ; debouncer:db4|d1      ; up_down:ud1|cnt[2] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 9.036      ;
-; -1.406 ; debouncer:db4|d1      ; up_down:ud1|cnt[1] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 7.820      ;
-; -1.348 ; debouncer:db2|d1      ; up_down:ud1|cnt[4] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 1.000        ; 0.936      ; 2.951      ;
-; -1.304 ; debouncer:db3|d1      ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 7.718      ;
-; -1.126 ; debouncer:db3|d1      ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 7.540      ;
-; -0.906 ; debouncer:db4|d1      ; up_down:ud1|cnt[1] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 7.820      ;
-; -0.847 ; debouncer:db3|d1      ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 7.261      ;
-; -0.804 ; debouncer:db3|d1      ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 7.718      ;
-; -0.626 ; debouncer:db3|d1      ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 7.540      ;
-; -0.347 ; debouncer:db3|d1      ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 7.261      ;
-; -0.009 ; debouncer:db1|d1      ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 6.423      ;
-; 0.169  ; debouncer:db1|d1      ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 6.245      ;
-; 0.369  ; debouncer:db3|d1      ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 6.045      ;
-; 0.448  ; debouncer:db1|d1      ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 5.966      ;
-; 0.491  ; debouncer:db1|d1      ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 6.423      ;
-; 0.669  ; debouncer:db1|d1      ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 6.245      ;
-; 0.672  ; debouncer:db1|d1      ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 5.742      ;
-; 0.869  ; debouncer:db3|d1      ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 6.045      ;
-; 0.948  ; debouncer:db1|d1      ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 5.966      ;
-; 1.172  ; debouncer:db1|d1      ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 5.742      ;
-+--------+-----------------------+--------------------+-------------------------+------------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'debouncer:db1|d1'                                                                                                                   ;
++--------+-------------------------+--------------------+-------------------------+------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node            ; Launch Clock            ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+--------------------+-------------------------+------------------+--------------+------------+------------+
+; -8.826 ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 11.079     ;
+; -8.648 ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.901     ;
+; -8.525 ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.778     ;
+; -8.506 ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.759     ;
+; -8.433 ; debouncer:db5|d1        ; up_down:ud1|cnt[3] ; clk                     ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 11.623     ;
+; -8.369 ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.622     ;
+; -8.347 ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.600     ;
+; -8.328 ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.581     ;
+; -8.255 ; debouncer:db5|d1        ; up_down:ud1|cnt[4] ; clk                     ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 11.445     ;
+; -8.068 ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.321     ;
+; -8.049 ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.302     ;
+; -7.976 ; debouncer:db5|d1        ; up_down:ud1|cnt[2] ; clk                     ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 11.166     ;
+; -7.153 ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.406      ;
+; -6.852 ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.105      ;
+; -6.833 ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.086      ;
+; -6.760 ; debouncer:db5|d1        ; up_down:ud1|cnt[1] ; clk                     ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 9.950      ;
+; -5.306 ; up_down:ud1|cnt[1]      ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.973      ;
+; -5.242 ; up_down:ud1|cnt[1]      ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.909      ;
+; -5.146 ; up_down:ud1|cnt[2]      ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.813      ;
+; -5.142 ; up_down:ud1|cnt[4]      ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.809      ;
+; -5.131 ; up_down:ud1|cnt[3]      ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.798      ;
+; -5.090 ; up_down:ud1|cnt[1]      ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.757      ;
+; -5.082 ; up_down:ud1|cnt[2]      ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.749      ;
+; -4.994 ; up_down:ud1|cnt[4]      ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.661      ;
+; -4.964 ; up_down:ud1|cnt[4]      ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.631      ;
+; -4.953 ; up_down:ud1|cnt[3]      ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.620      ;
+; -4.933 ; up_down:ud1|cnt[3]      ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.600      ;
+; -4.930 ; up_down:ud1|cnt[4]      ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.597      ;
+; -4.930 ; up_down:ud1|cnt[2]      ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.597      ;
+; -4.869 ; up_down:ud1|cnt[3]      ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.536      ;
+; -4.830 ; up_down:ud1|cnt[1]      ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.497      ;
+; -4.633 ; up_down:ud1|cnt[2]      ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 0.000      ; 5.300      ;
+; -3.079 ; debouncer:db4|d1        ; up_down:ud1|cnt[3] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 9.493      ;
+; -2.901 ; debouncer:db4|d1        ; up_down:ud1|cnt[4] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 9.315      ;
+; -2.658 ; debouncer:db2|d1        ; up_down:ud1|cnt[3] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 1.000        ; 0.936      ; 4.261      ;
+; -2.622 ; debouncer:db4|d1        ; up_down:ud1|cnt[2] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 9.036      ;
+; -2.579 ; debouncer:db4|d1        ; up_down:ud1|cnt[3] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 9.493      ;
+; -2.401 ; debouncer:db4|d1        ; up_down:ud1|cnt[4] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 9.315      ;
+; -2.373 ; debouncer:db2|d1        ; up_down:ud1|cnt[1] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 1.000        ; 0.936      ; 3.976      ;
+; -2.201 ; debouncer:db2|d1        ; up_down:ud1|cnt[2] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 1.000        ; 0.936      ; 3.804      ;
+; -2.122 ; debouncer:db4|d1        ; up_down:ud1|cnt[2] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 9.036      ;
+; -1.406 ; debouncer:db4|d1        ; up_down:ud1|cnt[1] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 7.820      ;
+; -1.348 ; debouncer:db2|d1        ; up_down:ud1|cnt[4] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 1.000        ; 0.936      ; 2.951      ;
+; -1.304 ; debouncer:db3|d1        ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 7.718      ;
+; -1.126 ; debouncer:db3|d1        ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 7.540      ;
+; -0.906 ; debouncer:db4|d1        ; up_down:ud1|cnt[1] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 7.820      ;
+; -0.847 ; debouncer:db3|d1        ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 7.261      ;
+; -0.804 ; debouncer:db3|d1        ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 7.718      ;
+; -0.626 ; debouncer:db3|d1        ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 7.540      ;
+; -0.347 ; debouncer:db3|d1        ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 7.261      ;
+; -0.009 ; debouncer:db1|d1        ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 6.423      ;
+; 0.169  ; debouncer:db1|d1        ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 6.245      ;
+; 0.369  ; debouncer:db3|d1        ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 6.045      ;
+; 0.448  ; debouncer:db1|d1        ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 5.966      ;
+; 0.491  ; debouncer:db1|d1        ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 6.423      ;
+; 0.669  ; debouncer:db1|d1        ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 6.245      ;
+; 0.672  ; debouncer:db1|d1        ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 5.742      ;
+; 0.869  ; debouncer:db3|d1        ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 6.045      ;
+; 0.948  ; debouncer:db1|d1        ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 5.966      ;
+; 1.172  ; debouncer:db1|d1        ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 5.742      ;
++--------+-------------------------+--------------------+-------------------------+------------------+--------------+------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -278,62 +279,62 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Slack  ; From Node                                                              ; To Node                                                                 ; Launch Clock     ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+-------------+--------------+------------+------------+
 ; -5.668 ; up_down:ud1|cnt[3]                                                     ; ram_io:ram_show|lucid_ram:ram|data[3][3]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 3.812      ;
-; -5.447 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[4][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.177      ;
-; -5.447 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[4][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.177      ;
-; -5.447 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[4][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.177      ;
+; -5.447 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[4][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.177      ;
+; -5.447 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[4][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.177      ;
+; -5.447 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[4][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.177      ;
 ; -5.396 ; up_down:ud1|cnt[3]                                                     ; ram_io:ram_pass|lucid_ram:ram|data[2][3]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 3.540      ;
 ; -5.395 ; up_down:ud1|cnt[3]                                                     ; ram_io:ram_pass|lucid_ram:ram|data[3][3]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 3.539      ;
-; -5.372 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[1][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.102      ;
-; -5.372 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[1][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.102      ;
-; -5.372 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[1][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.102      ;
-; -5.372 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[1][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.102      ;
+; -5.372 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[1][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.102      ;
+; -5.372 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[1][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.102      ;
+; -5.372 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[1][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.102      ;
+; -5.372 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[1][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.102      ;
 ; -5.334 ; up_down:ud1|cnt[4]                                                     ; ram_io:ram_pass|lucid_ram:ram|data[2][4]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 3.478      ;
 ; -5.333 ; up_down:ud1|cnt[4]                                                     ; ram_io:ram_pass|lucid_ram:ram|data[3][4]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 3.477      ;
 ; -5.314 ; up_down:ud1|cnt[2]                                                     ; ram_io:ram_pass|lucid_ram:ram|data[3][2]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 3.458      ;
 ; -5.312 ; up_down:ud1|cnt[2]                                                     ; ram_io:ram_pass|lucid_ram:ram|data[2][2]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 3.456      ;
-; -5.305 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[4][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.035      ;
-; -5.231 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[4][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.961      ;
-; -5.231 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[4][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.961      ;
-; -5.231 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[4][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.961      ;
+; -5.305 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[4][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 5.035      ;
+; -5.231 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_pass|lucid_ram:ram|data[4][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.961      ;
+; -5.231 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_pass|lucid_ram:ram|data[4][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.961      ;
+; -5.231 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_pass|lucid_ram:ram|data[4][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.961      ;
 ; -5.213 ; up_down:ud1|cnt[1]                                                     ; ram_io:ram_pass|lucid_ram:ram|data[2][1]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 3.357      ;
 ; -5.203 ; up_down:ud1|cnt[1]                                                     ; ram_io:ram_pass|lucid_ram:ram|data[3][1]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 3.347      ;
-; -5.156 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[1][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.886      ;
-; -5.156 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[1][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.886      ;
-; -5.156 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[1][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.886      ;
-; -5.156 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[1][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.886      ;
-; -5.155 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[1][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.885      ;
-; -5.155 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[1][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.885      ;
-; -5.155 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[1][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.885      ;
-; -5.155 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[1][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.885      ;
-; -5.089 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[4][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.819      ;
+; -5.156 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_pass|lucid_ram:ram|data[1][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.886      ;
+; -5.156 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_pass|lucid_ram:ram|data[1][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.886      ;
+; -5.156 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_pass|lucid_ram:ram|data[1][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.886      ;
+; -5.156 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_pass|lucid_ram:ram|data[1][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.886      ;
+; -5.155 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[1][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.885      ;
+; -5.155 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[1][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.885      ;
+; -5.155 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[1][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.885      ;
+; -5.155 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[1][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.885      ;
+; -5.089 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_pass|lucid_ram:ram|data[4][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.819      ;
 ; -4.996 ; up_down:ud1|cnt[1]                                                     ; ram_io:ram_pass|lucid_ram:ram|data[4][1]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 3.140      ;
 ; -4.929 ; up_down:ud1|cnt[3]                                                     ; ram_io:ram_show|lucid_ram:ram|data[1][3]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 3.073      ;
-; -4.917 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_show|lucid_ram:ram|data[3][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.647      ;
-; -4.917 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_show|lucid_ram:ram|data[3][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.647      ;
-; -4.917 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_show|lucid_ram:ram|data[3][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.647      ;
-; -4.917 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_show|lucid_ram:ram|data[3][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.647      ;
+; -4.917 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_show|lucid_ram:ram|data[3][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.647      ;
+; -4.917 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_show|lucid_ram:ram|data[3][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.647      ;
+; -4.917 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_show|lucid_ram:ram|data[3][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.647      ;
+; -4.917 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_show|lucid_ram:ram|data[3][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.647      ;
 ; -4.897 ; up_down:ud1|cnt[3]                                                     ; ram_io:ram_pass|lucid_ram:ram|data[1][3]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 3.041      ;
-; -4.835 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_show|lucid_ram:ram|data[1][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.565      ;
-; -4.835 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_show|lucid_ram:ram|data[1][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.565      ;
-; -4.835 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_show|lucid_ram:ram|data[1][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.565      ;
-; -4.835 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_show|lucid_ram:ram|data[1][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.565      ;
+; -4.835 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_show|lucid_ram:ram|data[1][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.565      ;
+; -4.835 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_show|lucid_ram:ram|data[1][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.565      ;
+; -4.835 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_show|lucid_ram:ram|data[1][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.565      ;
+; -4.835 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_show|lucid_ram:ram|data[1][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.565      ;
 ; -4.787 ; up_down:ud1|cnt[1]                                                     ; ram_io:ram_show|lucid_ram:ram|data[2][1]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 2.931      ;
 ; -4.782 ; up_down:ud1|cnt[1]                                                     ; ram_io:ram_show|lucid_ram:ram|data[4][1]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 2.926      ;
-; -4.727 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_show|lucid_ram:ram|data[2][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.457      ;
-; -4.727 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_show|lucid_ram:ram|data[2][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.457      ;
-; -4.727 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_show|lucid_ram:ram|data[2][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.457      ;
-; -4.727 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_show|lucid_ram:ram|data[2][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.457      ;
+; -4.727 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_show|lucid_ram:ram|data[2][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.457      ;
+; -4.727 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_show|lucid_ram:ram|data[2][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.457      ;
+; -4.727 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_show|lucid_ram:ram|data[2][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.457      ;
+; -4.727 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_show|lucid_ram:ram|data[2][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.457      ;
 ; -4.714 ; up_down:ud1|cnt[2]                                                     ; ram_io:ram_pass|lucid_ram:ram|data[4][2]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 2.858      ;
 ; -4.712 ; up_down:ud1|cnt[4]                                                     ; ram_io:ram_show|lucid_ram:ram|data[3][4]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 2.856      ;
 ; -4.711 ; up_down:ud1|cnt[4]                                                     ; ram_io:ram_show|lucid_ram:ram|data[1][4]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 2.855      ;
-; -4.706 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[2][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.436      ;
-; -4.706 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[2][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.436      ;
-; -4.706 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[2][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.436      ;
-; -4.706 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[2][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.436      ;
-; -4.705 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[3][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.435      ;
-; -4.705 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[3][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.435      ;
-; -4.705 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[3][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.435      ;
-; -4.705 ; cnt_modn:inst9|cnt[1]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[3][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.435      ;
+; -4.706 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[2][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.436      ;
+; -4.706 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[2][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.436      ;
+; -4.706 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[2][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.436      ;
+; -4.706 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[2][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.436      ;
+; -4.705 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[3][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.435      ;
+; -4.705 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[3][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.435      ;
+; -4.705 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[3][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.435      ;
+; -4.705 ; cnt_modn:cnt_dig|cnt[1]                                                ; ram_io:ram_pass|lucid_ram:ram|data[3][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.435      ;
 ; -4.703 ; up_down:ud1|cnt[2]                                                     ; ram_io:ram_show|lucid_ram:ram|data[2][2]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 2.847      ;
 ; -4.695 ; up_down:ud1|cnt[2]                                                     ; ram_io:ram_show|lucid_ram:ram|data[4][2]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 2.839      ;
 ; -4.684 ; up_down:ud1|cnt[3]                                                     ; ram_io:ram_show|lucid_ram:ram|data[4][3]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 2.828      ;
@@ -352,58 +353,58 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; -4.568 ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[1] ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[17] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.235      ;
 ; -4.568 ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[1] ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[16] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.235      ;
 ; -4.555 ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[1] ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[21] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.222      ;
-; -4.537 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[3][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.267      ;
-; -4.537 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[3][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.267      ;
-; -4.537 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[3][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.267      ;
-; -4.537 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[3][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.267      ;
+; -4.537 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[3][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.267      ;
+; -4.537 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[3][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.267      ;
+; -4.537 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[3][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.267      ;
+; -4.537 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[3][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.267      ;
 ; -4.507 ; up_down:ud1|cnt[4]                                                     ; ram_io:ram_pass|lucid_ram:ram|data[1][4]                                ; debouncer:db1|d1 ; clk         ; 1.000        ; -2.523     ; 2.651      ;
-; -4.504 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[2][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.234      ;
-; -4.504 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[2][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.234      ;
-; -4.504 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[2][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.234      ;
-; -4.504 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[2][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.234      ;
-; -4.499 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[4][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.229      ;
-; -4.499 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[4][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.229      ;
-; -4.499 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[4][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.229      ;
-; -4.499 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_show|lucid_ram:ram|data[4][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.229      ;
+; -4.504 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[2][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.234      ;
+; -4.504 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[2][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.234      ;
+; -4.504 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[2][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.234      ;
+; -4.504 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[2][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.234      ;
+; -4.499 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[4][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.229      ;
+; -4.499 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[4][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.229      ;
+; -4.499 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[4][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.229      ;
+; -4.499 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_show|lucid_ram:ram|data[4][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 4.229      ;
 ; -4.446 ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[2] ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[20] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.113      ;
 ; -4.446 ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[2] ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[19] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.113      ;
 ; -4.446 ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[2] ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[18] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.113      ;
 ; -4.446 ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[2] ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[17] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.113      ;
 ; -4.446 ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[2] ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[16] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.113      ;
 ; -4.433 ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[2] ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[21] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.100      ;
-; -4.233 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[2][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 3.963      ;
-; -4.233 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[2][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 3.963      ;
-; -4.233 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[2][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 3.963      ;
-; -4.233 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[2][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 3.963      ;
-; -4.231 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[3][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 3.961      ;
-; -4.231 ; cnt_modn:inst9|cnt[2]                                                  ; ram_io:ram_pass|lucid_ram:ram|data[3][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 3.961      ;
+; -4.233 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_pass|lucid_ram:ram|data[2][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 3.963      ;
+; -4.233 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_pass|lucid_ram:ram|data[2][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 3.963      ;
+; -4.233 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_pass|lucid_ram:ram|data[2][2]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 3.963      ;
+; -4.233 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_pass|lucid_ram:ram|data[2][1]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 3.963      ;
+; -4.231 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_pass|lucid_ram:ram|data[3][4]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 3.961      ;
+; -4.231 ; cnt_modn:cnt_dig|cnt[2]                                                ; ram_io:ram_pass|lucid_ram:ram|data[3][3]                                ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 3.961      ;
 +--------+------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+-------------+--------------+------------+------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'debouncer:db3|d1'                                                                                                             ;
-+--------+-----------------------+-----------------------+------------------+------------------+--------------+------------+------------+
-; Slack  ; From Node             ; To Node               ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------------------+-----------------------+------------------+------------------+--------------+------------+------------+
-; -5.451 ; cnt_modn:inst9|cnt[2] ; cnt_modn:inst9|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 6.118      ;
-; -5.450 ; cnt_modn:inst9|cnt[2] ; cnt_modn:inst9|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 6.117      ;
-; -5.445 ; cnt_modn:inst9|cnt[2] ; cnt_modn:inst9|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 6.112      ;
-; -5.150 ; cnt_modn:inst9|cnt[3] ; cnt_modn:inst9|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 5.817      ;
-; -5.149 ; cnt_modn:inst9|cnt[3] ; cnt_modn:inst9|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 5.816      ;
-; -5.144 ; cnt_modn:inst9|cnt[3] ; cnt_modn:inst9|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 5.811      ;
-; -5.131 ; cnt_modn:inst9|cnt[1] ; cnt_modn:inst9|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 5.798      ;
-; -5.130 ; cnt_modn:inst9|cnt[1] ; cnt_modn:inst9|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 5.797      ;
-; -5.125 ; cnt_modn:inst9|cnt[1] ; cnt_modn:inst9|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 5.792      ;
-; -5.058 ; debouncer:db5|d1      ; cnt_modn:inst9|cnt[3] ; clk              ; debouncer:db3|d1 ; 1.000        ; 0.937      ; 6.662      ;
-; -5.057 ; debouncer:db5|d1      ; cnt_modn:inst9|cnt[2] ; clk              ; debouncer:db3|d1 ; 1.000        ; 0.937      ; 6.661      ;
-; -5.052 ; debouncer:db5|d1      ; cnt_modn:inst9|cnt[1] ; clk              ; debouncer:db3|d1 ; 1.000        ; 0.937      ; 6.656      ;
-; 0.296  ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.500        ; 4.285      ; 4.532      ;
-; 0.297  ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.500        ; 4.285      ; 4.531      ;
-; 0.302  ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.500        ; 4.285      ; 4.526      ;
-; 0.796  ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 1.000        ; 4.285      ; 4.532      ;
-; 0.797  ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 1.000        ; 4.285      ; 4.531      ;
-; 0.802  ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 1.000        ; 4.285      ; 4.526      ;
-+--------+-----------------------+-----------------------+------------------+------------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'debouncer:db3|d1'                                                                                                                 ;
++--------+-------------------------+-------------------------+------------------+------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+------------------+------------------+--------------+------------+------------+
+; -5.451 ; cnt_modn:cnt_dig|cnt[2] ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 6.118      ;
+; -5.450 ; cnt_modn:cnt_dig|cnt[2] ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 6.117      ;
+; -5.445 ; cnt_modn:cnt_dig|cnt[2] ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 6.112      ;
+; -5.150 ; cnt_modn:cnt_dig|cnt[3] ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 5.817      ;
+; -5.149 ; cnt_modn:cnt_dig|cnt[3] ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 5.816      ;
+; -5.144 ; cnt_modn:cnt_dig|cnt[3] ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 5.811      ;
+; -5.131 ; cnt_modn:cnt_dig|cnt[1] ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 5.798      ;
+; -5.130 ; cnt_modn:cnt_dig|cnt[1] ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 5.797      ;
+; -5.125 ; cnt_modn:cnt_dig|cnt[1] ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 5.792      ;
+; -5.058 ; debouncer:db5|d1        ; cnt_modn:cnt_dig|cnt[3] ; clk              ; debouncer:db3|d1 ; 1.000        ; 0.937      ; 6.662      ;
+; -5.057 ; debouncer:db5|d1        ; cnt_modn:cnt_dig|cnt[2] ; clk              ; debouncer:db3|d1 ; 1.000        ; 0.937      ; 6.661      ;
+; -5.052 ; debouncer:db5|d1        ; cnt_modn:cnt_dig|cnt[1] ; clk              ; debouncer:db3|d1 ; 1.000        ; 0.937      ; 6.656      ;
+; 0.296  ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.500        ; 4.285      ; 4.532      ;
+; 0.297  ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.500        ; 4.285      ; 4.531      ;
+; 0.302  ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.500        ; 4.285      ; 4.526      ;
+; 0.796  ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 1.000        ; 4.285      ; 4.532      ;
+; 0.797  ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 1.000        ; 4.285      ; 4.531      ;
+; 0.802  ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 1.000        ; 4.285      ; 4.526      ;
++--------+-------------------------+-------------------------+------------------+------------------+--------------+------------+------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -471,72 +472,72 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+-------------------------+-------------------------+-------------------------+------------------------------------------------------------------------+--------------+------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'debouncer:db1|d1'                                                                                                                  ;
-+--------+-----------------------+--------------------+-------------------------+------------------+--------------+------------+------------+
-; Slack  ; From Node             ; To Node            ; Launch Clock            ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------------------+--------------------+-------------------------+------------------+--------------+------------+------------+
-; -2.213 ; debouncer:db1|d1      ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 4.255      ;
-; -1.713 ; debouncer:db1|d1      ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 4.255      ;
-; -1.288 ; debouncer:db1|d1      ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 5.180      ;
-; -1.215 ; debouncer:db1|d1      ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 5.253      ;
-; -0.788 ; debouncer:db1|d1      ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 5.180      ;
-; -0.715 ; debouncer:db1|d1      ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 5.253      ;
-; -0.679 ; debouncer:db1|d1      ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 5.789      ;
-; -0.423 ; debouncer:db3|d1      ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 6.045      ;
-; -0.179 ; debouncer:db1|d1      ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 5.789      ;
-; 0.077  ; debouncer:db3|d1      ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 6.045      ;
-; 0.793  ; debouncer:db3|d1      ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 7.261      ;
-; 1.072  ; debouncer:db3|d1      ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 7.540      ;
-; 1.219  ; debouncer:db2|d1      ; up_down:ud1|cnt[4] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 0.000        ; 0.936      ; 2.376      ;
-; 1.250  ; debouncer:db3|d1      ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 7.718      ;
-; 1.293  ; debouncer:db3|d1      ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 7.261      ;
-; 1.352  ; debouncer:db4|d1      ; up_down:ud1|cnt[1] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 7.820      ;
-; 1.572  ; debouncer:db3|d1      ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 7.540      ;
-; 1.750  ; debouncer:db3|d1      ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 7.718      ;
-; 1.852  ; debouncer:db4|d1      ; up_down:ud1|cnt[1] ; debouncer:db4|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 7.820      ;
-; 2.340  ; debouncer:db2|d1      ; up_down:ud1|cnt[2] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 0.000        ; 0.936      ; 3.497      ;
-; 2.385  ; debouncer:db2|d1      ; up_down:ud1|cnt[3] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 0.000        ; 0.936      ; 3.542      ;
-; 2.512  ; up_down:ud1|cnt[4]    ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 2.733      ;
-; 2.568  ; debouncer:db4|d1      ; up_down:ud1|cnt[2] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 9.036      ;
-; 2.819  ; debouncer:db2|d1      ; up_down:ud1|cnt[1] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 0.000        ; 0.936      ; 3.976      ;
-; 2.847  ; debouncer:db4|d1      ; up_down:ud1|cnt[4] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 9.315      ;
-; 3.025  ; debouncer:db4|d1      ; up_down:ud1|cnt[3] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 9.493      ;
-; 3.068  ; debouncer:db4|d1      ; up_down:ud1|cnt[2] ; debouncer:db4|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 9.036      ;
-; 3.255  ; up_down:ud1|cnt[2]    ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 3.476      ;
-; 3.268  ; up_down:ud1|cnt[3]    ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 3.489      ;
-; 3.347  ; debouncer:db4|d1      ; up_down:ud1|cnt[4] ; debouncer:db4|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 9.315      ;
-; 3.507  ; up_down:ud1|cnt[1]    ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 3.728      ;
-; 3.525  ; debouncer:db4|d1      ; up_down:ud1|cnt[3] ; debouncer:db4|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 9.493      ;
-; 3.602  ; up_down:ud1|cnt[1]    ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 3.823      ;
-; 3.671  ; up_down:ud1|cnt[2]    ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 3.892      ;
-; 3.689  ; up_down:ud1|cnt[2]    ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 3.910      ;
-; 3.797  ; up_down:ud1|cnt[1]    ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 4.018      ;
-; 3.998  ; up_down:ud1|cnt[3]    ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 4.219      ;
-; 4.082  ; up_down:ud1|cnt[1]    ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 4.303      ;
-; 4.178  ; up_down:ud1|cnt[3]    ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 4.399      ;
-; 4.239  ; up_down:ud1|cnt[4]    ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 4.460      ;
-; 4.438  ; up_down:ud1|cnt[2]    ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 4.659      ;
-; 4.696  ; up_down:ud1|cnt[4]    ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 4.917      ;
-; 4.879  ; up_down:ud1|cnt[3]    ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 5.100      ;
-; 4.890  ; up_down:ud1|cnt[4]    ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 5.111      ;
-; 7.206  ; debouncer:db5|d1      ; up_down:ud1|cnt[1] ; clk                     ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 9.950      ;
-; 7.279  ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.086      ;
-; 7.298  ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.105      ;
-; 7.599  ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.406      ;
-; 8.422  ; debouncer:db5|d1      ; up_down:ud1|cnt[2] ; clk                     ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 11.166     ;
-; 8.495  ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.302     ;
-; 8.514  ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.321     ;
-; 8.701  ; debouncer:db5|d1      ; up_down:ud1|cnt[4] ; clk                     ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 11.445     ;
-; 8.774  ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.581     ;
-; 8.793  ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.600     ;
-; 8.815  ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.622     ;
-; 8.879  ; debouncer:db5|d1      ; up_down:ud1|cnt[3] ; clk                     ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 11.623     ;
-; 8.952  ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.759     ;
-; 8.971  ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.778     ;
-; 9.094  ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.901     ;
-; 9.272  ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 11.079     ;
-+--------+-----------------------+--------------------+-------------------------+------------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'debouncer:db1|d1'                                                                                                                    ;
++--------+-------------------------+--------------------+-------------------------+------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node            ; Launch Clock            ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+--------------------+-------------------------+------------------+--------------+------------+------------+
+; -2.213 ; debouncer:db1|d1        ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 4.255      ;
+; -1.713 ; debouncer:db1|d1        ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 4.255      ;
+; -1.288 ; debouncer:db1|d1        ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 5.180      ;
+; -1.215 ; debouncer:db1|d1        ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 5.253      ;
+; -0.788 ; debouncer:db1|d1        ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 5.180      ;
+; -0.715 ; debouncer:db1|d1        ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 5.253      ;
+; -0.679 ; debouncer:db1|d1        ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 5.789      ;
+; -0.423 ; debouncer:db3|d1        ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 6.045      ;
+; -0.179 ; debouncer:db1|d1        ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 5.789      ;
+; 0.077  ; debouncer:db3|d1        ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 6.045      ;
+; 0.793  ; debouncer:db3|d1        ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 7.261      ;
+; 1.072  ; debouncer:db3|d1        ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 7.540      ;
+; 1.219  ; debouncer:db2|d1        ; up_down:ud1|cnt[4] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 0.000        ; 0.936      ; 2.376      ;
+; 1.250  ; debouncer:db3|d1        ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 7.718      ;
+; 1.293  ; debouncer:db3|d1        ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 7.261      ;
+; 1.352  ; debouncer:db4|d1        ; up_down:ud1|cnt[1] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 7.820      ;
+; 1.572  ; debouncer:db3|d1        ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 7.540      ;
+; 1.750  ; debouncer:db3|d1        ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 7.718      ;
+; 1.852  ; debouncer:db4|d1        ; up_down:ud1|cnt[1] ; debouncer:db4|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 7.820      ;
+; 2.340  ; debouncer:db2|d1        ; up_down:ud1|cnt[2] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 0.000        ; 0.936      ; 3.497      ;
+; 2.385  ; debouncer:db2|d1        ; up_down:ud1|cnt[3] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 0.000        ; 0.936      ; 3.542      ;
+; 2.512  ; up_down:ud1|cnt[4]      ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 2.733      ;
+; 2.568  ; debouncer:db4|d1        ; up_down:ud1|cnt[2] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 9.036      ;
+; 2.819  ; debouncer:db2|d1        ; up_down:ud1|cnt[1] ; clk_500m_1s:cl1|tffc[1] ; debouncer:db1|d1 ; 0.000        ; 0.936      ; 3.976      ;
+; 2.847  ; debouncer:db4|d1        ; up_down:ud1|cnt[4] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 9.315      ;
+; 3.025  ; debouncer:db4|d1        ; up_down:ud1|cnt[3] ; debouncer:db4|d1        ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 9.493      ;
+; 3.068  ; debouncer:db4|d1        ; up_down:ud1|cnt[2] ; debouncer:db4|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 9.036      ;
+; 3.255  ; up_down:ud1|cnt[2]      ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 3.476      ;
+; 3.268  ; up_down:ud1|cnt[3]      ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 3.489      ;
+; 3.347  ; debouncer:db4|d1        ; up_down:ud1|cnt[4] ; debouncer:db4|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 9.315      ;
+; 3.507  ; up_down:ud1|cnt[1]      ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 3.728      ;
+; 3.525  ; debouncer:db4|d1        ; up_down:ud1|cnt[3] ; debouncer:db4|d1        ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 9.493      ;
+; 3.602  ; up_down:ud1|cnt[1]      ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 3.823      ;
+; 3.671  ; up_down:ud1|cnt[2]      ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 3.892      ;
+; 3.689  ; up_down:ud1|cnt[2]      ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 3.910      ;
+; 3.797  ; up_down:ud1|cnt[1]      ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 4.018      ;
+; 3.998  ; up_down:ud1|cnt[3]      ; up_down:ud1|cnt[4] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 4.219      ;
+; 4.082  ; up_down:ud1|cnt[1]      ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 4.303      ;
+; 4.178  ; up_down:ud1|cnt[3]      ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 4.399      ;
+; 4.239  ; up_down:ud1|cnt[4]      ; up_down:ud1|cnt[2] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 4.460      ;
+; 4.438  ; up_down:ud1|cnt[2]      ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 4.659      ;
+; 4.696  ; up_down:ud1|cnt[4]      ; up_down:ud1|cnt[3] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 4.917      ;
+; 4.879  ; up_down:ud1|cnt[3]      ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 5.100      ;
+; 4.890  ; up_down:ud1|cnt[4]      ; up_down:ud1|cnt[1] ; debouncer:db1|d1        ; debouncer:db1|d1 ; 0.000        ; 0.000      ; 5.111      ;
+; 7.206  ; debouncer:db5|d1        ; up_down:ud1|cnt[1] ; clk                     ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 9.950      ;
+; 7.279  ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.086      ;
+; 7.298  ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.105      ;
+; 7.599  ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[1] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.406      ;
+; 8.422  ; debouncer:db5|d1        ; up_down:ud1|cnt[2] ; clk                     ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 11.166     ;
+; 8.495  ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.302     ;
+; 8.514  ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.321     ;
+; 8.701  ; debouncer:db5|d1        ; up_down:ud1|cnt[4] ; clk                     ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 11.445     ;
+; 8.774  ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.581     ;
+; 8.793  ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.600     ;
+; 8.815  ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[2] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.622     ;
+; 8.879  ; debouncer:db5|d1        ; up_down:ud1|cnt[3] ; clk                     ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 11.623     ;
+; 8.952  ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.759     ;
+; 8.971  ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.778     ;
+; 9.094  ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[4] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.901     ;
+; 9.272  ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[3] ; debouncer:db3|d1        ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 11.079     ;
++--------+-------------------------+--------------------+-------------------------+------------------+--------------+------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -647,30 +648,30 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+-------------+--------------+------------+------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'debouncer:db3|d1'                                                                                                              ;
-+--------+-----------------------+-----------------------+------------------+------------------+--------------+------------+------------+
-; Slack  ; From Node             ; To Node               ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------------------+-----------------------+------------------+------------------+--------------+------------+------------+
-; -0.356 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.000        ; 4.285      ; 4.526      ;
-; -0.351 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.000        ; 4.285      ; 4.531      ;
-; -0.350 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.000        ; 4.285      ; 4.532      ;
-; 0.144  ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; -0.500       ; 4.285      ; 4.526      ;
-; 0.149  ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; -0.500       ; 4.285      ; 4.531      ;
-; 0.150  ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; -0.500       ; 4.285      ; 4.532      ;
-; 2.182  ; cnt_modn:inst9|cnt[3] ; cnt_modn:inst9|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 2.403      ;
-; 2.192  ; cnt_modn:inst9|cnt[3] ; cnt_modn:inst9|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 2.413      ;
-; 2.528  ; cnt_modn:inst9|cnt[2] ; cnt_modn:inst9|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 2.749      ;
-; 3.031  ; cnt_modn:inst9|cnt[2] ; cnt_modn:inst9|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 3.252      ;
-; 3.037  ; cnt_modn:inst9|cnt[2] ; cnt_modn:inst9|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 3.258      ;
-; 3.071  ; cnt_modn:inst9|cnt[1] ; cnt_modn:inst9|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 3.292      ;
-; 3.376  ; cnt_modn:inst9|cnt[1] ; cnt_modn:inst9|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 3.597      ;
-; 3.382  ; cnt_modn:inst9|cnt[1] ; cnt_modn:inst9|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 3.603      ;
-; 5.498  ; debouncer:db5|d1      ; cnt_modn:inst9|cnt[1] ; clk              ; debouncer:db3|d1 ; 0.000        ; 0.937      ; 6.656      ;
-; 5.503  ; debouncer:db5|d1      ; cnt_modn:inst9|cnt[2] ; clk              ; debouncer:db3|d1 ; 0.000        ; 0.937      ; 6.661      ;
-; 5.504  ; debouncer:db5|d1      ; cnt_modn:inst9|cnt[3] ; clk              ; debouncer:db3|d1 ; 0.000        ; 0.937      ; 6.662      ;
-; 5.595  ; cnt_modn:inst9|cnt[3] ; cnt_modn:inst9|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 5.816      ;
-+--------+-----------------------+-----------------------+------------------+------------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'debouncer:db3|d1'                                                                                                                  ;
++--------+-------------------------+-------------------------+------------------+------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+------------------+------------------+--------------+------------+------------+
+; -0.356 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.000        ; 4.285      ; 4.526      ;
+; -0.351 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.000        ; 4.285      ; 4.531      ;
+; -0.350 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.000        ; 4.285      ; 4.532      ;
+; 0.144  ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; -0.500       ; 4.285      ; 4.526      ;
+; 0.149  ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; -0.500       ; 4.285      ; 4.531      ;
+; 0.150  ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; -0.500       ; 4.285      ; 4.532      ;
+; 2.182  ; cnt_modn:cnt_dig|cnt[3] ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 2.403      ;
+; 2.192  ; cnt_modn:cnt_dig|cnt[3] ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 2.413      ;
+; 2.528  ; cnt_modn:cnt_dig|cnt[2] ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 2.749      ;
+; 3.031  ; cnt_modn:cnt_dig|cnt[2] ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 3.252      ;
+; 3.037  ; cnt_modn:cnt_dig|cnt[2] ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 3.258      ;
+; 3.071  ; cnt_modn:cnt_dig|cnt[1] ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 3.292      ;
+; 3.376  ; cnt_modn:cnt_dig|cnt[1] ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 3.597      ;
+; 3.382  ; cnt_modn:cnt_dig|cnt[1] ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 3.603      ;
+; 5.498  ; debouncer:db5|d1        ; cnt_modn:cnt_dig|cnt[1] ; clk              ; debouncer:db3|d1 ; 0.000        ; 0.937      ; 6.656      ;
+; 5.503  ; debouncer:db5|d1        ; cnt_modn:cnt_dig|cnt[2] ; clk              ; debouncer:db3|d1 ; 0.000        ; 0.937      ; 6.661      ;
+; 5.504  ; debouncer:db5|d1        ; cnt_modn:cnt_dig|cnt[3] ; clk              ; debouncer:db3|d1 ; 0.000        ; 0.937      ; 6.662      ;
+; 5.595  ; cnt_modn:cnt_dig|cnt[3] ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 5.816      ;
++--------+-------------------------+-------------------------+------------------+------------------+--------------+------------+------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -698,380 +699,380 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+---------------------------------------------------------+---------------------------------------------------------+--------------+------------+------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Recovery: 'debouncer:db1|d1'                                                                                                       ;
-+--------+-----------------------+--------------------+------------------+------------------+--------------+------------+------------+
-; Slack  ; From Node             ; To Node            ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------------------+--------------------+------------------+------------------+--------------+------------+------------+
-; -8.568 ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.821     ;
-; -8.267 ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.520     ;
-; -8.248 ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.501     ;
-; -8.175 ; debouncer:db5|d1      ; up_down:ud1|cnt[4] ; clk              ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 11.365     ;
-; -8.008 ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.261     ;
-; -8.008 ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.261     ;
-; -8.008 ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.261     ;
-; -7.707 ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.960      ;
-; -7.707 ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.960      ;
-; -7.707 ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.960      ;
-; -7.688 ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.941      ;
-; -7.688 ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.941      ;
-; -7.688 ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.941      ;
-; -7.615 ; debouncer:db5|d1      ; up_down:ud1|cnt[3] ; clk              ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 10.805     ;
-; -7.615 ; debouncer:db5|d1      ; up_down:ud1|cnt[2] ; clk              ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 10.805     ;
-; -7.615 ; debouncer:db5|d1      ; up_down:ud1|cnt[1] ; clk              ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 10.805     ;
-; -2.821 ; debouncer:db4|d1      ; up_down:ud1|cnt[4] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 9.235      ;
-; -2.321 ; debouncer:db4|d1      ; up_down:ud1|cnt[4] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 9.235      ;
-; -2.261 ; debouncer:db4|d1      ; up_down:ud1|cnt[3] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 8.675      ;
-; -2.261 ; debouncer:db4|d1      ; up_down:ud1|cnt[2] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 8.675      ;
-; -2.261 ; debouncer:db4|d1      ; up_down:ud1|cnt[1] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 8.675      ;
-; -1.761 ; debouncer:db4|d1      ; up_down:ud1|cnt[3] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 8.675      ;
-; -1.761 ; debouncer:db4|d1      ; up_down:ud1|cnt[2] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 8.675      ;
-; -1.761 ; debouncer:db4|d1      ; up_down:ud1|cnt[1] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 8.675      ;
-; -1.046 ; debouncer:db3|d1      ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 7.460      ;
-; -0.546 ; debouncer:db3|d1      ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 7.460      ;
-; -0.486 ; debouncer:db3|d1      ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 6.900      ;
-; -0.486 ; debouncer:db3|d1      ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 6.900      ;
-; -0.486 ; debouncer:db3|d1      ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 6.900      ;
-; 0.014  ; debouncer:db3|d1      ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 6.900      ;
-; 0.014  ; debouncer:db3|d1      ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 6.900      ;
-; 0.014  ; debouncer:db3|d1      ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 6.900      ;
-+--------+-----------------------+--------------------+------------------+------------------+--------------+------------+------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Recovery: 'clk'                                                                                                                                     ;
-+--------+-----------------------+------------------------------------------+------------------+-------------+--------------+------------+------------+
-; Slack  ; From Node             ; To Node                                  ; Launch Clock     ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------------------+------------------------------------------+------------------+-------------+--------------+------------+------------+
-; -7.650 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
-; -7.650 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
-; -7.650 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
-; -7.650 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
-; -7.650 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
-; -7.650 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
-; -7.650 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
-; -7.650 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
-; -7.349 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
-; -7.349 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
-; -7.349 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
-; -7.349 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
-; -7.349 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
-; -7.349 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
-; -7.349 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
-; -7.349 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
-; -7.330 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
-; -7.330 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
-; -7.330 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
-; -7.330 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
-; -7.330 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
-; -7.330 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
-; -7.330 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
-; -7.330 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
-; -7.257 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
-; -7.257 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
-; -7.257 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
-; -7.257 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
-; -7.257 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
-; -7.257 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
-; -7.257 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
-; -7.257 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
-; -7.163 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
-; -7.163 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
-; -7.163 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
-; -7.163 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
-; -7.163 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
-; -7.163 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
-; -7.163 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
-; -7.163 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
-; -6.862 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
-; -6.862 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
-; -6.862 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
-; -6.862 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
-; -6.862 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
-; -6.862 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
-; -6.862 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
-; -6.862 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
-; -6.843 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
-; -6.843 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
-; -6.843 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
-; -6.843 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
-; -6.843 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
-; -6.843 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
-; -6.843 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
-; -6.843 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
-; -6.770 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
-; -6.770 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
-; -6.770 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
-; -6.770 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
-; -6.770 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
-; -6.770 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
-; -6.770 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
-; -6.770 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
-; -5.015 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[2][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
-; -5.015 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[3][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
-; -5.015 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[3][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
-; -5.015 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[2][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
-; -5.015 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[2][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
-; -5.015 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[3][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
-; -5.015 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[3][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
-; -5.015 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[2][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
-; -3.696 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[4][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 4.363      ;
-; -3.646 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[4][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 4.313      ;
-; -3.646 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[4][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 4.313      ;
-; -3.646 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[4][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 4.313      ;
-; -2.517 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[1][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 3.184      ;
-; -2.517 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[1][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 3.184      ;
-; -2.517 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[1][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 3.184      ;
-; -2.517 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[1][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 3.184      ;
-; -1.903 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
-; -1.903 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
-; -1.903 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
-; -1.903 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
-; -1.903 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
-; -1.903 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
-; -1.903 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
-; -1.903 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
-; -1.416 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
-; -1.416 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
-; -1.416 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
-; -1.416 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
-; -1.416 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
-; -1.416 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
-; -1.416 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
-; -1.416 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
-; -1.403 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db4|d1 ; clk         ; 1.000        ; 3.348      ; 5.794      ;
-; -1.403 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db4|d1 ; clk         ; 1.000        ; 3.348      ; 5.794      ;
-; -1.403 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db4|d1 ; clk         ; 1.000        ; 3.348      ; 5.794      ;
-; -1.403 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db4|d1 ; clk         ; 1.000        ; 3.348      ; 5.794      ;
-+--------+-----------------------+------------------------------------------+------------------+-------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Recovery: 'debouncer:db3|d1'                                                                                                          ;
-+--------+-----------------------+-----------------------+------------------+------------------+--------------+------------+------------+
-; Slack  ; From Node             ; To Node               ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------------------+-----------------------+------------------+------------------+--------------+------------+------------+
-; -6.769 ; cnt_modn:inst9|cnt[2] ; cnt_modn:inst9|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.436      ;
-; -6.769 ; cnt_modn:inst9|cnt[2] ; cnt_modn:inst9|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.436      ;
-; -6.769 ; cnt_modn:inst9|cnt[2] ; cnt_modn:inst9|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.436      ;
-; -6.468 ; cnt_modn:inst9|cnt[3] ; cnt_modn:inst9|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.135      ;
-; -6.468 ; cnt_modn:inst9|cnt[3] ; cnt_modn:inst9|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.135      ;
-; -6.468 ; cnt_modn:inst9|cnt[3] ; cnt_modn:inst9|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.135      ;
-; -6.449 ; cnt_modn:inst9|cnt[1] ; cnt_modn:inst9|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.116      ;
-; -6.449 ; cnt_modn:inst9|cnt[1] ; cnt_modn:inst9|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.116      ;
-; -6.449 ; cnt_modn:inst9|cnt[1] ; cnt_modn:inst9|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.116      ;
-; -6.376 ; debouncer:db5|d1      ; cnt_modn:inst9|cnt[1] ; clk              ; debouncer:db3|d1 ; 1.000        ; 0.937      ; 7.980      ;
-; -6.376 ; debouncer:db5|d1      ; cnt_modn:inst9|cnt[3] ; clk              ; debouncer:db3|d1 ; 1.000        ; 0.937      ; 7.980      ;
-; -6.376 ; debouncer:db5|d1      ; cnt_modn:inst9|cnt[2] ; clk              ; debouncer:db3|d1 ; 1.000        ; 0.937      ; 7.980      ;
-; -1.022 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.500        ; 4.285      ; 5.850      ;
-; -1.022 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.500        ; 4.285      ; 5.850      ;
-; -1.022 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.500        ; 4.285      ; 5.850      ;
-; -0.522 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 1.000        ; 4.285      ; 5.850      ;
-; -0.522 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 1.000        ; 4.285      ; 5.850      ;
-; -0.522 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 1.000        ; 4.285      ; 5.850      ;
-+--------+-----------------------+-----------------------+------------------+------------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Recovery: 'debouncer:db4|d1'                                                                                            ;
-+--------+-----------------------+---------+------------------+------------------+--------------+------------+------------+
-; Slack  ; From Node             ; To Node ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------------------+---------+------------------+------------------+--------------+------------+------------+
-; -5.788 ; cnt_modn:inst9|cnt[2] ; tff2    ; debouncer:db3|d1 ; debouncer:db4|d1 ; 1.000        ; -1.437     ; 5.018      ;
-; -5.487 ; cnt_modn:inst9|cnt[3] ; tff2    ; debouncer:db3|d1 ; debouncer:db4|d1 ; 1.000        ; -1.437     ; 4.717      ;
-; -5.468 ; cnt_modn:inst9|cnt[1] ; tff2    ; debouncer:db3|d1 ; debouncer:db4|d1 ; 1.000        ; -1.437     ; 4.698      ;
-; -5.395 ; debouncer:db5|d1      ; tff2    ; clk              ; debouncer:db4|d1 ; 1.000        ; -0.500     ; 5.562      ;
-; -4.756 ; debouncer:db4|d1      ; tff2    ; debouncer:db4|d1 ; debouncer:db4|d1 ; 0.500        ; 2.848      ; 8.147      ;
-; -4.256 ; debouncer:db4|d1      ; tff2    ; debouncer:db4|d1 ; debouncer:db4|d1 ; 1.000        ; 2.848      ; 8.147      ;
-+--------+-----------------------+---------+------------------+------------------+--------------+------------+------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Removal: 'debouncer:db1|d1'                                                                                                       ;
-+-------+-----------------------+--------------------+------------------+------------------+--------------+------------+------------+
-; Slack ; From Node             ; To Node            ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------------------+--------------------+------------------+------------------+--------------+------------+------------+
-; 0.432 ; debouncer:db3|d1      ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 6.900      ;
-; 0.432 ; debouncer:db3|d1      ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 6.900      ;
-; 0.432 ; debouncer:db3|d1      ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 6.900      ;
-; 0.932 ; debouncer:db3|d1      ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 6.900      ;
-; 0.932 ; debouncer:db3|d1      ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 6.900      ;
-; 0.932 ; debouncer:db3|d1      ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 6.900      ;
-; 0.992 ; debouncer:db3|d1      ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 7.460      ;
-; 1.492 ; debouncer:db3|d1      ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 7.460      ;
-; 2.207 ; debouncer:db4|d1      ; up_down:ud1|cnt[3] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 8.675      ;
-; 2.207 ; debouncer:db4|d1      ; up_down:ud1|cnt[2] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 8.675      ;
-; 2.207 ; debouncer:db4|d1      ; up_down:ud1|cnt[1] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 8.675      ;
-; 2.707 ; debouncer:db4|d1      ; up_down:ud1|cnt[3] ; debouncer:db4|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 8.675      ;
-; 2.707 ; debouncer:db4|d1      ; up_down:ud1|cnt[2] ; debouncer:db4|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 8.675      ;
-; 2.707 ; debouncer:db4|d1      ; up_down:ud1|cnt[1] ; debouncer:db4|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 8.675      ;
-; 2.767 ; debouncer:db4|d1      ; up_down:ud1|cnt[4] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 9.235      ;
-; 3.267 ; debouncer:db4|d1      ; up_down:ud1|cnt[4] ; debouncer:db4|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 9.235      ;
-; 8.061 ; debouncer:db5|d1      ; up_down:ud1|cnt[3] ; clk              ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 10.805     ;
-; 8.061 ; debouncer:db5|d1      ; up_down:ud1|cnt[2] ; clk              ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 10.805     ;
-; 8.061 ; debouncer:db5|d1      ; up_down:ud1|cnt[1] ; clk              ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 10.805     ;
-; 8.134 ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.941      ;
-; 8.134 ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.941      ;
-; 8.134 ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.941      ;
-; 8.153 ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.960      ;
-; 8.153 ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.960      ;
-; 8.153 ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.960      ;
-; 8.454 ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.261     ;
-; 8.454 ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.261     ;
-; 8.454 ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.261     ;
-; 8.621 ; debouncer:db5|d1      ; up_down:ud1|cnt[4] ; clk              ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 11.365     ;
-; 8.694 ; cnt_modn:inst9|cnt[1] ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.501     ;
-; 8.713 ; cnt_modn:inst9|cnt[3] ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.520     ;
-; 9.014 ; cnt_modn:inst9|cnt[2] ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.821     ;
-+-------+-----------------------+--------------------+------------------+------------------+--------------+------------+------------+
-
-
 +--------------------------------------------------------------------------------------------------------------------------------------+
-; Removal: 'debouncer:db3|d1'                                                                                                          ;
-+-------+-----------------------+-----------------------+------------------+------------------+--------------+------------+------------+
-; Slack ; From Node             ; To Node               ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------------------+-----------------------+------------------+------------------+--------------+------------+------------+
-; 0.968 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.000        ; 4.285      ; 5.850      ;
-; 0.968 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.000        ; 4.285      ; 5.850      ;
-; 0.968 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.000        ; 4.285      ; 5.850      ;
-; 1.468 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; -0.500       ; 4.285      ; 5.850      ;
-; 1.468 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; -0.500       ; 4.285      ; 5.850      ;
-; 1.468 ; debouncer:db4|d1      ; cnt_modn:inst9|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; -0.500       ; 4.285      ; 5.850      ;
-; 6.822 ; debouncer:db5|d1      ; cnt_modn:inst9|cnt[1] ; clk              ; debouncer:db3|d1 ; 0.000        ; 0.937      ; 7.980      ;
-; 6.822 ; debouncer:db5|d1      ; cnt_modn:inst9|cnt[3] ; clk              ; debouncer:db3|d1 ; 0.000        ; 0.937      ; 7.980      ;
-; 6.822 ; debouncer:db5|d1      ; cnt_modn:inst9|cnt[2] ; clk              ; debouncer:db3|d1 ; 0.000        ; 0.937      ; 7.980      ;
-; 6.895 ; cnt_modn:inst9|cnt[1] ; cnt_modn:inst9|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.116      ;
-; 6.895 ; cnt_modn:inst9|cnt[1] ; cnt_modn:inst9|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.116      ;
-; 6.895 ; cnt_modn:inst9|cnt[1] ; cnt_modn:inst9|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.116      ;
-; 6.914 ; cnt_modn:inst9|cnt[3] ; cnt_modn:inst9|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.135      ;
-; 6.914 ; cnt_modn:inst9|cnt[3] ; cnt_modn:inst9|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.135      ;
-; 6.914 ; cnt_modn:inst9|cnt[3] ; cnt_modn:inst9|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.135      ;
-; 7.215 ; cnt_modn:inst9|cnt[2] ; cnt_modn:inst9|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.436      ;
-; 7.215 ; cnt_modn:inst9|cnt[2] ; cnt_modn:inst9|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.436      ;
-; 7.215 ; cnt_modn:inst9|cnt[2] ; cnt_modn:inst9|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.436      ;
-+-------+-----------------------+-----------------------+------------------+------------------+--------------+------------+------------+
+; Recovery: 'debouncer:db1|d1'                                                                                                         ;
++--------+-------------------------+--------------------+------------------+------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node            ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+--------------------+------------------+------------------+--------------+------------+------------+
+; -8.568 ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.821     ;
+; -8.267 ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.520     ;
+; -8.248 ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.501     ;
+; -8.175 ; debouncer:db5|d1        ; up_down:ud1|cnt[4] ; clk              ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 11.365     ;
+; -8.008 ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.261     ;
+; -8.008 ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.261     ;
+; -8.008 ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 10.261     ;
+; -7.707 ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.960      ;
+; -7.707 ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.960      ;
+; -7.707 ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.960      ;
+; -7.688 ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.941      ;
+; -7.688 ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.941      ;
+; -7.688 ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 1.586      ; 9.941      ;
+; -7.615 ; debouncer:db5|d1        ; up_down:ud1|cnt[3] ; clk              ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 10.805     ;
+; -7.615 ; debouncer:db5|d1        ; up_down:ud1|cnt[2] ; clk              ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 10.805     ;
+; -7.615 ; debouncer:db5|d1        ; up_down:ud1|cnt[1] ; clk              ; debouncer:db1|d1 ; 1.000        ; 2.523      ; 10.805     ;
+; -2.821 ; debouncer:db4|d1        ; up_down:ud1|cnt[4] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 9.235      ;
+; -2.321 ; debouncer:db4|d1        ; up_down:ud1|cnt[4] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 9.235      ;
+; -2.261 ; debouncer:db4|d1        ; up_down:ud1|cnt[3] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 8.675      ;
+; -2.261 ; debouncer:db4|d1        ; up_down:ud1|cnt[2] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 8.675      ;
+; -2.261 ; debouncer:db4|d1        ; up_down:ud1|cnt[1] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 8.675      ;
+; -1.761 ; debouncer:db4|d1        ; up_down:ud1|cnt[3] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 8.675      ;
+; -1.761 ; debouncer:db4|d1        ; up_down:ud1|cnt[2] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 8.675      ;
+; -1.761 ; debouncer:db4|d1        ; up_down:ud1|cnt[1] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 8.675      ;
+; -1.046 ; debouncer:db3|d1        ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 7.460      ;
+; -0.546 ; debouncer:db3|d1        ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 7.460      ;
+; -0.486 ; debouncer:db3|d1        ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 6.900      ;
+; -0.486 ; debouncer:db3|d1        ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 6.900      ;
+; -0.486 ; debouncer:db3|d1        ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.500        ; 5.871      ; 6.900      ;
+; 0.014  ; debouncer:db3|d1        ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 6.900      ;
+; 0.014  ; debouncer:db3|d1        ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 6.900      ;
+; 0.014  ; debouncer:db3|d1        ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 1.000        ; 5.871      ; 6.900      ;
++--------+-------------------------+--------------------+------------------+------------------+--------------+------------+------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removal: 'clk'                                                                                                                                     ;
-+-------+-----------------------+------------------------------------------+------------------+-------------+--------------+------------+------------+
-; Slack ; From Node             ; To Node                                  ; Launch Clock     ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------------------+------------------------------------------+------------------+-------------+--------------+------------+------------+
-; 1.362 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
-; 1.362 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
-; 1.362 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
-; 1.362 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
-; 1.362 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
-; 1.362 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
-; 1.362 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
-; 1.362 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
-; 1.849 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
-; 1.849 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
-; 1.849 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
-; 1.849 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
-; 1.849 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
-; 1.849 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
-; 1.849 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
-; 1.849 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
-; 1.862 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
-; 1.862 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
-; 1.862 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
-; 1.862 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
-; 1.862 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
-; 1.862 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
-; 1.862 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
-; 1.862 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
-; 2.349 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
-; 2.349 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
-; 2.349 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
-; 2.349 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
-; 2.349 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
-; 2.349 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
-; 2.349 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
-; 2.349 ; debouncer:db4|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
-; 2.963 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[1][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 3.184      ;
-; 2.963 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[1][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 3.184      ;
-; 2.963 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[1][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 3.184      ;
-; 2.963 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[1][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 3.184      ;
-; 4.092 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[4][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 4.313      ;
-; 4.092 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[4][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 4.313      ;
-; 4.092 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[4][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 4.313      ;
-; 4.142 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[4][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 4.363      ;
-; 5.461 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[2][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
-; 5.461 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[3][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
-; 5.461 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[3][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
-; 5.461 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[2][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
-; 5.461 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[2][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
-; 5.461 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[3][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
-; 5.461 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[3][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
-; 5.461 ; debouncer:db5|d1      ; ram_io:ram_pass|lucid_ram:ram|data[2][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
-; 7.216 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
-; 7.216 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
-; 7.216 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
-; 7.216 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
-; 7.216 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
-; 7.216 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
-; 7.216 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
-; 7.216 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
-; 7.289 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
-; 7.289 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
-; 7.289 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
-; 7.289 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
-; 7.289 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
-; 7.289 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
-; 7.289 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
-; 7.289 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
-; 7.308 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
-; 7.308 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
-; 7.308 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
-; 7.308 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
-; 7.308 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
-; 7.308 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
-; 7.308 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
-; 7.308 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
-; 7.609 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
-; 7.609 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
-; 7.609 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
-; 7.609 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
-; 7.609 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
-; 7.609 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
-; 7.609 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
-; 7.609 ; cnt_modn:inst9|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
-; 7.703 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
-; 7.703 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
-; 7.703 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
-; 7.703 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
-; 7.703 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
-; 7.703 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
-; 7.703 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
-; 7.703 ; debouncer:db5|d1      ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
-; 7.776 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
-; 7.776 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
-; 7.776 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
-; 7.776 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
-; 7.776 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
-; 7.776 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
-; 7.776 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
-; 7.776 ; cnt_modn:inst9|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
-; 7.795 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.079      ;
-; 7.795 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.079      ;
-; 7.795 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.079      ;
-; 7.795 ; cnt_modn:inst9|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.079      ;
-+-------+-----------------------+------------------------------------------+------------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'clk'                                                                                                                                       ;
++--------+-------------------------+------------------------------------------+------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                                  ; Launch Clock     ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+------------------------------------------+------------------+-------------+--------------+------------+------------+
+; -7.650 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
+; -7.650 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
+; -7.650 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
+; -7.650 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
+; -7.650 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
+; -7.650 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
+; -7.650 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
+; -7.650 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.380      ;
+; -7.349 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
+; -7.349 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
+; -7.349 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
+; -7.349 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
+; -7.349 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
+; -7.349 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
+; -7.349 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
+; -7.349 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.079      ;
+; -7.330 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
+; -7.330 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
+; -7.330 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
+; -7.330 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
+; -7.330 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
+; -7.330 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
+; -7.330 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
+; -7.330 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 7.060      ;
+; -7.257 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
+; -7.257 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
+; -7.257 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
+; -7.257 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
+; -7.257 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
+; -7.257 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
+; -7.257 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
+; -7.257 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.924      ;
+; -7.163 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
+; -7.163 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
+; -7.163 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
+; -7.163 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
+; -7.163 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
+; -7.163 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
+; -7.163 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
+; -7.163 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.893      ;
+; -6.862 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
+; -6.862 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
+; -6.862 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
+; -6.862 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
+; -6.862 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
+; -6.862 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
+; -6.862 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
+; -6.862 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.592      ;
+; -6.843 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
+; -6.843 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
+; -6.843 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
+; -6.843 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
+; -6.843 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
+; -6.843 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
+; -6.843 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
+; -6.843 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db3|d1 ; clk         ; 1.000        ; -0.937     ; 6.573      ;
+; -6.770 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
+; -6.770 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
+; -6.770 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
+; -6.770 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
+; -6.770 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
+; -6.770 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
+; -6.770 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
+; -6.770 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 7.437      ;
+; -5.015 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[2][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
+; -5.015 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[3][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
+; -5.015 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[3][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
+; -5.015 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[2][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
+; -5.015 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[2][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
+; -5.015 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[3][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
+; -5.015 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[3][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
+; -5.015 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[2][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 5.682      ;
+; -3.696 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[4][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 4.363      ;
+; -3.646 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[4][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 4.313      ;
+; -3.646 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[4][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 4.313      ;
+; -3.646 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[4][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 4.313      ;
+; -2.517 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[1][4] ; clk              ; clk         ; 1.000        ; 0.000      ; 3.184      ;
+; -2.517 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[1][3] ; clk              ; clk         ; 1.000        ; 0.000      ; 3.184      ;
+; -2.517 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[1][2] ; clk              ; clk         ; 1.000        ; 0.000      ; 3.184      ;
+; -2.517 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[1][1] ; clk              ; clk         ; 1.000        ; 0.000      ; 3.184      ;
+; -1.903 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
+; -1.903 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
+; -1.903 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
+; -1.903 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
+; -1.903 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
+; -1.903 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
+; -1.903 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
+; -1.903 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.794      ;
+; -1.416 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
+; -1.416 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
+; -1.416 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
+; -1.416 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
+; -1.416 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
+; -1.416 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
+; -1.416 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
+; -1.416 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db4|d1 ; clk         ; 0.500        ; 3.348      ; 5.307      ;
+; -1.403 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db4|d1 ; clk         ; 1.000        ; 3.348      ; 5.794      ;
+; -1.403 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db4|d1 ; clk         ; 1.000        ; 3.348      ; 5.794      ;
+; -1.403 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db4|d1 ; clk         ; 1.000        ; 3.348      ; 5.794      ;
+; -1.403 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db4|d1 ; clk         ; 1.000        ; 3.348      ; 5.794      ;
++--------+-------------------------+------------------------------------------+------------------+-------------+--------------+------------+------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Removal: 'debouncer:db4|d1'                                                                                            ;
-+-------+-----------------------+---------+------------------+------------------+--------------+------------+------------+
-; Slack ; From Node             ; To Node ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------------------+---------+------------------+------------------+--------------+------------+------------+
-; 4.702 ; debouncer:db4|d1      ; tff2    ; debouncer:db4|d1 ; debouncer:db4|d1 ; 0.000        ; 2.848      ; 8.147      ;
-; 5.202 ; debouncer:db4|d1      ; tff2    ; debouncer:db4|d1 ; debouncer:db4|d1 ; -0.500       ; 2.848      ; 8.147      ;
-; 5.841 ; debouncer:db5|d1      ; tff2    ; clk              ; debouncer:db4|d1 ; 0.000        ; -0.500     ; 5.562      ;
-; 5.914 ; cnt_modn:inst9|cnt[1] ; tff2    ; debouncer:db3|d1 ; debouncer:db4|d1 ; 0.000        ; -1.437     ; 4.698      ;
-; 5.933 ; cnt_modn:inst9|cnt[3] ; tff2    ; debouncer:db3|d1 ; debouncer:db4|d1 ; 0.000        ; -1.437     ; 4.717      ;
-; 6.234 ; cnt_modn:inst9|cnt[2] ; tff2    ; debouncer:db3|d1 ; debouncer:db4|d1 ; 0.000        ; -1.437     ; 5.018      ;
-+-------+-----------------------+---------+------------------+------------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'debouncer:db3|d1'                                                                                                              ;
++--------+-------------------------+-------------------------+------------------+------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+------------------+------------------+--------------+------------+------------+
+; -6.769 ; cnt_modn:cnt_dig|cnt[2] ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.436      ;
+; -6.769 ; cnt_modn:cnt_dig|cnt[2] ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.436      ;
+; -6.769 ; cnt_modn:cnt_dig|cnt[2] ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.436      ;
+; -6.468 ; cnt_modn:cnt_dig|cnt[3] ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.135      ;
+; -6.468 ; cnt_modn:cnt_dig|cnt[3] ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.135      ;
+; -6.468 ; cnt_modn:cnt_dig|cnt[3] ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.135      ;
+; -6.449 ; cnt_modn:cnt_dig|cnt[1] ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.116      ;
+; -6.449 ; cnt_modn:cnt_dig|cnt[1] ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.116      ;
+; -6.449 ; cnt_modn:cnt_dig|cnt[1] ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 1.000        ; 0.000      ; 7.116      ;
+; -6.376 ; debouncer:db5|d1        ; cnt_modn:cnt_dig|cnt[1] ; clk              ; debouncer:db3|d1 ; 1.000        ; 0.937      ; 7.980      ;
+; -6.376 ; debouncer:db5|d1        ; cnt_modn:cnt_dig|cnt[3] ; clk              ; debouncer:db3|d1 ; 1.000        ; 0.937      ; 7.980      ;
+; -6.376 ; debouncer:db5|d1        ; cnt_modn:cnt_dig|cnt[2] ; clk              ; debouncer:db3|d1 ; 1.000        ; 0.937      ; 7.980      ;
+; -1.022 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.500        ; 4.285      ; 5.850      ;
+; -1.022 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.500        ; 4.285      ; 5.850      ;
+; -1.022 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.500        ; 4.285      ; 5.850      ;
+; -0.522 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 1.000        ; 4.285      ; 5.850      ;
+; -0.522 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 1.000        ; 4.285      ; 5.850      ;
+; -0.522 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 1.000        ; 4.285      ; 5.850      ;
++--------+-------------------------+-------------------------+------------------+------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'debouncer:db4|d1'                                                                                              ;
++--------+-------------------------+---------+------------------+------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+---------+------------------+------------------+--------------+------------+------------+
+; -5.788 ; cnt_modn:cnt_dig|cnt[2] ; tff2    ; debouncer:db3|d1 ; debouncer:db4|d1 ; 1.000        ; -1.437     ; 5.018      ;
+; -5.487 ; cnt_modn:cnt_dig|cnt[3] ; tff2    ; debouncer:db3|d1 ; debouncer:db4|d1 ; 1.000        ; -1.437     ; 4.717      ;
+; -5.468 ; cnt_modn:cnt_dig|cnt[1] ; tff2    ; debouncer:db3|d1 ; debouncer:db4|d1 ; 1.000        ; -1.437     ; 4.698      ;
+; -5.395 ; debouncer:db5|d1        ; tff2    ; clk              ; debouncer:db4|d1 ; 1.000        ; -0.500     ; 5.562      ;
+; -4.756 ; debouncer:db4|d1        ; tff2    ; debouncer:db4|d1 ; debouncer:db4|d1 ; 0.500        ; 2.848      ; 8.147      ;
+; -4.256 ; debouncer:db4|d1        ; tff2    ; debouncer:db4|d1 ; debouncer:db4|d1 ; 1.000        ; 2.848      ; 8.147      ;
++--------+-------------------------+---------+------------------+------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'debouncer:db1|d1'                                                                                                         ;
++-------+-------------------------+--------------------+------------------+------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node            ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+--------------------+------------------+------------------+--------------+------------+------------+
+; 0.432 ; debouncer:db3|d1        ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 6.900      ;
+; 0.432 ; debouncer:db3|d1        ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 6.900      ;
+; 0.432 ; debouncer:db3|d1        ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 6.900      ;
+; 0.932 ; debouncer:db3|d1        ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 6.900      ;
+; 0.932 ; debouncer:db3|d1        ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 6.900      ;
+; 0.932 ; debouncer:db3|d1        ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 6.900      ;
+; 0.992 ; debouncer:db3|d1        ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 7.460      ;
+; 1.492 ; debouncer:db3|d1        ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 7.460      ;
+; 2.207 ; debouncer:db4|d1        ; up_down:ud1|cnt[3] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 8.675      ;
+; 2.207 ; debouncer:db4|d1        ; up_down:ud1|cnt[2] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 8.675      ;
+; 2.207 ; debouncer:db4|d1        ; up_down:ud1|cnt[1] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 8.675      ;
+; 2.707 ; debouncer:db4|d1        ; up_down:ud1|cnt[3] ; debouncer:db4|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 8.675      ;
+; 2.707 ; debouncer:db4|d1        ; up_down:ud1|cnt[2] ; debouncer:db4|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 8.675      ;
+; 2.707 ; debouncer:db4|d1        ; up_down:ud1|cnt[1] ; debouncer:db4|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 8.675      ;
+; 2.767 ; debouncer:db4|d1        ; up_down:ud1|cnt[4] ; debouncer:db4|d1 ; debouncer:db1|d1 ; 0.000        ; 5.871      ; 9.235      ;
+; 3.267 ; debouncer:db4|d1        ; up_down:ud1|cnt[4] ; debouncer:db4|d1 ; debouncer:db1|d1 ; -0.500       ; 5.871      ; 9.235      ;
+; 8.061 ; debouncer:db5|d1        ; up_down:ud1|cnt[3] ; clk              ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 10.805     ;
+; 8.061 ; debouncer:db5|d1        ; up_down:ud1|cnt[2] ; clk              ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 10.805     ;
+; 8.061 ; debouncer:db5|d1        ; up_down:ud1|cnt[1] ; clk              ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 10.805     ;
+; 8.134 ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.941      ;
+; 8.134 ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.941      ;
+; 8.134 ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.941      ;
+; 8.153 ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.960      ;
+; 8.153 ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.960      ;
+; 8.153 ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 9.960      ;
+; 8.454 ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[3] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.261     ;
+; 8.454 ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[2] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.261     ;
+; 8.454 ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[1] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.261     ;
+; 8.621 ; debouncer:db5|d1        ; up_down:ud1|cnt[4] ; clk              ; debouncer:db1|d1 ; 0.000        ; 2.523      ; 11.365     ;
+; 8.694 ; cnt_modn:cnt_dig|cnt[1] ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.501     ;
+; 8.713 ; cnt_modn:cnt_dig|cnt[3] ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.520     ;
+; 9.014 ; cnt_modn:cnt_dig|cnt[2] ; up_down:ud1|cnt[4] ; debouncer:db3|d1 ; debouncer:db1|d1 ; 0.000        ; 1.586      ; 10.821     ;
++-------+-------------------------+--------------------+------------------+------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'debouncer:db3|d1'                                                                                                              ;
++-------+-------------------------+-------------------------+------------------+------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+------------------+------------------+--------------+------------+------------+
+; 0.968 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.000        ; 4.285      ; 5.850      ;
+; 0.968 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.000        ; 4.285      ; 5.850      ;
+; 0.968 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; 0.000        ; 4.285      ; 5.850      ;
+; 1.468 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db4|d1 ; debouncer:db3|d1 ; -0.500       ; 4.285      ; 5.850      ;
+; 1.468 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db4|d1 ; debouncer:db3|d1 ; -0.500       ; 4.285      ; 5.850      ;
+; 1.468 ; debouncer:db4|d1        ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db4|d1 ; debouncer:db3|d1 ; -0.500       ; 4.285      ; 5.850      ;
+; 6.822 ; debouncer:db5|d1        ; cnt_modn:cnt_dig|cnt[1] ; clk              ; debouncer:db3|d1 ; 0.000        ; 0.937      ; 7.980      ;
+; 6.822 ; debouncer:db5|d1        ; cnt_modn:cnt_dig|cnt[3] ; clk              ; debouncer:db3|d1 ; 0.000        ; 0.937      ; 7.980      ;
+; 6.822 ; debouncer:db5|d1        ; cnt_modn:cnt_dig|cnt[2] ; clk              ; debouncer:db3|d1 ; 0.000        ; 0.937      ; 7.980      ;
+; 6.895 ; cnt_modn:cnt_dig|cnt[1] ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.116      ;
+; 6.895 ; cnt_modn:cnt_dig|cnt[1] ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.116      ;
+; 6.895 ; cnt_modn:cnt_dig|cnt[1] ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.116      ;
+; 6.914 ; cnt_modn:cnt_dig|cnt[3] ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.135      ;
+; 6.914 ; cnt_modn:cnt_dig|cnt[3] ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.135      ;
+; 6.914 ; cnt_modn:cnt_dig|cnt[3] ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.135      ;
+; 7.215 ; cnt_modn:cnt_dig|cnt[2] ; cnt_modn:cnt_dig|cnt[1] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.436      ;
+; 7.215 ; cnt_modn:cnt_dig|cnt[2] ; cnt_modn:cnt_dig|cnt[3] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.436      ;
+; 7.215 ; cnt_modn:cnt_dig|cnt[2] ; cnt_modn:cnt_dig|cnt[2] ; debouncer:db3|d1 ; debouncer:db3|d1 ; 0.000        ; 0.000      ; 7.436      ;
++-------+-------------------------+-------------------------+------------------+------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'clk'                                                                                                                                       ;
++-------+-------------------------+------------------------------------------+------------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                                  ; Launch Clock     ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+------------------------------------------+------------------+-------------+--------------+------------+------------+
+; 1.362 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
+; 1.362 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
+; 1.362 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
+; 1.362 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
+; 1.362 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
+; 1.362 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
+; 1.362 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
+; 1.362 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.307      ;
+; 1.849 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
+; 1.849 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
+; 1.849 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
+; 1.849 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
+; 1.849 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
+; 1.849 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
+; 1.849 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
+; 1.849 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; debouncer:db4|d1 ; clk         ; 0.000        ; 3.348      ; 5.794      ;
+; 1.862 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
+; 1.862 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
+; 1.862 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
+; 1.862 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
+; 1.862 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
+; 1.862 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
+; 1.862 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
+; 1.862 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.307      ;
+; 2.349 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
+; 2.349 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
+; 2.349 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
+; 2.349 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
+; 2.349 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
+; 2.349 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
+; 2.349 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
+; 2.349 ; debouncer:db4|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; debouncer:db4|d1 ; clk         ; -0.500       ; 3.348      ; 5.794      ;
+; 2.963 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[1][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 3.184      ;
+; 2.963 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[1][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 3.184      ;
+; 2.963 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[1][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 3.184      ;
+; 2.963 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[1][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 3.184      ;
+; 4.092 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[4][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 4.313      ;
+; 4.092 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[4][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 4.313      ;
+; 4.092 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[4][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 4.313      ;
+; 4.142 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[4][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 4.363      ;
+; 5.461 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[2][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
+; 5.461 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[3][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
+; 5.461 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[3][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
+; 5.461 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[2][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
+; 5.461 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[2][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
+; 5.461 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[3][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
+; 5.461 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[3][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
+; 5.461 ; debouncer:db5|d1        ; ram_io:ram_pass|lucid_ram:ram|data[2][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 5.682      ;
+; 7.216 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
+; 7.216 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
+; 7.216 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
+; 7.216 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
+; 7.216 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
+; 7.216 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
+; 7.216 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
+; 7.216 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.437      ;
+; 7.289 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
+; 7.289 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
+; 7.289 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
+; 7.289 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
+; 7.289 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
+; 7.289 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
+; 7.289 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
+; 7.289 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.573      ;
+; 7.308 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
+; 7.308 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
+; 7.308 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
+; 7.308 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
+; 7.308 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
+; 7.308 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
+; 7.308 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
+; 7.308 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.592      ;
+; 7.609 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
+; 7.609 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
+; 7.609 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
+; 7.609 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
+; 7.609 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
+; 7.609 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[4][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
+; 7.609 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
+; 7.609 ; cnt_modn:cnt_dig|cnt[2] ; ram_io:ram_show|lucid_ram:ram|data[2][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 6.893      ;
+; 7.703 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
+; 7.703 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
+; 7.703 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
+; 7.703 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
+; 7.703 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
+; 7.703 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
+; 7.703 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
+; 7.703 ; debouncer:db5|d1        ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; clk              ; clk         ; 0.000        ; 0.000      ; 7.924      ;
+; 7.776 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
+; 7.776 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
+; 7.776 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
+; 7.776 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
+; 7.776 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
+; 7.776 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][3] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
+; 7.776 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[3][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
+; 7.776 ; cnt_modn:cnt_dig|cnt[1] ; ram_io:ram_show|lucid_ram:ram|data[1][4] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.060      ;
+; 7.795 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[1][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.079      ;
+; 7.795 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[3][1] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.079      ;
+; 7.795 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[1][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.079      ;
+; 7.795 ; cnt_modn:cnt_dig|cnt[3] ; ram_io:ram_show|lucid_ram:ram|data[3][2] ; debouncer:db3|d1 ; clk         ; 0.000        ; -0.937     ; 7.079      ;
++-------+-------------------------+------------------------------------------+------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'debouncer:db4|d1'                                                                                              ;
++-------+-------------------------+---------+------------------+------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+---------+------------------+------------------+--------------+------------+------------+
+; 4.702 ; debouncer:db4|d1        ; tff2    ; debouncer:db4|d1 ; debouncer:db4|d1 ; 0.000        ; 2.848      ; 8.147      ;
+; 5.202 ; debouncer:db4|d1        ; tff2    ; debouncer:db4|d1 ; debouncer:db4|d1 ; -0.500       ; 2.848      ; 8.147      ;
+; 5.841 ; debouncer:db5|d1        ; tff2    ; clk              ; debouncer:db4|d1 ; 0.000        ; -0.500     ; 5.562      ;
+; 5.914 ; cnt_modn:cnt_dig|cnt[1] ; tff2    ; debouncer:db3|d1 ; debouncer:db4|d1 ; 0.000        ; -1.437     ; 4.698      ;
+; 5.933 ; cnt_modn:cnt_dig|cnt[3] ; tff2    ; debouncer:db3|d1 ; debouncer:db4|d1 ; 0.000        ; -1.437     ; 4.717      ;
+; 6.234 ; cnt_modn:cnt_dig|cnt[2] ; tff2    ; debouncer:db3|d1 ; debouncer:db4|d1 ; 0.000        ; -1.437     ; 5.018      ;
++-------+-------------------------+---------+------------------+------------------+--------------+------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1294,7 +1295,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Feb 25 22:21:59 2025
+    Info: Processing started: Wed Feb 26 07:56:35 2025
 Info: Command: quartus_sta cofre -c cofre
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1372,7 +1373,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 341 megabytes
-    Info: Processing ended: Tue Feb 25 22:22:00 2025
+    Info: Processing ended: Wed Feb 26 07:56:36 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

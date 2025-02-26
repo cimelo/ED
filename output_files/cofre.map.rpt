@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cofre
-Tue Feb 25 22:21:54 2025
+Wed Feb 26 07:56:29 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -19,7 +19,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  11. Parameter Settings for User Entity Instance: display_controller:inst8|display_selector:dspl_sel|cnt_modn:cnt_mod4
  12. Parameter Settings for User Entity Instance: ram_io:ram_pass|lpm_mux:mux[2]
  13. Parameter Settings for User Entity Instance: ram_io:ram_pass|lpm_mux:mux[1]
- 14. Parameter Settings for User Entity Instance: cnt_modn:inst9
+ 14. Parameter Settings for User Entity Instance: cnt_modn:cnt_dig
  15. Parameter Settings for User Entity Instance: clk_500m_1s:cl1|lpm_counter:cnt_inst
  16. Parameter Settings for User Entity Instance: ram_io:ram_show|lpm_mux:mux[2]
  17. Parameter Settings for User Entity Instance: ram_io:ram_show|lpm_mux:mux[1]
@@ -50,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Feb 25 22:21:54 2025       ;
+; Analysis & Synthesis Status ; Successful - Wed Feb 26 07:56:29 2025       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; cofre                                       ;
 ; Top-level Entity Name       ; cofre                                       ;
@@ -237,7 +237,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |clk_500m_1s:cl1|                  ; 24 (1)      ; 23           ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 23 (1)           ; 23 (0)          ; 0 (0)      ; |cofre|clk_500m_1s:cl1                                                                                 ; clk_500m_1s        ; work         ;
 ;       |lpm_counter:cnt_inst|          ; 23 (0)      ; 22           ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 22 (0)           ; 23 (0)          ; 0 (0)      ; |cofre|clk_500m_1s:cl1|lpm_counter:cnt_inst                                                            ; lpm_counter        ; work         ;
 ;          |cntr_92j:auto_generated|    ; 23 (23)     ; 22           ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 22 (22)          ; 23 (23)         ; 0 (0)      ; |cofre|clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated                                    ; cntr_92j           ; work         ;
-;    |cnt_modn:inst9|                   ; 4 (4)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |cofre|cnt_modn:inst9                                                                                  ; cnt_modn           ; work         ;
+;    |cnt_modn:cnt_dig|                 ; 4 (4)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |cofre|cnt_modn:cnt_dig                                                                                ; cnt_modn           ; work         ;
 ;    |debouncer:db1|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|debouncer:db1                                                                                   ; debouncer          ; work         ;
 ;    |debouncer:db2|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|debouncer:db2                                                                                   ; debouncer          ; work         ;
 ;    |debouncer:db3|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|debouncer:db3                                                                                   ; debouncer          ; work         ;
@@ -373,13 +373,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cnt_modn:inst9 ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; N              ; 4     ; Untyped                            ;
-+----------------+-------+------------------------------------+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cnt_modn:cnt_dig ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; N              ; 4     ; Untyped                              ;
++----------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -454,7 +454,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Feb 25 22:21:42 2025
+    Info: Processing started: Wed Feb 26 07:56:17 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cofre -c cofre
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -518,9 +518,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
     Info (12023): Found entity 1: mux_k9c File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/db/mux_k9c.tdf Line: 23
 Info (12128): Elaborating entity "mux_k9c" for hierarchy "ram_io:ram_pass|lpm_mux:mux[2]|mux_k9c:auto_generated" File: /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Info (12128): Elaborating entity "reset" for hierarchy "reset:inst10"
-Info (12128): Elaborating entity "cnt_modn" for hierarchy "cnt_modn:inst9"
+Info (12128): Elaborating entity "cnt_modn" for hierarchy "cnt_modn:cnt_dig"
 Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:db3"
 Info (12128): Elaborating entity "clk_500m_1s" for hierarchy "clk_500m_1s:cl1"
+Warning (287013): Variable or input pin "ena_500m" is defined but never used. File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/clk_500m_1s.tdf Line: 8
 Info (12128): Elaborating entity "lpm_counter" for hierarchy "clk_500m_1s:cl1|lpm_counter:cnt_inst" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/clk_500m_1s.tdf Line: 12
 Info (12130): Elaborated megafunction instantiation "clk_500m_1s:cl1|lpm_counter:cnt_inst" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/clk_500m_1s.tdf Line: 12
 Info (12133): Instantiated megafunction "clk_500m_1s:cl1|lpm_counter:cnt_inst" with the following parameter: File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/clk_500m_1s.tdf Line: 12
@@ -541,10 +542,10 @@ Info (21057): Implemented 170 device resources after synthesis - the final resou
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 17 output pins
     Info (21061): Implemented 147 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 348 megabytes
-    Info: Processing ended: Tue Feb 25 22:21:54 2025
+    Info: Processing ended: Wed Feb 26 07:56:29 2025
     Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Total CPU time (on all processors): 00:00:29
 
 

@@ -1,5 +1,5 @@
 Fitter report for cofre
-Tue Feb 25 22:21:57 2025
+Wed Feb 26 07:56:32 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -57,7 +57,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Tue Feb 25 22:21:57 2025       ;
+; Fitter Status         ; Successful - Wed Feb 26 07:56:32 2025       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; cofre                                       ;
 ; Top-level Entity Name ; cofre                                       ;
@@ -128,12 +128,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.02        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.4%      ;
+;     Processor 2            ;   1.8%      ;
 +----------------------------+-------------+
 
 
@@ -433,7 +433,7 @@ Note: User assignments will override these defaults. The user specified values a
 ;    |clk_500m_1s:cl1|                  ; 24 (1)      ; 23           ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 23 (1)           ; 23 (0)          ; 0 (0)      ; |cofre|clk_500m_1s:cl1                                                                                 ; clk_500m_1s        ; work         ;
 ;       |lpm_counter:cnt_inst|          ; 23 (0)      ; 22           ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 22 (0)           ; 23 (0)          ; 0 (0)      ; |cofre|clk_500m_1s:cl1|lpm_counter:cnt_inst                                                            ; lpm_counter        ; work         ;
 ;          |cntr_92j:auto_generated|    ; 23 (23)     ; 22           ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 22 (22)          ; 23 (23)         ; 0 (0)      ; |cofre|clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated                                    ; cntr_92j           ; work         ;
-;    |cnt_modn:inst9|                   ; 4 (4)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |cofre|cnt_modn:inst9                                                                                  ; cnt_modn           ; work         ;
+;    |cnt_modn:cnt_dig|                 ; 4 (4)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |cofre|cnt_modn:cnt_dig                                                                                ; cnt_modn           ; work         ;
 ;    |debouncer:db1|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|debouncer:db1                                                                                   ; debouncer          ; work         ;
 ;    |debouncer:db2|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|debouncer:db2                                                                                   ; debouncer          ; work         ;
 ;    |debouncer:db3|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|debouncer:db3                                                                                   ; debouncer          ; work         ;
@@ -498,7 +498,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------+-------------+---------+--------------+--------+----------------------+------------------+
 ; clk                                                                                                  ; PIN_12      ; 69      ; Clock        ; yes    ; Global Clock         ; GCLK0            ;
 ; clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|cout                                    ; LC_X5_Y4_N6 ; 1       ; Clock        ; no     ; --                   ; --               ;
-; cnt_modn:inst9|_~0                                                                                   ; LC_X5_Y2_N6 ; 5       ; Clock enable ; no     ; --                   ; --               ;
+; cnt_modn:cnt_dig|_~0                                                                                 ; LC_X5_Y2_N6 ; 5       ; Clock enable ; no     ; --                   ; --               ;
 ; debouncer:db3|d1                                                                                     ; LC_X6_Y3_N9 ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK2            ;
 ; debouncer:db4|d1                                                                                     ; LC_X5_Y1_N7 ; 2       ; Clock        ; no     ; --                   ; --               ;
 ; debouncer:db5|d1                                                                                     ; LC_X5_Y1_N0 ; 17      ; Async. clear ; no     ; --                   ; --               ;
@@ -753,7 +753,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "rst_n" is assigned to location or region, but does not exist in design
     Warning (15706): Node "rxd" is assigned to location or region, but does not exist in design
     Warning (15706): Node "txd" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -766,13 +766,13 @@ Info (170195): Router estimated average interconnect usage is 7% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.29 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/output_files/cofre.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 59 warnings
     Info: Peak virtual memory: 533 megabytes
-    Info: Processing ended: Tue Feb 25 22:21:57 2025
+    Info: Processing ended: Wed Feb 26 07:56:32 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
