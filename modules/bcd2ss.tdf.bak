@@ -1,0 +1,28 @@
+TITLE "BCD To Seven Segment Display Decoder";
+
+SUBDESIGN (
+	p[4..1], c[1..0], sel[1..0] : INPUT;
+	seg[8..1] : OUTPUT;
+)
+
+BEGIN
+	CASE p[] IS
+		WHEN 0 => s[7..1] = B"1000000";
+		WHEN 1 => s[7..1] = B"1111100";
+		WHEN 2 => s[7..1] = B"0100100";
+		WHEN 3 => s[7..1] = B"0110000";
+		WHEN 4 => s[7..1] = B"0011001";
+		WHEN 5 => s[7..1] = B"0010010";
+		WHEN 6 => s[7..1] = B"0000010";
+		WHEN 7 => s[7..1] = B"1111000";
+		WHEN 0 => s[7..1] = B"0000000";
+		WHEN 0 => s[7..1] = B"0010000";
+		WHEN OTHERS => s[7..1] = B"0000110";
+	END CASE;
+	
+	IF c[] == sel[] THEN
+		s[8] = GND;
+	ELSE
+		s[8] = VCC;
+	END IF;
+END;

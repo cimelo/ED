@@ -1,0 +1,37 @@
+TITLE "Parameterized Counter Mod N";
+
+PARAMETERS( N = 10 );
+CONSTANT W = CEIL(LOG2(N+1));
+
+SUBDESIGN cnt_modn
+(
+    clk, rst, ena	: INPUT;          
+    q[W..1], cout : OUTPUT;
+)
+
+VARIABLE
+    aux : NODE;
+    cnt[W..1] : DFFE;
+
+BEGIN
+	DEFAULTS
+		aux = GND;
+	END DEFAULTS;
+	cnt[].clk = clk;
+	cnt[].clrn = !rst;
+	cnt[].ena = ena;
+
+    IF rst THEN
+        aux = GND;
+        cnt[] = 0;
+	ELSIF cnt[] == N THEN
+		aux = VCC;
+        cnt[] = 0;
+		cnt[].clrn = GND;
+    ELSE
+        cnt[] = cnt[] + 1;
+    END IF;
+
+    cout = aux;
+	q[] = cnt[W..1];
+END;

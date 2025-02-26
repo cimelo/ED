@@ -1,0 +1,8 @@
+TITLE "Display Controller";
+
+INCLUDE "lpm_decode.inc";
+INCLUDE "display_selector.inc"
+
+SUBDESIGN display_controller (
+	
+);

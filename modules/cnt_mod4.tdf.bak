@@ -1,0 +1,24 @@
+TITLE "Counter Mod 4"
+
+SUBMODULE(
+    clk, rst: INPUT;
+    q[2], cout: OUTPUT;
+);
+
+VARIABLE
+    cnt[2..0] : DFF;
+    aux: NODE;
+
+BEGIN
+    DEFAULTS
+    q[2..0] = 0, cout = GND;
+    END DEFAULTS:
+
+    cnt[].clk = clk;
+    cnt[].clrn = !rst;
+
+    IF (cnt[1].q == VCC) THEN 
+        aux = VCC;
+        cnt[].clrn = GND;
+    END IF;
+END;

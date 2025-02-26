@@ -1,0 +1,31 @@
+TITLE "Display Controller";
+%
+	This module sends the values
+	from digit_selector to every
+	dig[4..1] to determine wich
+	one is to be lighted up at
+	any given time
+%
+
+INCLUDE "lpm_decode.inc";
+INCLUDE "display_selector.inc";
+
+SUBDESIGN display_controller (
+	clk_50M : INPUT;
+	d[4..1], sel[2..1] : OUTPUT;
+)
+
+VARIABLE
+	decode : LPM_DECODE
+	WITH (
+		LPM_WIDTH = 2,
+		LPM_DECODES = 4
+	);
+	dspl_sel : display_selector;
+	
+BEGIN
+	dspl_sel.clk_50M = clk_50M;
+	decode.data[] = dspl_sel.q[];
+	sel[] = dspl_sel.q[];
+	d[] = decode.eq[];
+END;

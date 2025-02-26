@@ -1,0 +1,33 @@
+TITLE "Timer 500m_1s";
+
+INCLUDE "lpm_counter.inc";
+CONSTANT AVALUE = 3125000;
+CONSTANT WIDTH = CEIL(LOG2(AVALUE));
+
+SUBDESIGN clk_500m_1s (
+	clk_50M, ena_500m : INPUT;
+	clk_62m, clk_500m, clk_1s : OUTPUT;
+)
+VARIABLE
+	cnt_inst : LPM_COUNTER
+	WITH (
+		LPM_AVALUE = AVALUE,
+		LPM_WIDTH = WIDTH,
+		LPM_DIRECTION = "UP"
+	);
+	tffc[5..1] : TFFE;
+BEGIN
+	cnt_inst.clock = clk_50M;
+	
+	tffc[] = VCC;
+	tffc[1].clk = cnt_inst.cout;
+	tffc[2].clk = tffc[1];
+	tffc[3].clk = tffc[2];
+	tffc[4].clk = tffc[3];
+	tffc[5].clk = tffc[4];
+	
+	
+	clk_62m = tffc[1];
+	clk_500m = tffc[4];
+	clk_1s = tffc[5];
+END;

@@ -1,0 +1,32 @@
+TITLE "UP/Down Counter Mod N";
+
+--PARAMETERS ( MAX = 10 );
+CONSTANT MAX = 10;
+CONSTANT N = CEIL(LOG2(10));
+
+SUBDESIGN up_down (
+	inc, dec, rst : INPUT;
+	q[N..1] : OUTPUT;
+)
+
+VARIABLE
+	cnt[N..1] : dff;
+BEGIN
+	cnt[].clk = inc # dec;
+
+	IF rst THEN
+		cnt[] = 0;
+	ELSIF ( inc & (cnt[].q == MAX) ) THEN
+		cnt[] = 0;
+	ELSIF ( dec & (cnt[].q == 0) ) THEN
+		cnt[] = MAX - 1;
+	ELSIF ( inc & (cnt[].q < MAX) ) THEN
+		cnt[] = cnt[] + 1;
+	ELSIF ( dec & (cnt[].q > 0) ) THEN
+		cnt[] = cnt[] - 1;
+	ELSE
+		cnt[] = cnt[];
+	END IF;
+	
+	q[] = cnt[];
+END;

@@ -1,0 +1,21 @@
+TITLE "Soft Reset";
+%
+This module resets under these
+circunstances:
+1 - counter_dig == 4
+2 - change of mode
+3 - reset button is clicked
+4 - if in mode == 1, the counter_5s
+	overflows
+%
+
+SUBDESIGN reset (
+	cout_mod4, mode, hrst, key_dig: INPUT;
+	srst, udrst, nrst_mode : OUTPUT;
+)
+
+BEGIN
+	srst = LCELL(cout_mod4 # mode # hrst);
+	udrst = LCELL(LCELL(key_dig) # LCELL(srst));
+	nrst_mode = !(cout_mod4 # hrst);
+END;
