@@ -16,6 +16,6 @@ SUBDESIGN reset (
 
 BEGIN
 	srst = LCELL(cout_mod4 # mode # hrst);
-	udrst = LCELL(LCELL(key_dig) # LCELL(srst));
+	udrst = LCELL(key_dig) # LCELL(srst);
 	nrst_mode = !(cout_mod4 # hrst);
 END;
