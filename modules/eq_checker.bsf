@@ -62,15 +62,15 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 112)
 		(input)
-		(text "chkd" (rect 0 0 18 12)(font "Arial" ))
-		(text "chkd" (rect 21 107 39 119)(font "Arial" ))
+		(text "key_dig" (rect 0 0 31 12)(font "Arial" ))
+		(text "key_dig" (rect 21 107 52 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
 		(pt 0 128)
 		(input)
-		(text "chkt" (rect 0 0 16 12)(font "Arial" ))
-		(text "chkt" (rect 21 123 37 135)(font "Arial" ))
+		(text "cout4" (rect 0 0 22 12)(font "Arial" ))
+		(text "cout4" (rect 21 123 43 135)(font "Arial" ))
 		(line (pt 0 128)(pt 16 128)(line_width 1))
 	)
 	(port

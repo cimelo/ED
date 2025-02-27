@@ -22,17 +22,17 @@ BEGIN
 	cnt[].ena = ena;
 
     IF rst THEN
-        aux = GND;
-        cnt[].clrn = GND;
+		aux = GND;
+		cnt[].clrn = GND;
 		cnt[] = 0;
 	ELSIF cnt[] == N THEN
 		aux = VCC;
 		cnt[].clrn = GND;
 		cnt[] = 0;
     ELSE
-        cnt[] = cnt[] + 1;
-    END IF;
+		cnt[] = cnt[] + 1;
+	END IF;
 
-    cout = aux;
+	cout = aux;
 	q[] = cnt[W..1];
 END;

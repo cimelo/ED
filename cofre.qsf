@@ -201,3 +201,5 @@ set_global_assignment -name BDF_FILE tests/test_up_down.bdf
 set_global_assignment -name AHDL_FILE modules/ram_io.tdf
 set_global_assignment -name AHDL_FILE modules/mode.tdf
 set_global_assignment -name AHDL_FILE modules/eq_checker.tdf
+set_global_assignment -name REMOVE_REDUNDANT_LOGIC_CELLS ON
+set_global_assignment -name STATE_MACHINE_PROCESSING "USER-ENCODED"

@@ -116,20 +116,20 @@ RESERVED_INPUT               : 50        :        :                   :         
 RESERVED_INPUT               : 51        :        :                   :         : 1         :                
 RESERVED_INPUT               : 52        :        :                   :         : 2         :                
 RESERVED_INPUT               : 53        :        :                   :         : 2         :                
-led5                         : 54        : output : 3.3-V LVTTL       :         : 2         : N              
-RESERVED_INPUT               : 55        :        :                   :         : 2         :                
-RESERVED_INPUT               : 56        :        :                   :         : 2         :                
-led2                         : 57        : output : 3.3-V LVTTL       :         : 2         : N              
-RESERVED_INPUT               : 58        :        :                   :         : 2         :                
+led[8]                       : 54        : output : 3.3-V LVTTL       :         : 2         : Y              
+led[7]                       : 55        : output : 3.3-V LVTTL       :         : 2         : Y              
+led[6]                       : 56        : output : 3.3-V LVTTL       :         : 2         : Y              
+led[5]                       : 57        : output : 3.3-V LVTTL       :         : 2         : Y              
+led[4]                       : 58        : output : 3.3-V LVTTL       :         : 2         : Y              
 VCCIO2                       : 59        : power  :                   : 3.3V    : 2         :                
 GNDIO                        : 60        : gnd    :                   :         :           :                
-led3                         : 61        : output : 3.3-V LVTTL       :         : 2         : N              
-led1                         : 62        : output : 3.3-V LVTTL       :         : 2         : N              
+led[3]                       : 61        : output : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT               : 62        :        :                   :         : 2         :                
 VCCINT                       : 63        : power  :                   : 2.5V/3.3V :           :                
 RESERVED_INPUT               : 64        :        :                   :         : 2         :                
 GNDINT                       : 65        : gnd    :                   :         :           :                
-RESERVED_INPUT               : 66        :        :                   :         : 2         :                
-RESERVED_INPUT               : 67        :        :                   :         : 2         :                
+led[2]                       : 66        : output : 3.3-V LVTTL       :         : 2         : Y              
+led[1]                       : 67        : output : 3.3-V LVTTL       :         : 2         : Y              
 RESERVED_INPUT               : 68        :        :                   :         : 2         :                
 RESERVED_INPUT               : 69        :        :                   :         : 2         :                
 RESERVED_INPUT               : 70        :        :                   :         : 2         :                

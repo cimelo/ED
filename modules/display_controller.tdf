@@ -27,5 +27,5 @@ BEGIN
 	dspl_sel.clk_50M = clk_50M;
 	decode.data[] = dspl_sel.q[];
 	sel[] = dspl_sel.q[];
-	d[] = decode.eq[];
+	d[] = !decode.eq[];
 END;

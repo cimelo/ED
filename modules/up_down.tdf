@@ -5,29 +5,31 @@ CONSTANT MAX = 10;
 CONSTANT N = CEIL(LOG2(10));
 
 SUBDESIGN up_down (
-	inc, dec, rst : INPUT;
+	inc, dec, rst, clk	: INPUT;
 	q[N..1] : OUTPUT;
 )
 
 VARIABLE
 	cnt[N..1] : DFF;
 BEGIN
-	cnt[].clk = inc # dec;
+	cnt[].clk = clk;
 	cnt[].clrn = !rst;
 
 	IF rst THEN
-		cnt[].d = 0;
-	ELSIF ( inc & (cnt[].q == MAX-1) ) THEN
-		cnt[].d = 0;
-	ELSIF ( dec & (cnt[].q == 0) ) THEN
-		cnt[].d = MAX - 1;
-	ELSIF ( inc & (cnt[].q < MAX) ) THEN
-		cnt[].d = cnt[].q + 1;
-	ELSIF ( dec & (cnt[].q > 0) ) THEN
-		cnt[].d = cnt[].q - 1;
+		cnt[].clrn = GND;
+		cnt[] = 0;
+	ELSIF ( inc & (cnt[] == MAX-1) ) THEN
+		cnt[].clrn = GND;
+		cnt[] = 0;
+	ELSIF ( dec & (cnt[] == 0) ) THEN
+		cnt[] = MAX - 1;
+	ELSIF ( inc & (cnt[] < MAX) ) THEN
+		cnt[] = cnt[] + 1;
+	ELSIF ( dec & (cnt[] > 0) ) THEN
+		cnt[] = cnt[] - 1;
 	ELSE
-		cnt[].d = cnt[].q;
+		cnt[] = cnt[];
 	END IF;
 	
-	q[] = cnt[].q;
+	q[] = cnt[];
 END;

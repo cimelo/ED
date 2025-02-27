@@ -1,50 +1,62 @@
 TITLE "Equality Checker";
+%
+	This module works in the following way
+	if there's any difference between the
+	digits shown and the digits saved, it
+	will lock the first DFF in HIGH,
+	therefore the led for success will be
+	locked in LOW and a pulse will be generated
+	that will serve as clock for the counter
+	for failure. If after 4 checks, there's no
+	difference, then the LED for success will
+	be set to HIGH, therefore it will be turned
+	off.
+%
 
 INCLUDE "cnt_modn.inc";
 
 SUBDESIGN eq_checker (
 	ss[4..1], pass[4..1], srst, hrst,
-		mode, chkd, chkt : INPUT;
+		mode, key_dig, cout4 : INPUT;
 	suc, fai, tfai : OUTPUT;
 )
 
 VARIABLE
-	dff_eqd : DFFE; -- Responsible for verifying each digit
-	dff_eqt : DFFE;  -- Responsible for the end of digits
-	cnt4 : cnt_modn
+	dff_eqd : DFFE;  -- partial comparision
+	dff_eqt : DFFE;  -- end of digits
+	cnt4 : cnt_modn  -- failure counter
 	WITH ( N = 4 );
-	aux_fai : NODE;
-	atff[2..1] : TFF;
+	chk : NODE;
+	aux_fai : NODE; -- partial failure logic
+	atff : TFF; -- used to hold failure signal
 	
 BEGIN
 	DEFAULTS
 		aux_fai = GND;
 	END DEFAULTS;
 	
-	dff_eqd.ena = !mode;
-	dff_eqt.ena = !mode;
+	chk = (!mode & cout4);
 	
-	dff_eqd.clk = chkd;
-	dff_eqd.ena = !( dff_eqd # !mode);
+	dff_eqd.clk = (key_dig & !mode);
+	dff_eqd.ena = (!dff_eqd & !mode);
 	dff_eqd.clrn = !srst;
 	dff_eqd = (ss != pass);
 	
-	dff_eqt.clk = !dff_eqd;
+	dff_eqt.ena = !mode;
 	dff_eqt.clrn = !(hrst # mode);
-	dff_eqt.clk = chkt;
+	dff_eqt.clk = chk;
 	dff_eqt = !dff_eqd;
 
-	aux_fai = !dff_eqt & chkd & dff_eqd;
+	aux_fai = !dff_eqt & chk & dff_eqd;
 	cnt4.ena = VCC;
 	cnt4.clk = aux_fai;
 	cnt4.rst = hrst # mode;
 	
-	atff[].clrn = srst;
-	atff[] = VCC;
-	atff[1].clk = fai;
-	atff[2].clk = tfai;
+	atff.clrn = !srst;
+	atff = VCC;
+	atff.clk = aux_fai;
 	
-	suc = dff_eqt;
-	fai = aux_fai;
-	tfai = cnt4.cout;
+	suc = dff_eqd;
+	fai = atff;
+	tfai = dff_eqt;
 END;
