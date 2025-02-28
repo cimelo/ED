@@ -1,7 +1,0 @@
-TITLE "Decoder N Bits";
-
-PARAMETERS ( N = 2 );
-
-SUBDESIGN decoder_n_bits(
-	
-);

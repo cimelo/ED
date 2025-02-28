@@ -1,6 +1,0 @@
-TITLE "Soft Reset";
-%This module resets under these
-circunstances:
-1 - counter_dig == 4
-2 - change of mode
-3 - %
