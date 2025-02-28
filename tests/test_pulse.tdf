@@ -1,0 +1,28 @@
+TITLE "Test Pulse";
+
+INCLUDE "debouncer.inc";
+INCLUDE "clk_500m_1s.inc";
+INCLUDE "oneshot_pulse.inc";
+
+SUBDESIGN test_pulse (
+	clk, key[1] : INPUT;
+	led[1], buzz : OUTPUT;
+)
+
+VARIABLE
+	one[2..1] : TFFE;
+	clk1 : clk_500m_1s;
+	db : debouncer;
+	os : oneshot_pulse;
+	
+BEGIN
+	clk1.clk_50M = clk;
+	db.k = key[1];
+	db.clk = clk1.clk_62m;
+	db.ena = VCC;
+	os.trigger = db.o;
+	os.clk = clk1.clk_500m;
+	
+	led[1] = os.pulse;
+	buzz = os.pulse;
+END;

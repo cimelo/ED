@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100I5
-set_global_assignment -name TOP_LEVEL_ENTITY test_dffe_bahaviour
+set_global_assignment -name TOP_LEVEL_ENTITY cofre
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:43:37  FEBRUARY 14, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -202,4 +202,7 @@ set_global_assignment -name AHDL_FILE modules/mode.tdf
 set_global_assignment -name REMOVE_REDUNDANT_LOGIC_CELLS ON
 set_global_assignment -name STATE_MACHINE_PROCESSING "USER-ENCODED"
 set_global_assignment -name AHDL_FILE tests/test_op.tdf
-set_global_assignment -name BDF_FILE tests/test_dffe_bahaviour.bdf
+set_global_assignment -name AHDL_FILE tests/test_pulse.tdf
+set_global_assignment -name AHDL_FILE modules/module_failure.tdf
+set_global_assignment -name AHDL_FILE modules/oneshot_pulse.tdf
+set_global_assignment -name AHDL_FILE modules/eq_checker.tdf

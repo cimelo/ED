@@ -90,16 +90,23 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 176 32)
 		(output)
-		(text "res[3..1]" (rect 0 0 31 12)(font "Arial" ))
-		(text "res[3..1]" (rect 124 27 155 39)(font "Arial" ))
-		(line (pt 176 32)(pt 160 32)(line_width 3))
+		(text "suc" (rect 0 0 14 12)(font "Arial" ))
+		(text "suc" (rect 141 27 155 39)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32)(line_width 1))
 	)
 	(port
 		(pt 176 48)
 		(output)
-		(text "cnt[2..1]" (rect 0 0 30 12)(font "Arial" ))
-		(text "cnt[2..1]" (rect 125 43 155 55)(font "Arial" ))
+		(text "fail[2..1]" (rect 0 0 29 12)(font "Arial" ))
+		(text "fail[2..1]" (rect 126 43 155 55)(font "Arial" ))
 		(line (pt 176 48)(pt 160 48)(line_width 3))
+	)
+	(port
+		(pt 176 64)
+		(output)
+		(text "cnt[2..1]" (rect 0 0 30 12)(font "Arial" ))
+		(text "cnt[2..1]" (rect 125 59 155 71)(font "Arial" ))
+		(line (pt 176 64)(pt 160 64)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 160 192)(line_width 1))

@@ -21,7 +21,7 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 200 128)
+	(rect 16 16 192 128)
 	(text "clk_500m_1s" (rect 5 0 58 12)(font "Arial" ))
 	(text "inst" (rect 8 96 20 108)(font "Arial" ))
 	(port
@@ -32,34 +32,27 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 32)(pt 16 32)(line_width 1))
 	)
 	(port
-		(pt 0 48)
-		(input)
-		(text "ena_500m" (rect 0 0 42 12)(font "Arial" ))
-		(text "ena_500m" (rect 21 43 63 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 1))
-	)
-	(port
-		(pt 184 32)
+		(pt 176 32)
 		(output)
 		(text "clk_62m" (rect 0 0 34 12)(font "Arial" ))
-		(text "clk_62m" (rect 129 27 163 39)(font "Arial" ))
-		(line (pt 184 32)(pt 168 32)(line_width 1))
+		(text "clk_62m" (rect 121 27 155 39)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32)(line_width 1))
 	)
 	(port
-		(pt 184 48)
+		(pt 176 48)
 		(output)
 		(text "clk_500m" (rect 0 0 38 12)(font "Arial" ))
-		(text "clk_500m" (rect 125 43 163 55)(font "Arial" ))
-		(line (pt 184 48)(pt 168 48)(line_width 1))
+		(text "clk_500m" (rect 117 43 155 55)(font "Arial" ))
+		(line (pt 176 48)(pt 160 48)(line_width 1))
 	)
 	(port
-		(pt 184 64)
+		(pt 176 64)
 		(output)
 		(text "clk_1s" (rect 0 0 24 12)(font "Arial" ))
-		(text "clk_1s" (rect 139 59 163 71)(font "Arial" ))
-		(line (pt 184 64)(pt 168 64)(line_width 1))
+		(text "clk_1s" (rect 131 59 155 71)(font "Arial" ))
+		(line (pt 176 64)(pt 160 64)(line_width 1))
 	)
 	(drawing
-		(rectangle (rect 16 16 168 96)(line_width 1))
+		(rectangle (rect 16 16 160 96)(line_width 1))
 	)
 )
