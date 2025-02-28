@@ -5,16 +5,18 @@ CONSTANT MAX = 10;
 CONSTANT N = CEIL(LOG2(10));
 
 SUBDESIGN up_down (
-	inc, dec, rst, clk	: INPUT;
+	inc, dec, rst, clk, ena	: INPUT;
 	q[N..1] : OUTPUT;
 )
 
 VARIABLE
-	cnt[N..1] : DFF;
+	cnt[N..1] : DFFE;
+
 BEGIN
 	cnt[].clk = clk;
 	cnt[].clrn = !rst;
-
+	cnt[].ena = ena;
+	
 	IF rst THEN
 		cnt[].clrn = GND;
 		cnt[] = 0;

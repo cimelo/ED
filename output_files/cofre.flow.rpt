@@ -1,5 +1,5 @@
 Flow report for cofre
-Thu Feb 27 03:06:24 2025
+Fri Feb 28 05:54:30 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Thu Feb 27 03:06:24 2025       ;
+; Flow Status           ; Successful - Fri Feb 28 05:54:30 2025       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; cofre                                       ;
-; Top-level Entity Name ; cofre                                       ;
+; Top-level Entity Name ; test_dffe_bahaviour                         ;
 ; Family                ; MAX II                                      ;
 ; Device                ; EPM240T100I5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 146 / 240 ( 61 % )                          ;
-; Total pins            ; 26 / 80 ( 33 % )                            ;
+; Total logic elements  ; 29 / 240 ( 12 % )                           ;
+; Total pins            ; 2 / 80 ( 3 % )                              ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/27/2025 03:06:01 ;
+; Start date & time ; 02/28/2025 05:54:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; cofre               ;
 +-------------------+---------------------+
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+----------------------------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                       ; Value                                                    ; Default Value ; Entity Name ; Section Id                        ;
 +---------------------------------------+----------------------------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                 ; 102021904028832.174063636112060                          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                 ; 102021904028832.174073284705246                          ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST       ; Off                                                      ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST       ; Off                                                      ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST       ; Off                                                      ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -88,6 +88,7 @@ https://fpgasoftware.intel.com/eula.
 ; SEARCH_PATH                           ; /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/output_files ; --            ; --          ; --                                ;
 ; SEARCH_PATH                           ; /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules      ; --            ; --          ; --                                ;
 ; STATE_MACHINE_PROCESSING              ; User-Encoded                                             ; Auto          ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                      ; test_dffe_bahaviour                                      ; cofre         ; --          ; --                                ;
 +---------------------------------------+----------------------------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -96,12 +97,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 352 MB              ; 00:00:33                           ;
-; Fitter               ; 00:00:03     ; 1.0                     ; 532 MB              ; 00:00:03                           ;
-; Assembler            ; 00:00:00     ; 1.0                     ; 330 MB              ; 00:00:00                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 339 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 578 MB              ; 00:00:01                           ;
-; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:38                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 344 MB              ; 00:00:31                           ;
+; Fitter               ; 00:00:03     ; 1.0                     ; 531 MB              ; 00:00:02                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 328 MB              ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 340 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 577 MB              ; 00:00:00                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:34                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

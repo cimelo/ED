@@ -3,15 +3,27 @@ TITLE "Failure Module";
 INCLUDE "count_modn.inc";
 
 SUBDESIGN module_failure (
-	fai, tfai, clk_1s : INPUT;
-	f, tf : OUTPUT;
+	fail[2..1], -- 1 - partial failure; total failure 
+		clk_1s, hrst : INPUT;
+	buzz, dis : OUTPUT;
 )
 
 VARIABLE
 	tf : TFFE; -- Total failure
-	cnt1 : count_modn
-	WITH ( N = 1 );
-
+	cnt1 : count_modn 
+		WITH ( N = 1);
+	dis : DFFE;
+	aux : NODE;
 BEGIN
+	-- Partial failure handling
 	
+	-- Total failure handling
+	tf.clk = fail[2];
+	tf.ena = tf & !mode;
+	tf.clrn = !hrst;
+	tf = VCC;
+	
+	aux = !tf[1] # !tf[2];
+	buzz = aux;
+	dis = aux;
 END;

@@ -16,6 +16,7 @@ VARIABLE
 BEGIN
 	DEFAULTS
 		aux = GND;
+		cnt[] = 0;
 	END DEFAULTS;
 	cnt[].clk = clk;
 	cnt[].clrn = !rst;

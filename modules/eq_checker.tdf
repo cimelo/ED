@@ -1,62 +1,42 @@
 TITLE "Equality Checker";
-%
-	This module works in the following way
-	if there's any difference between the
-	digits shown and the digits saved, it
-	will lock the first DFF in HIGH,
-	therefore the led for success will be
-	locked in LOW and a pulse will be generated
-	that will serve as clock for the counter
-	for failure. If after 4 checks, there's no
-	difference, then the LED for success will
-	be set to HIGH, therefore it will be turned
-	off.
-%
 
 INCLUDE "cnt_modn.inc";
 
 SUBDESIGN eq_checker (
 	ss[4..1], pass[4..1], srst, hrst,
-		mode, key_dig, cout4 : INPUT;
-	suc, fai, tfai : OUTPUT;
+		mode, key_dig, key_mode, 
+		cout4, rst_pulse : INPUT;
+	result[3..1], cnt[2..1] : OUTPUT;
 )
 
 VARIABLE
-	dff_eqd : DFFE;  -- partial comparision
-	dff_eqt : DFFE;  -- end of digits
-	cnt4 : cnt_modn  -- failure counter
-	WITH ( N = 4 );
-	chk : NODE;
-	aux_fai : NODE; -- partial failure logic
-	atff : TFF; -- used to hold failure signal
-	
-BEGIN
-	DEFAULTS
-		aux_fai = GND;
-	END DEFAULTS;
-	
-	chk = (!mode & cout4);
-	
-	dff_eqd.clk = (key_dig & !mode);
-	dff_eqd.ena = (!dff_eqd & !mode);
-	dff_eqd.clrn = !srst;
-	dff_eqd = (ss != pass);
-	
-	dff_eqt.ena = !mode;
-	dff_eqt.clrn = !(hrst # mode);
-	dff_eqt.clk = chk;
-	dff_eqt = !dff_eqd;
+	eqn : DFF;
+	cnt4 : cnt_modn
+	WITH ( N = 3 );
+	aux : NODE;
+	result[3..1] : NODE;
+	--result[3..1] : TFF;
 
-	aux_fai = !dff_eqt & chk & dff_eqd;
-	cnt4.ena = VCC;
-	cnt4.clk = aux_fai;
-	cnt4.rst = hrst # mode;
+BEGIN
+	eqn.clk = key_dig & !mode;
+	eqn.clrn = !srst;
 	
-	atff.clrn = !srst;
-	atff = VCC;
-	atff.clk = aux_fai;
+	IF ( (ss[] == pass[]) & !eqn) THEN
+		eqn = GND;
+	ELSE
+		eqn = VCC;
+	END IF;
 	
-	suc = dff_eqd;
-	fai = atff;
-	tfai = dff_eqt;
+	cnt4.rst = hrst # key_mode;
+	cnt4.ena = !mode;
+	aux = cout4 & eqn & !mode;
+	cnt4.clk = aux;
+	
+	result[1].clk = cout4 & !eqn & !mode; 	-- Success
+	result[2].clk = aux; 						-- Partial Failure
+	result[3].clk = cnt4.cout;					-- 3 attempts Failure
+--	result[].clrn = !(hrst # rst_pulse);
+--	result[].t = VCC;
+
+--	cnt[] = cnt4.q[];
 END;

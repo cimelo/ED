@@ -1,9 +1,43 @@
 TITLE "Equality Checker";
 
-SUBDESIGN (
-	ss[4..1], pass[4..1] : INPUT;
-	
+INCLUDE "cnt_modn.inc";
+
+SUBDESIGN eq_checker (
+	ss[4..1], pass[4..1], srst, hrst,
+		mode, key_dig, key_mode, 
+		cout4 : INPUT;
+	s, pf, tf : OUTPUT;
 )
 
+VARIABLE
+	eqn : DFF;
+	cnt4 : cnt_modn
+	WITH ( N = 4 );
+	aux : NODE;
+	result[3..1] : TFF;
+
 BEGIN
+	eqn.clk = key_dig & !mode;
+	eqn.clrn = !srst;
+	
+	IF ( (ss[] == pass[]) & !eqn) THEN
+		eqn = GND;
+	ELSE
+		eqn = VCC;
+	END IF;
+	
+	cnt4.rst = hrst # key_mode;
+	cnt4.ena = !mode;
+	aux = cout4 & eqn;
+	cnt4.clk = aux;
+	
+	result[1].clk = cout4 & !eqn;
+	result[2].clk = aux;
+	result[3].clk = cnt4.cout;
+	result[].clrn = !srst;
+	result[] = VCC;
+	
+	s = result[1];
+	pf = result[2];
+	tf = result[3];
 END;
