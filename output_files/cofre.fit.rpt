@@ -1,5 +1,5 @@
 Fitter report for cofre
-Sat Mar  1 14:20:27 2025
+Sun Mar  2 18:01:03 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Sat Mar  1 14:20:27 2025       ;
+; Fitter Status         ; Successful - Sun Mar  2 18:01:03 2025       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; cofre                                       ;
 ; Top-level Entity Name ; cofre                                       ;
@@ -130,12 +130,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.0%      ;
+;     Processor 2            ;   2.9%      ;
 +----------------------------+-------------+
 
 
@@ -841,15 +841,15 @@ Info (170195): Router estimated average interconnect usage is 13% of the availab
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.42 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.58 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/output_files/cofre.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 65 warnings
-    Info: Peak virtual memory: 534 megabytes
-    Info: Processing ended: Sat Mar  1 14:20:27 2025
+    Info: Peak virtual memory: 532 megabytes
+    Info: Processing ended: Sun Mar  2 18:01:03 2025
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
