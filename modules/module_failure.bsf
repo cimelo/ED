@@ -21,7 +21,7 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 184 160)
+	(rect 16 16 176 160)
 	(text "module_failure" (rect 5 0 62 12)(font "Arial" ))
 	(text "inst" (rect 8 128 20 140)(font "Arial" ))
 	(port
@@ -34,8 +34,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 48)
 		(input)
-		(text "clk_500m" (rect 0 0 38 12)(font "Arial" ))
-		(text "clk_500m" (rect 21 43 59 55)(font "Arial" ))
+		(text "clk" (rect 0 0 10 12)(font "Arial" ))
+		(text "clk" (rect 21 43 31 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
@@ -67,27 +67,27 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
-		(pt 168 32)
+		(pt 160 32)
 		(output)
 		(text "led" (rect 0 0 10 12)(font "Arial" ))
-		(text "led" (rect 137 27 147 39)(font "Arial" ))
-		(line (pt 168 32)(pt 152 32)(line_width 1))
+		(text "led" (rect 129 27 139 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 1))
 	)
 	(port
-		(pt 168 48)
+		(pt 160 48)
 		(output)
 		(text "buzzer" (rect 0 0 24 12)(font "Arial" ))
-		(text "buzzer" (rect 123 43 147 55)(font "Arial" ))
-		(line (pt 168 48)(pt 152 48)(line_width 1))
+		(text "buzzer" (rect 115 43 139 55)(font "Arial" ))
+		(line (pt 160 48)(pt 144 48)(line_width 1))
 	)
 	(port
-		(pt 168 64)
+		(pt 160 64)
 		(output)
 		(text "disable" (rect 0 0 25 12)(font "Arial" ))
-		(text "disable" (rect 122 59 147 71)(font "Arial" ))
-		(line (pt 168 64)(pt 152 64)(line_width 1))
+		(text "disable" (rect 114 59 139 71)(font "Arial" ))
+		(line (pt 160 64)(pt 144 64)(line_width 1))
 	)
 	(drawing
-		(rectangle (rect 16 16 152 128)(line_width 1))
+		(rectangle (rect 16 16 144 128)(line_width 1))
 	)
 )

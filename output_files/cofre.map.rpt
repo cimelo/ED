@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cofre
-Fri Feb 28 11:39:05 2025
+Sat Mar  1 14:20:24 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -53,12 +53,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Feb 28 11:39:05 2025       ;
+; Analysis & Synthesis Status ; Successful - Sat Mar  1 14:20:24 2025       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; cofre                                       ;
 ; Top-level Entity Name       ; cofre                                       ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 187                                         ;
+; Total logic elements        ; 186                                         ;
 ; Total pins                  ; 22                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -172,6 +172,7 @@ https://fpgasoftware.intel.com/eula.
 ; modules/module_failure.tdf       ; yes             ; User AHDL File                     ; /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/module_failure.tdf                 ;         ;
 ; modules/oneshot_pulse.tdf        ; yes             ; User AHDL File                     ; /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/oneshot_pulse.tdf                  ;         ;
 ; modules/eq_checker.tdf           ; yes             ; User AHDL File                     ; /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/eq_checker.tdf                     ;         ;
+; modules/block_debouncer.bdf      ; yes             ; User Block Diagram/Schematic File  ; /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/block_debouncer.bdf                ;         ;
 ; lpm_decode.inc                   ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
 ; display_selector.inc             ; yes             ; Auto-Found AHDL File               ; /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/display_selector.inc               ;         ;
 ; lpm_counter.inc                  ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
@@ -205,33 +206,33 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 187   ;
+; Total logic elements                        ; 186   ;
 ;     -- Combinational with no register       ; 85    ;
 ;     -- Register only                        ; 32    ;
-;     -- Combinational with a register        ; 70    ;
+;     -- Combinational with a register        ; 69    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 56    ;
 ;     -- 3 input functions                    ; 17    ;
 ;     -- 2 input functions                    ; 57    ;
-;     -- 1 input functions                    ; 25    ;
+;     -- 1 input functions                    ; 24    ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 152   ;
+;     -- normal mode                          ; 151   ;
 ;     -- arithmetic mode                      ; 35    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 0     ;
 ;     -- asynchronous clear/load mode         ; 53    ;
 ;                                             ;       ;
-; Total registers                             ; 102   ;
+; Total registers                             ; 101   ;
 ; Total logic cells in carry chains           ; 37    ;
 ; I/O pins                                    ; 22    ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 67    ;
-; Total fan-out                               ; 655   ;
-; Average fan-out                             ; 3.13  ;
+; Total fan-out                               ; 653   ;
+; Average fan-out                             ; 3.14  ;
 +---------------------------------------------+-------+
 
 
@@ -240,18 +241,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node            ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                    ; Entity Name        ; Library Name ;
 +---------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; |cofre                                ; 187 (0)     ; 102          ; 0          ; 22   ; 0            ; 85 (0)       ; 32 (0)            ; 70 (0)           ; 37 (0)          ; 0 (0)      ; |cofre                                                                                                 ; cofre              ; work         ;
+; |cofre                                ; 186 (0)     ; 101          ; 0          ; 22   ; 0            ; 85 (0)       ; 32 (0)            ; 69 (0)           ; 37 (0)          ; 0 (0)      ; |cofre                                                                                                 ; cofre              ; work         ;
 ;    |bcd2ss:inst11|                    ; 12 (12)     ; 0            ; 0          ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cofre|bcd2ss:inst11                                                                                   ; bcd2ss             ; work         ;
-;    |clk_500m_1s:cl1|                  ; 28 (5)      ; 27           ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 27 (5)           ; 23 (0)          ; 0 (0)      ; |cofre|clk_500m_1s:cl1                                                                                 ; clk_500m_1s        ; work         ;
+;    |block_debouncer:inst|             ; 6 (0)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 6 (0)            ; 0 (0)           ; 0 (0)      ; |cofre|block_debouncer:inst                                                                            ; block_debouncer    ; work         ;
+;       |debouncer:db1|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|block_debouncer:inst|debouncer:db1                                                              ; debouncer          ; work         ;
+;       |debouncer:db2|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|block_debouncer:inst|debouncer:db2                                                              ; debouncer          ; work         ;
+;       |debouncer:db3|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|block_debouncer:inst|debouncer:db3                                                              ; debouncer          ; work         ;
+;       |debouncer:db4|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|block_debouncer:inst|debouncer:db4                                                              ; debouncer          ; work         ;
+;       |debouncer:db5|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|block_debouncer:inst|debouncer:db5                                                              ; debouncer          ; work         ;
+;       |mode:inst|                     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|block_debouncer:inst|mode:inst                                                                  ; mode               ; work         ;
+;    |clk_500m_1s:cl1|                  ; 27 (4)      ; 26           ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 26 (4)           ; 23 (0)          ; 0 (0)      ; |cofre|clk_500m_1s:cl1                                                                                 ; clk_500m_1s        ; work         ;
 ;       |lpm_counter:cnt_inst|          ; 23 (0)      ; 22           ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 22 (0)           ; 23 (0)          ; 0 (0)      ; |cofre|clk_500m_1s:cl1|lpm_counter:cnt_inst                                                            ; lpm_counter        ; work         ;
 ;          |cntr_92j:auto_generated|    ; 23 (23)     ; 22           ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 22 (22)          ; 23 (23)         ; 0 (0)      ; |cofre|clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated                                    ; cntr_92j           ; work         ;
 ;    |cnt_modn:cnt_dig|                 ; 5 (5)       ; 3            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |cofre|cnt_modn:cnt_dig                                                                                ; cnt_modn           ; work         ;
 ;    |cnt_modn:cnt_rst5|                ; 4 (4)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |cofre|cnt_modn:cnt_rst5                                                                               ; cnt_modn           ; work         ;
-;    |debouncer:db1|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|debouncer:db1                                                                                   ; debouncer          ; work         ;
-;    |debouncer:db2|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|debouncer:db2                                                                                   ; debouncer          ; work         ;
-;    |debouncer:db3|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|debouncer:db3                                                                                   ; debouncer          ; work         ;
-;    |debouncer:db4|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|debouncer:db4                                                                                   ; debouncer          ; work         ;
-;    |debouncer:db5|                    ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|debouncer:db5                                                                                   ; debouncer          ; work         ;
 ;    |display_controller:inst8|         ; 21 (0)      ; 17           ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 17 (0)           ; 14 (0)          ; 0 (0)      ; |cofre|display_controller:inst8                                                                        ; display_controller ; work         ;
 ;       |display_selector:dspl_sel|     ; 18 (1)      ; 17           ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 17 (1)           ; 14 (0)          ; 0 (0)      ; |cofre|display_controller:inst8|display_selector:dspl_sel                                              ; display_selector   ; work         ;
 ;          |cnt_modn:cnt_mod4|          ; 3 (3)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |cofre|display_controller:inst8|display_selector:dspl_sel|cnt_modn:cnt_mod4                            ; cnt_modn           ; work         ;
@@ -261,7 +264,6 @@ https://fpgasoftware.intel.com/eula.
 ;          |decode_gpe:auto_generated|  ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cofre|display_controller:inst8|lpm_decode:decode|decode_gpe:auto_generated                            ; decode_gpe         ; work         ;
 ;    |eq_checker:inst5|                 ; 11 (8)      ; 4            ; 0          ; 0    ; 0            ; 7 (6)        ; 0 (0)             ; 4 (2)            ; 0 (0)           ; 0 (0)      ; |cofre|eq_checker:inst5                                                                                ; eq_checker         ; work         ;
 ;       |cnt_modn:cnt4|                 ; 3 (3)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |cofre|eq_checker:inst5|cnt_modn:cnt4                                                                  ; cnt_modn           ; work         ;
-;    |mode:inst|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cofre|mode:inst                                                                                       ; mode               ; work         ;
 ;    |module_failure:inst6|             ; 11 (6)      ; 6            ; 0          ; 0    ; 0            ; 5 (3)        ; 0 (0)             ; 6 (3)            ; 0 (0)           ; 0 (0)      ; |cofre|module_failure:inst6                                                                            ; module_failure     ; work         ;
 ;       |oneshot_pulse:os|              ; 5 (5)       ; 3            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |cofre|module_failure:inst6|oneshot_pulse:os                                                           ; oneshot_pulse      ; work         ;
 ;    |ram_io:ram_pass|                  ; 28 (0)      ; 16           ; 0          ; 0    ; 0            ; 12 (0)       ; 16 (0)            ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cofre|ram_io:ram_pass                                                                                 ; ram_io             ; work         ;
@@ -296,7 +298,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 102   ;
+; Total registers                              ; 101   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 53    ;
@@ -501,7 +503,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Feb 28 11:38:53 2025
+    Info: Processing started: Sat Mar  1 14:20:11 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cofre -c cofre
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -545,6 +547,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file modules
     Info (12023): Found entity 1: oneshot_pulse File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/oneshot_pulse.tdf Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file modules/eq_checker.tdf
     Info (12023): Found entity 1: eq_checker File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/eq_checker.tdf Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file modules/block_debouncer.bdf
+    Info (12023): Found entity 1: block_debouncer
 Info (12127): Elaborating entity "cofre" for the top level hierarchy
 Info (12128): Elaborating entity "module_failure" for hierarchy "module_failure:inst6"
 Warning (287013): Variable or input pin "srst" is defined but never used. File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/module_failure.tdf Line: 8
@@ -559,11 +563,12 @@ Info (12133): Instantiated megafunction "clk_500m_1s:cl1|lpm_counter:cnt_inst" w
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_92j.tdf
     Info (12023): Found entity 1: cntr_92j File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/db/cntr_92j.tdf Line: 26
 Info (12128): Elaborating entity "cntr_92j" for hierarchy "clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated" File: /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
-Info (12128): Elaborating entity "mode" for hierarchy "mode:inst"
-Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:db4"
+Info (12128): Elaborating entity "block_debouncer" for hierarchy "block_debouncer:inst"
+Info (12128): Elaborating entity "debouncer" for hierarchy "block_debouncer:inst|debouncer:db1"
+Info (12128): Elaborating entity "mode" for hierarchy "block_debouncer:inst|mode:inst"
+Info (12128): Elaborating entity "debouncer" for hierarchy "block_debouncer:inst|debouncer:db5"
 Info (12128): Elaborating entity "reset" for hierarchy "reset:inst1"
 Info (12128): Elaborating entity "cnt_modn" for hierarchy "cnt_modn:cnt_dig"
-Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:db5"
 Info (12128): Elaborating entity "cnt_modn" for hierarchy "cnt_modn:cnt_rst5"
 Info (12128): Elaborating entity "eq_checker" for hierarchy "eq_checker:inst5"
 Warning (287013): Variable or input pin "rst_pulse" is defined but never used. File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/eq_checker.tdf Line: 8
@@ -603,15 +608,15 @@ Info (12128): Elaborating entity "cntr_jti" for hierarchy "display_controller:in
 Info (12128): Elaborating entity "cnt_modn" for hierarchy "display_controller:inst8|display_selector:dspl_sel|cnt_modn:cnt_mod4" File: /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/modules/display_selector.tdf Line: 20
 Info (12128): Elaborating entity "bcd2ss" for hierarchy "bcd2ss:inst11"
 Info (17017): Removed the following redundant logic cells
-    Info (17048): Logic cell "clk_500m_1s:cl1|clk_62m"
-Info (21057): Implemented 209 device resources after synthesis - the final resource count might be different
+    Info (17048): Logic cell "clk_500m_1s:cl1|clk_125m"
+Info (21057): Implemented 208 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 187 logic cells
+    Info (21061): Implemented 186 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 351 megabytes
-    Info: Processing ended: Fri Feb 28 11:39:05 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Processing ended: Sat Mar  1 14:20:24 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:28
 
 

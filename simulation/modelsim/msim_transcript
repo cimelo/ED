@@ -11,577 +11,85 @@
 # 
 # vlog -vlog01compat -work work +incdir+. {cofre.vo}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:25:56 on Feb 26,2025
+# Start time: 14:03:41 on Mar 01,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." cofre.vo 
-# -- Compiling module cofre
+# -- Compiling module cnt_modn
 # 
 # Top level modules:
-# 	cofre
-# End time: 17:25:56 on Feb 26,2025, Elapsed time: 0:00:00
+# 	cnt_modn
+# End time: 14:03:41 on Mar 01,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # 
 # stdin: <EOF>
-vsim work.cofre
-# vsim work.cofre 
-# Start time: 17:25:59 on Feb 26,2025
-# Loading work.cofre
+vsim work.cnt_modn
+# vsim work.cnt_modn 
+# Start time: 14:03:46 on Mar 01,2025
+# Loading work.cnt_modn
 # ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 206
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 216
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 254
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 293
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 332
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 374
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 416
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 458
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 499
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 538
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 580
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 622
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 664
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 705
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 744
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 784
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 820
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 857
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 893
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 929
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 965
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1001
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1037
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1073
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1110
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1149
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1191
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1233
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1275
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1316
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1355
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1397
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1439
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1481
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1522
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1561
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1603
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1645
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1687
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1728
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1767
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1809
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1851
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1893
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1934
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 1973
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2013
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 69
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2049
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2059
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 79
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2095
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 89
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2105
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2141
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 99
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2151
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 135
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2187
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 171
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2223
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 207
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2259
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 243
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2295
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 279
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2331
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2367
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 315
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2377
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 351
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2413
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2423
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2459
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2495
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2531
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2567
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2603
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2639
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2675
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2711
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2747
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2783
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2819
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2855
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2892
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2928
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 2964
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3000
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3036
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3072
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3108
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3144
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3180
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3216
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3252
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3288
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3324
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3360
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3396
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3432
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3468
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3504
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3540
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3576
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3612
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3648
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3684
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3720
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3757
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3793
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3829
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3865
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3902
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3938
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 3974
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4012
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4049
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4086
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4122
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4158
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4195
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4232
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4268
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4304
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4340
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4377
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4414
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4451
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4488
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4524
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4561
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4597
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_lcell' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4633
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 387
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4669
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 397
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4679
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 407
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4689
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 417
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4699
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4709
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4719
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4729
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4739
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4749
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4759
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4769
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4779
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4789
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4799
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4809
-#         Searched libraries:
-#             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
-# ** Error: (vsim-3033) Instantiation of 'maxii_io' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /cofre File: cofre.vo Line: 4819
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn File: cofre.vo Line: 427
 #         Searched libraries:
 #             /mnt/caio/General/UFPE/ED/Projetos/P2/cofre/simulation/modelsim/gate_work
 # Error loading design
-# End time: 17:26:00 on Feb 26,2025, Elapsed time: 0:00:01
-# Errors: 139, Warnings: 0
+# End time: 14:03:46 on Mar 01,2025, Elapsed time: 0:00:00
+# Errors: 16, Warnings: 0

@@ -1,7 +1,7 @@
 TITLE "Parameterized Counter Mod N";
 
 PARAMETERS( N = 10 );
-CONSTANT W = CEIL(LOG2(N+1));
+CONSTANT W = CEIL(LOG2(N+1)); -- Increment to avoid multiples of 2 to be miscalculated
 
 SUBDESIGN cnt_modn
 (
@@ -22,6 +22,7 @@ BEGIN
 	cnt[].clrn = !rst;
 	cnt[].ena = ena;
 
+	-- The async clr is used to speed the proccess by 1 cycle of clock
     IF rst THEN
 		aux = GND;
 		cnt[].clrn = GND;

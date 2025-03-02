@@ -1,29 +1,29 @@
 |cofre
-buzz <= module_failure:inst6.buzzer
+buzz <= buzzer.DB_MAX_OUTPUT_PORT_TYPE
 clk => clk_500m_1s:cl1.clk_50M
 clk => ram_io:ram_pass.clk
 clk => ram_io:ram_show.clk
 clk => display_controller:inst8.clk_50M
-key[1] => debouncer:db1.k
-key[2] => debouncer:db2.k
-key[3] => debouncer:db3.k
-key[4] => debouncer:db4.k
-key[5] => debouncer:db5.k
-dig[1] <= display_controller:inst8.d[1]
-dig[2] <= display_controller:inst8.d[2]
-dig[3] <= display_controller:inst8.d[3]
-dig[4] <= display_controller:inst8.d[4]
+key[1] => block_debouncer:inst.key[1]
+key[2] => block_debouncer:inst.key[2]
+key[3] => block_debouncer:inst.key[3]
+key[4] => block_debouncer:inst.key[4]
+key[5] => block_debouncer:inst.key[5]
+dig[1] <= digit[1].DB_MAX_OUTPUT_PORT_TYPE
+dig[2] <= digit[2].DB_MAX_OUTPUT_PORT_TYPE
+dig[3] <= digit[3].DB_MAX_OUTPUT_PORT_TYPE
+dig[4] <= digit[4].DB_MAX_OUTPUT_PORT_TYPE
 led[1] <= suc.DB_MAX_OUTPUT_PORT_TYPE
-led[2] <= module_failure:inst6.led
-led[3] <= mode:inst.nmode
-seg[1] <= bcd2ss:inst11.seg[1]
-seg[2] <= bcd2ss:inst11.seg[2]
-seg[3] <= bcd2ss:inst11.seg[3]
-seg[4] <= bcd2ss:inst11.seg[4]
-seg[5] <= bcd2ss:inst11.seg[5]
-seg[6] <= bcd2ss:inst11.seg[6]
-seg[7] <= bcd2ss:inst11.seg[7]
-seg[8] <= bcd2ss:inst11.seg[8]
+led[2] <= led_failure.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= nmode.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= ssegment[1].DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= ssegment[2].DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= ssegment[3].DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= ssegment[4].DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= ssegment[5].DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= ssegment[6].DB_MAX_OUTPUT_PORT_TYPE
+seg[7] <= ssegment[7].DB_MAX_OUTPUT_PORT_TYPE
+seg[8] <= ssegment[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cofre|module_failure:inst6
@@ -51,9 +51,9 @@ pulse <= pulse.DB_MAX_OUTPUT_PORT_TYPE
 
 |cofre|clk_500m_1s:cl1
 clk_50M => lpm_counter:cnt_inst.clock
-clk_62m <= $00002.DB_MAX_OUTPUT_PORT_TYPE
-clk_500m <= tffc[4].DB_MAX_OUTPUT_PORT_TYPE
-clk_1s <= tffc[5].DB_MAX_OUTPUT_PORT_TYPE
+clk_125m <= $00002.DB_MAX_OUTPUT_PORT_TYPE
+clk_500m <= tffc[3].DB_MAX_OUTPUT_PORT_TYPE
+clk_1s <= tffc[4].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cofre|clk_500m_1s:cl1|lpm_counter:cnt_inst
@@ -159,14 +159,67 @@ clock => counter_cella21.CLK
 cout <= cout_bit.COMBOUT
 
 
-|cofre|mode:inst
+|cofre|block_debouncer:inst
+inc <= debouncer:db1.o
+key[1] => debouncer:db1.k
+key[2] => debouncer:db2.k
+key[3] => debouncer:db3.k
+key[4] => debouncer:db4.k
+key[5] => debouncer:db5.k
+clk => debouncer:db1.clk
+clk => debouncer:db2.clk
+clk => debouncer:db3.clk
+clk => debouncer:db4.clk
+clk => debouncer:db5.clk
+disable => debouncer:db1.ena
+disable => debouncer:db2.ena
+disable => debouncer:db3.ena
+disable => debouncer:db4.ena
+dec <= debouncer:db2.o
+key_dig <= debouncer:db3.o
+key_mode <= debouncer:db4.o
+mode <= mode:inst.mode
+nrst_mode => mode:inst.nrst
+nmode <= mode:inst.nmode
+hrst <= debouncer:db5.o
+
+
+|cofre|block_debouncer:inst|debouncer:db1
+k => d1.IN0
+clk => d1.CLK
+ena => d1.ENA
+o <= d1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cofre|block_debouncer:inst|debouncer:db2
+k => d1.IN0
+clk => d1.CLK
+ena => d1.ENA
+o <= d1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cofre|block_debouncer:inst|debouncer:db3
+k => d1.IN0
+clk => d1.CLK
+ena => d1.ENA
+o <= d1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cofre|block_debouncer:inst|debouncer:db4
+k => d1.IN0
+clk => d1.CLK
+ena => d1.ENA
+o <= d1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cofre|block_debouncer:inst|mode:inst
 key_mode => tff1.CLK
 nrst => tff1.ACLR
 mode <= tff1.DB_MAX_OUTPUT_PORT_TYPE
 nmode <= nmode.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|cofre|debouncer:db4
+|cofre|block_debouncer:inst|debouncer:db5
 k => d1.IN0
 clk => d1.CLK
 ena => d1.ENA
@@ -204,34 +257,6 @@ q[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
 q[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
 cout <= aux.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|cofre|debouncer:db3
-k => d1.IN0
-clk => d1.CLK
-ena => d1.ENA
-o <= d1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|cofre|debouncer:db5
-k => d1.IN0
-clk => d1.CLK
-ena => d1.ENA
-o <= d1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|cofre|debouncer:db1
-k => d1.IN0
-clk => d1.CLK
-ena => d1.ENA
-o <= d1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|cofre|debouncer:db2
-k => d1.IN0
-clk => d1.CLK
-ena => d1.ENA
-o <= d1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cofre|cnt_modn:cnt_rst5
@@ -586,10 +611,6 @@ clk => cnt[4].CLK
 clk => cnt[3].CLK
 clk => cnt[2].CLK
 clk => cnt[1].CLK
-ena => cnt[4].ENA
-ena => cnt[3].ENA
-ena => cnt[2].ENA
-ena => cnt[1].ENA
 q[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
 q[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE

@@ -3,139 +3,123 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'clk_500m_1s:cl1|tffc[1]'
-Slack : -13.038
-TNS   : -96.880
-
-Type  : Setup 'clk_500m_1s:cl1|tffc[5]'
-Slack : -12.003
-TNS   : -25.304
-
-Type  : Setup 'debouncer:db3|d1'
-Slack : -8.779
-TNS   : -37.216
-
-Type  : Setup 'debouncer:db4|d1'
-Slack : -6.126
-TNS   : -27.768
-
-Type  : Setup 'clk'
-Slack : -5.887
-TNS   : -302.279
-
-Type  : Setup 'display_controller:inst8|display_selector:dspl_sel|tff1'
-Slack : -1.849
-TNS   : -5.387
+Slack : -12.646
+TNS   : -92.856
 
 Type  : Setup 'clk_500m_1s:cl1|tffc[4]'
-Slack : -1.211
-TNS   : -3.599
+Slack : -12.501
+TNS   : -31.023
+
+Type  : Setup 'block_debouncer:inst|debouncer:db3|d1'
+Slack : -8.877
+TNS   : -39.628
+
+Type  : Setup 'block_debouncer:inst|debouncer:db4|d1'
+Slack : -7.065
+TNS   : -31.406
+
+Type  : Setup 'clk'
+Slack : -6.383
+TNS   : -322.625
+
+Type  : Setup 'display_controller:inst8|display_selector:dspl_sel|tff1'
+Slack : -1.792
+TNS   : -5.097
 
 Type  : Setup 'clk_500m_1s:cl1|tffc[2]'
-Slack : 0.466
+Slack : 0.833
 TNS   : 0.000
 
 Type  : Setup 'clk_500m_1s:cl1|tffc[3]'
-Slack : 1.351
+Slack : 1.776
 TNS   : 0.000
 
 Type  : Setup 'display_controller:inst8|display_selector:dspl_sel|lpm_counter:cnt_inst|cntr_jti:auto_generated|safe_q[0]'
-Slack : 4.308
+Slack : 4.815
 TNS   : 0.000
 
 Type  : Setup 'clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[0]'
-Slack : 5.396
+Slack : 5.466
 TNS   : 0.000
 
-Type  : Hold 'debouncer:db3|d1'
-Slack : -6.121
-TNS   : -22.794
+Type  : Hold 'clk_500m_1s:cl1|tffc[4]'
+Slack : -12.747
+TNS   : -15.793
+
+Type  : Hold 'block_debouncer:inst|debouncer:db3|d1'
+Slack : -5.716
+TNS   : -26.726
 
 Type  : Hold 'clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[0]'
-Slack : -5.450
-TNS   : -5.450
+Slack : -5.520
+TNS   : -5.520
 
 Type  : Hold 'display_controller:inst8|display_selector:dspl_sel|lpm_counter:cnt_inst|cntr_jti:auto_generated|safe_q[0]'
-Slack : -4.376
-TNS   : -4.376
+Slack : -4.883
+TNS   : -4.883
 
 Type  : Hold 'clk_500m_1s:cl1|tffc[1]'
-Slack : -2.125
-TNS   : -2.125
+Slack : -2.854
+TNS   : -4.571
 
-Type  : Hold 'clk_500m_1s:cl1|tffc[4]'
-Slack : -1.692
-TNS   : -3.007
+Type  : Hold 'clk_500m_1s:cl1|tffc[3]'
+Slack : -1.830
+TNS   : -1.830
 
 Type  : Hold 'clk'
 Slack : -1.503
 TNS   : -5.189
 
-Type  : Hold 'debouncer:db4|d1'
-Slack : -1.499
-TNS   : -2.998
-
-Type  : Hold 'clk_500m_1s:cl1|tffc[3]'
-Slack : -1.405
-TNS   : -1.405
-
-Type  : Hold 'clk_500m_1s:cl1|tffc[5]'
-Slack : -1.088
-TNS   : -1.558
-
 Type  : Hold 'clk_500m_1s:cl1|tffc[2]'
-Slack : -0.520
-TNS   : -0.520
+Slack : -0.887
+TNS   : -0.887
+
+Type  : Hold 'block_debouncer:inst|debouncer:db4|d1'
+Slack : -0.142
+TNS   : -0.284
 
 Type  : Hold 'display_controller:inst8|display_selector:dspl_sel|tff1'
-Slack : 1.667
+Slack : 1.660
 TNS   : 0.000
-
-Type  : Recovery 'clk_500m_1s:cl1|tffc[5]'
-Slack : -12.878
-TNS   : -38.634
-
-Type  : Recovery 'clk_500m_1s:cl1|tffc[1]'
-Slack : -12.650
-TNS   : -50.600
 
 Type  : Recovery 'clk_500m_1s:cl1|tffc[4]'
-Slack : -12.347
-TNS   : -24.242
+Slack : -13.815
+TNS   : -63.306
 
 Type  : Recovery 'clk'
-Slack : -11.660
-TNS   : -260.607
+Slack : -12.309
+TNS   : -272.920
 
-Type  : Recovery 'debouncer:db3|d1'
-Slack : -10.455
-TNS   : -37.254
+Type  : Recovery 'clk_500m_1s:cl1|tffc[1]'
+Slack : -11.754
+TNS   : -47.016
 
-Type  : Recovery 'debouncer:db4|d1'
-Slack : -9.039
-TNS   : -17.156
+Type  : Recovery 'block_debouncer:inst|debouncer:db3|d1'
+Slack : -11.449
+TNS   : -40.954
 
-Type  : Removal 'debouncer:db3|d1'
-Slack : -7.016
-TNS   : -26.052
-
-Type  : Removal 'debouncer:db4|d1'
-Slack : -2.394
-TNS   : -6.505
-
-Type  : Removal 'clk_500m_1s:cl1|tffc[5]'
-Slack : 0.405
-TNS   : 0.000
+Type  : Recovery 'block_debouncer:inst|debouncer:db4|d1'
+Slack : -8.286
+TNS   : -22.251
 
 Type  : Removal 'clk_500m_1s:cl1|tffc[4]'
-Slack : 0.461
-TNS   : 0.000
+Slack : -10.648
+TNS   : -10.648
+
+Type  : Removal 'block_debouncer:inst|debouncer:db3|d1'
+Slack : -7.565
+TNS   : -26.631
+
+Type  : Removal 'block_debouncer:inst|debouncer:db4|d1'
+Slack : -1.991
+TNS   : -3.982
 
 Type  : Removal 'clk'
-Slack : 1.288
+Slack : 0.662
 TNS   : 0.000
 
 Type  : Removal 'clk_500m_1s:cl1|tffc[1]'
-Slack : 2.013
+Slack : 0.732
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clk'
@@ -144,6 +128,14 @@ TNS   : -2.289
 
 Type  : Minimum Pulse Width 'display_controller:inst8|display_selector:dspl_sel|lpm_counter:cnt_inst|cntr_jti:auto_generated|safe_q[0]'
 Slack : 0.220
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'block_debouncer:inst|debouncer:db3|d1'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'block_debouncer:inst|debouncer:db4|d1'
+Slack : 0.234
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clk_500m_1s:cl1|lpm_counter:cnt_inst|cntr_92j:auto_generated|safe_q[0]'
@@ -163,18 +155,6 @@ Slack : 0.234
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clk_500m_1s:cl1|tffc[4]'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'clk_500m_1s:cl1|tffc[5]'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'debouncer:db3|d1'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'debouncer:db4|d1'
 Slack : 0.234
 TNS   : 0.000
 

@@ -6,7 +6,7 @@ CONSTANT WIDTH = CEIL(LOG2(AVALUE));
 
 SUBDESIGN clk_500m_1s (
 	clk_50M : INPUT;
-	clk_62m, clk_500m, clk_1s : OUTPUT;
+	clk_125m, clk_500m, clk_1s : OUTPUT;
 )
 VARIABLE
 	cnt_inst : LPM_COUNTER
@@ -15,7 +15,7 @@ VARIABLE
 		LPM_WIDTH = WIDTH,
 		LPM_DIRECTION = "UP"
 	);
-	tffc[5..1] : TFFE;
+	tffc[4..1] : TFF;
 BEGIN
 	cnt_inst.clock = clk_50M;
 	
@@ -24,10 +24,9 @@ BEGIN
 	tffc[2].clk = tffc[1];
 	tffc[3].clk = tffc[2];
 	tffc[4].clk = tffc[3];
-	tffc[5].clk = tffc[4];
 	
 	
-	clk_62m = LCELL(tffc[1]);
-	clk_500m = tffc[4];
-	clk_1s = tffc[5];
+	clk_125m = LCELL(tffc[1]);
+	clk_500m = tffc[3];
+	clk_1s = tffc[4];
 END;

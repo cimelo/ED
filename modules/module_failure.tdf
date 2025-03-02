@@ -4,7 +4,7 @@ INCLUDE "oneshot_pulse";
 
 SUBDESIGN module_failure (
 	fail[2..1], -- 1 - partial failure; 2 - total failure 
-		clk_500m, mode,
+		clk, mode,
 		hrst, srst, suc : INPUT;
 	led, buzzer, disable : OUTPUT;
 )
@@ -17,7 +17,7 @@ VARIABLE
 	
 BEGIN
 	-- Partial failure handling
-	os.clk = clk_500m;
+	os.clk = clk;
 	os.trigger = fail[1];
 	aux = os.pulse;
 	
@@ -26,7 +26,7 @@ BEGIN
 	tf[].ena = !mode;
 	tf[].clrn = !hrst;
 	tf[] = VCC;
-	tf[2].clk = tf[1] & clk_500m;
+	tf[2].clk = tf[1] & clk;
 	
 	-- Disable circuit until hrst
 	dis.clk = fail[2];
