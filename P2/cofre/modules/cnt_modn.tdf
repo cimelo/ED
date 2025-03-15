@@ -1,0 +1,41 @@
+TITLE "Parameterized Counter Mod N";
+
+PARAMETERS( N = 10 );
+CONSTANT W = CEIL(LOG2(N+1)); -- Increment to avoid multiples of 2 to be miscalculated
+
+SUBDESIGN cnt_modn
+(
+    clk, rst, ena	: INPUT;          
+    q[W..1], cout : OUTPUT;
+)
+
+VARIABLE
+    aux : NODE;
+    cnt[W..1] : DFFE;
+
+BEGIN
+	DEFAULTS
+		aux = GND;
+		cnt[] = 0;
+	END DEFAULTS;
+	
+	cnt[].clk = clk;
+	cnt[].clrn = !rst;
+	cnt[].ena = ena;
+
+	-- The async clr is used to speed the proccess by 1 cycle of clock
+    IF rst THEN
+		aux = GND;
+		cnt[].clrn = GND;
+		cnt[] = 0;
+	ELSIF cnt[] == N THEN
+		aux = VCC;
+		cnt[].clrn = GND;
+		cnt[] = 0;
+    ELSE
+		cnt[] = cnt[] + 1;
+	END IF;
+
+	cout = aux;
+	q[] = cnt[W..1];
+END;

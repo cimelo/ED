@@ -1,0 +1,32 @@
+TITLE "Display Selector";
+INCLUDE "lpm_counter.inc";
+INCLUDE "cnt_modn.inc";
+
+CONSTANT AVALUE = 5000;
+CONSTANT FREQ = CEIL(LOG2(AVALUE));
+
+SUBDESIGN display_selector (
+    clk_50M : INPUT;
+    q[2..1], clk_10k : OUTPUT;
+)
+
+VARIABLE 
+    cnt_inst: LPM_COUNTER
+	WITH (
+		LPM_AVALUE = AVALUE,
+	    LPM_WIDTH = FREQ,
+        LPM_DIRECTION = "UP"
+	);
+    cnt_mod4: cnt_modn WITH ( N = 4 );
+    tff1: TFF;
+	
+BEGIN
+    cnt_inst.clock = clk_50M;
+    tff1.clk = cnt_inst.cout;
+    tff1 = VCC;
+	cnt_mod4.ena = VCC;
+    cnt_mod4.clk = tff1;
+	clk_10k = tff1.q;
+    cnt_mod4.rst = GND;
+	q[] = cnt_mod4.q[2..1];
+END;

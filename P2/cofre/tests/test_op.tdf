@@ -1,0 +1,21 @@
+TITLE "Test Logic";
+
+%
+	Unit Test for logic operations
+%
+
+SUBDESIGN test_op (
+	led[1] : OUTPUT;
+)
+
+VARIABLE
+	a[4..1] : NODE;
+	b[4..1] : NODE;
+BEGIN
+	DEFAULTS
+		a[] = 5;
+		b[] = 5;
+	END DEFAULTS;
+	
+	led[1] = (a != b);
+END;

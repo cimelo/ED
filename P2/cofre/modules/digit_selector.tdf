@@ -1,0 +1,36 @@
+TITLE "Display Selector";
+%
+	This module counts from 0 to 3
+	to set the frequency of change
+	of the lighted up digit
+%
+
+INCLUDE "lpm_counter.inc";
+INCLUDE "cnt_modn.inc";
+
+CONSTANT AVALUE = 5000;
+CONSTANT WIDTH = CEIL(LOG2(AVALUE));
+CONSTANT N = 4;
+
+SUBDESIGN digit_selector(
+    clk_50M: INPUT;
+    q[2..1] : OUTPUT;
+)
+
+VARIABLE 
+    cnt_inst: LPM_COUNTER
+	WITH (
+		LPM_AVALUE = AVALUE,
+	    LPM_WIDTH = WIDTH,
+        LPM_DIRECTION = "UP"
+	);
+    cnt_mod4: cnt_modn WITH ( N = 4 );
+    tff1: TFF;
+	
+BEGIN
+    cnt_inst.clock = clk_50M;
+    tff1.clk = cnt_inst.cout;
+    tff1 = VCC;
+    cnt_mod4.clk = tff1;
+    q[] = cnt_mod4.q[2..1];
+END;
