@@ -7,16 +7,17 @@ Family                :  maxii
 Quartus root          :  /home/caio/intelFPGA_lite/20.1/quartus/linux64/
 Quartus sim root      :  /home/caio/intelFPGA_lite/20.1/quartus/eda/sim_lib
 Simulation Tool       :  modelsim-altera
-Simulation Language   :  verilog
+Simulation Language   :  vhdl
+Version               :  93
 Simulation Mode       :  GUI
-Sim Output File       :  cofre.vo
-Sim SDF file          :  cofre__verilog.sdo
+Sim Output File       :  cofre.vho
+Sim SDF file          :  cofre__vhdl.sdo
 Sim dir               :  simulation/modelsim
 
 =======================================================
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script /home/caio/intelFPGA_lite/20.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File cofre_run_msim_gate_verilog.do already exists - backing up current file as cofre_run_msim_gate_verilog.do.bak2
+Warning: File cofre_run_msim_gate_vhdl.do already exists - backing up current file as cofre_run_msim_gate_vhdl.do.bak
 Info: Spawning ModelSim-Altera Simulation software 
 Info: NativeLink simulation flow was successful

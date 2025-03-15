@@ -18,6 +18,7 @@ BEGIN
 		aux = GND;
 		cnt[] = 0;
 	END DEFAULTS;
+	
 	cnt[].clk = clk;
 	cnt[].clrn = !rst;
 	cnt[].ena = ena;
