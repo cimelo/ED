@@ -6,5 +6,6 @@ dist/
 build/
 *.bak
 **/Relatorio/
+Docs/
 *.eps
 *.mp4
