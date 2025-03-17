@@ -1,0 +1,135 @@
+# do Bomba_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying /home/caio/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Bomba.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:29:23 on Mar 16,2025
+# vcom -reportprogress 300 -93 -work work Bomba.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package maxii_atom_pack
+# -- Loading package maxii_components
+# -- Compiling entity cnt_modn
+# -- Compiling architecture structure of cnt_modn
+# End time: 16:29:23 on Mar 16,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# stdin: <EOF>
+vsim work.cnt_modn
+# vsim work.cnt_modn 
+# Start time: 16:29:30 on Mar 16,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading maxii.maxii_atom_pack(body)
+# Loading maxii.maxii_components
+# Loading work.cnt_modn(structure)
+# Loading maxii.maxii_io(behave)
+# Loading maxii.maxii_lcell(vital_le_atom)
+# Loading maxii.maxii_asynch_lcell(vital_le)
+# Loading maxii.maxii_lcell_register(vital_le_reg)
+add wave -position insertpoint  \
+sim:/cnt_modn/clk \
+sim:/cnt_modn/en \
+sim:/cnt_modn/rst \
+sim:/cnt_modn/inc \
+sim:/cnt_modn/dec \
+sim:/cnt_modn/q \
+sim:/cnt_modn/cout
+force -freeze sim:/cnt_modn/clk 1 0, 0 {50000 ps} -r 100ns
+force -freeze sim:/cnt_modn/en 1 0
+force -freeze sim:/cnt_modn/rst 1 , 0 {100000 ps} -r 1000ns
+force -freeze sim:/cnt_modn/inc 1 0, 0 {500000 ps} -r 1000ns
+force -freeze sim:/cnt_modn/dec 1 500ns, 0 {1000000 ps} -r 1000ns
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cnt_modn
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /cnt_modn
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 1  Instance: /cnt_modn
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /cnt_modn
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 2  Instance: /cnt_modn
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /cnt_modn
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 3  Instance: /cnt_modn
+# ** Fatal: (vsim-3421) Value 10 is out of range 0 to 9.
+#    Time: 0 ps  Iteration: 4  Process: /cnt_modn/line__98 File: Bomba.vho Line: 98
+# Fatal error in Architecture structure at Bomba.vho line 98
+# 
+# HDL call sequence:
+# Stopped at Bomba.vho 98 Architecture structure
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at Bomba.vho 98 Architecture structure
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at Bomba.vho 98 Architecture structure
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at Bomba.vho 98 Architecture structure
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at Bomba.vho 98 Architecture structure
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at Bomba.vho 98 Architecture structure
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at Bomba.vho 98 Architecture structure
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at Bomba.vho 98 Architecture structure
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at Bomba.vho 98 Architecture structure
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at Bomba.vho 98 Architecture structure
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at Bomba.vho 98 Architecture structure
+# 
+# End time: 16:31:30 on Mar 16,2025, Elapsed time: 0:02:00
+# Errors: 1, Warnings: 8
