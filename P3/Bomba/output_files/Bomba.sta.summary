@@ -3,39 +3,15 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'clk'
-Slack : -4.568
-TNS   : -96.666
-
-Type  : Setup 'inst5'
-Slack : -2.423
-TNS   : -24.125
-
-Type  : Setup 'lpm_counter:inst3|cntr_ldg:auto_generated|safe_q[0]'
-Slack : 5.437
-TNS   : 0.000
-
-Type  : Hold 'lpm_counter:inst3|cntr_ldg:auto_generated|safe_q[0]'
-Slack : -5.516
-TNS   : -5.516
+Slack : -4.603
+TNS   : -22.407
 
 Type  : Hold 'clk'
-Slack : -1.607
-TNS   : -4.021
-
-Type  : Hold 'inst5'
-Slack : 1.788
+Slack : 2.107
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clk'
 Slack : -2.289
 TNS   : -2.289
-
-Type  : Minimum Pulse Width 'lpm_counter:inst3|cntr_ldg:auto_generated|safe_q[0]'
-Slack : 0.209
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'inst5'
-Slack : 0.234
-TNS   : 0.000
 
 ------------------------------------------------------------

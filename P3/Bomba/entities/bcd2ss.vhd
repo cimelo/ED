@@ -10,15 +10,15 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY bcd2ss IS
 	PORT(
 		d : IN NATURAL RANGE 9 DOWNTO 0;
-		c : IN STD_LOGIC; -- Signal to update the value
+		clk : IN STD_LOGIC; -- Signal to update the value
 		q : OUT STD_LOGIC_VECTOR(8 DOWNTO 1));
 END bcd2ss;
 
 ARCHITECTURE behaviour OF bcd2ss IS
 BEGIN
-	PROCESS (c)
+	PROCESS (clk)
 	BEGIN
-		IF (RISING_EDGE(c)) THEN
+		IF (clk'EVENT AND clk = '1') THEN
 			CASE (d) IS
 				WHEN 0 => q <= B"11000000";
 				WHEN 1 => q <= B"11111001";
