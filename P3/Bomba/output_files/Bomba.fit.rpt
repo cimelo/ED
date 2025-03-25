@@ -1,5 +1,5 @@
 Fitter report for Bomba
-Tue Mar 25 15:40:51 2025
+Tue Mar 25 15:42:58 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Tue Mar 25 15:40:51 2025       ;
+; Fitter Status         ; Successful - Tue Mar 25 15:42:58 2025       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; Bomba                                       ;
 ; Top-level Entity Name ; test_uni_dec                                ;
@@ -580,8 +580,8 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file /mnt/caio/General/UFPE/ED/ED/P3/Bomba/output_files/Bomba.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 516 megabytes
-    Info: Processing ended: Tue Mar 25 15:40:51 2025
+    Info: Peak virtual memory: 517 megabytes
+    Info: Processing ended: Tue Mar 25 15:42:58 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

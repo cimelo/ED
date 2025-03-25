@@ -198,6 +198,3 @@ set_global_assignment -name VHDL_FILE /mnt/caio/General/UFPE/ED/ED/P3/Bomba/enti
 set_global_assignment -name SEARCH_PATH /mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests
 set_global_assignment -name SEARCH_PATH /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities
 set_global_assignment -name BDF_FILE /mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests/test_rng.bdf
-
-set_global_assignment -name VHDL_FILE /mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests/test_dec_uni.vhd
-set_global_assignment -name BDF_FILE /mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests/test_uni_dec.bdf
