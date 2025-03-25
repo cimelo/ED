@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Bomba
-Fri Mar 21 08:59:42 2025
+Tue Mar 25 15:40:50 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,8 +13,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -41,12 +42,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Mar 21 08:59:42 2025       ;
+; Analysis & Synthesis Status ; Successful - Tue Mar 25 15:40:50 2025       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; Bomba                                       ;
-; Top-level Entity Name       ; cnt_mod10                                   ;
+; Top-level Entity Name       ; test_uni_dec                                ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 16                                          ;
+; Total logic elements        ; 0                                           ;
 ; Total pins                  ; 10                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -59,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EPM240T100I5       ;                    ;
-; Top-level entity name                                            ; cnt_mod10          ; Bomba              ;
+; Top-level entity name                                            ; test_uni_dec       ; Bomba              ;
 ; Family name                                                      ; MAX II             ; Cyclone V          ;
 ; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -141,58 +142,71 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                            ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
-; entities/gen_functions.vhd       ; yes             ; User VHDL File  ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd ;         ;
-; entities/cnt_mod10.vhd           ; yes             ; User VHDL File  ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/cnt_mod10.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+---------+
+; entities/gen_functions.vhd       ; yes             ; User VHDL File                     ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd ;         ;
+; entities/bcd2ss.vhd              ; yes             ; User VHDL File                     ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/bcd2ss.vhd        ;         ;
+; tests/test_dec_uni.vhd           ; yes             ; User VHDL File                     ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests/test_dec_uni.vhd     ;         ;
+; tests/test_uni_dec.bdf           ; yes             ; User Block Diagram/Schematic File  ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests/test_uni_dec.bdf     ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Total logic elements                        ; 16     ;
-;     -- Combinational with no register       ; 11     ;
-;     -- Register only                        ; 0      ;
-;     -- Combinational with a register        ; 5      ;
-;                                             ;        ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 10     ;
-;     -- 3 input functions                    ; 5      ;
-;     -- 2 input functions                    ; 1      ;
-;     -- 1 input functions                    ; 0      ;
-;     -- 0 input functions                    ; 0      ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 16     ;
-;     -- arithmetic mode                      ; 0      ;
-;     -- qfbk mode                            ; 0      ;
-;     -- register cascade mode                ; 0      ;
-;     -- synchronous clear/load mode          ; 0      ;
-;     -- asynchronous clear/load mode         ; 5      ;
-;                                             ;        ;
-; Total registers                             ; 5      ;
-; I/O pins                                    ; 10     ;
-; Maximum fan-out node                        ; cnt[0] ;
-; Maximum fan-out                             ; 7      ;
-; Total fan-out                               ; 77     ;
-; Average fan-out                             ; 2.96   ;
-+---------------------------------------------+--------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 0     ;
+;     -- Combinational with no register       ; 0     ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- 2 input functions                    ; 0     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 10    ;
++---------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |cnt_mod10                 ; 16 (16)     ; 5            ; 0          ; 10   ; 0            ; 11 (11)      ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |cnt_mod10          ; cnt_mod10   ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                 ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name  ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+--------------+
+; |test_uni_dec              ; 0 (0)       ; 0            ; 0          ; 10   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |test_uni_dec       ; test_uni_dec ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; bcd2ss:inst1|q[1,2]                   ; Stuck at GND due to stuck port data_in ;
+; bcd2ss:inst1|q[3]                     ; Stuck at VCC due to stuck port data_in ;
+; bcd2ss:inst1|q[4,5]                   ; Stuck at GND due to stuck port data_in ;
+; bcd2ss:inst1|q[6]                     ; Stuck at VCC due to stuck port data_in ;
+; bcd2ss:inst1|q[7]                     ; Stuck at GND due to stuck port data_in ;
+; bcd2ss:inst1|q[8]                     ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 8 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -200,12 +214,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5     ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -216,13 +230,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Mar 21 08:59:29 2025
+    Info: Processing started: Tue Mar 25 15:40:36 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Bomba -c Bomba
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 0 entities, in source file entities/gen_functions.vhd
-    Info (12022): Found design unit 1: gen_functions File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd Line: 7
-    Info (12022): Found design unit 2: gen_functions-body File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd Line: 14
+    Info (12022): Found design unit 1: gen_functions File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd Line: 11
+    Info (12022): Found design unit 2: gen_functions-body File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd Line: 24
 Info (12021): Found 2 design units, including 1 entities, in source file entities/bcd2ss.vhd
     Info (12022): Found design unit 1: bcd2ss-behaviour File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/bcd2ss.vhd Line: 17
     Info (12023): Found entity 1: bcd2ss File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/bcd2ss.vhd Line: 10
@@ -235,18 +249,40 @@ Info (12021): Found 2 design units, including 1 entities, in source file entitie
     Info (12022): Found design unit 1: cnt_mod10-behaviour File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/cnt_mod10.vhd Line: 20
     Info (12023): Found entity 1: cnt_mod10 File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/cnt_mod10.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file entities/rng.vhd
-    Info (12022): Found design unit 1: rng-behaviour File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/rng.vhd Line: 16
-    Info (12023): Found entity 1: rng File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/rng.vhd Line: 10
-Info (12127): Elaborating entity "cnt_mod10" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at cnt_mod10.vhd(29): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/cnt_mod10.vhd Line: 29
-Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 16 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 399 megabytes
-    Info: Processing ended: Fri Mar 21 08:59:42 2025
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:30
+    Info (12022): Found design unit 1: rng-behaviour File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/rng.vhd Line: 20
+    Info (12023): Found entity 1: rng File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/rng.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file entities/osc_ring.vhd
+    Info (12022): Found design unit 1: osc_ring-behaviour File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 16
+    Info (12023): Found entity 1: osc_ring File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file tests/test_rng.bdf
+    Info (12023): Found entity 1: test_rng
+Info (12021): Found 2 design units, including 1 entities, in source file tests/test_dec_uni.vhd
+    Info (12022): Found design unit 1: test_dec_uni-behaviour File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests/test_dec_uni.vhd Line: 9
+    Info (12023): Found entity 1: test_dec_uni File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests/test_dec_uni.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file tests/test_uni_dec.bdf
+    Info (12023): Found entity 1: test_uni_dec
+Info (12127): Elaborating entity "test_uni_dec" for the top level hierarchy
+Info (12128): Elaborating entity "bcd2ss" for hierarchy "bcd2ss:inst1"
+Info (12128): Elaborating entity "test_dec_uni" for hierarchy "test_dec_uni:inst"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "dig[1]" is stuck at GND
+    Warning (13410): Pin "seg[8]" is stuck at VCC
+    Warning (13410): Pin "seg[7]" is stuck at GND
+    Warning (13410): Pin "seg[6]" is stuck at VCC
+    Warning (13410): Pin "seg[5]" is stuck at GND
+    Warning (13410): Pin "seg[4]" is stuck at GND
+    Warning (13410): Pin "seg[3]" is stuck at VCC
+    Warning (13410): Pin "seg[2]" is stuck at GND
+    Warning (13410): Pin "seg[1]" is stuck at GND
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 9 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 400 megabytes
+    Info: Processing ended: Tue Mar 25 15:40:50 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:31
 
 

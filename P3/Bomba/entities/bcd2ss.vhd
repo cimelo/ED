@@ -18,7 +18,7 @@ ARCHITECTURE behaviour OF bcd2ss IS
 BEGIN
 	PROCESS (clk)
 	BEGIN
-		IF (clk'EVENT AND clk = '1') THEN
+		IF (rising_edge(clk)) THEN
 			CASE (d) IS
 				WHEN 0 => q <= B"11000000";
 				WHEN 1 => q <= B"11111001";

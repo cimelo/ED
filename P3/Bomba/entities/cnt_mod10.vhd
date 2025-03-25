@@ -27,7 +27,7 @@ BEGIN
 			cnt := 0;
 			aux := '0';
 		ELSIF (en = '1') THEN
-			IF (clk'EVENT AND clk = '1') THEN
+			IF (rising_edge(clk)) THEN
 				IF (inc = '1' AND cnt = 9) THEN
 					cnt := 0;
 					aux := '1';

@@ -1,27 +1,68 @@
-|cnt_mod10
-clk => aux.CLK
-clk => cnt[0].CLK
-clk => cnt[1].CLK
-clk => cnt[2].CLK
-clk => cnt[3].CLK
-en => aux.ENA
-en => cnt[3].ENA
-en => cnt[2].ENA
-en => cnt[1].ENA
-en => cnt[0].ENA
-rst => aux.ACLR
-rst => cnt[0].ACLR
-rst => cnt[1].ACLR
-rst => cnt[2].ACLR
-rst => cnt[3].ACLR
-inc => process_0.IN1
-inc => process_0.IN1
-dec => process_0.IN1
-dec => process_0.IN1
-q[0] << cnt[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] << cnt[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] << cnt[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] << cnt[3].DB_MAX_OUTPUT_PORT_TYPE
-cout << aux.DB_MAX_OUTPUT_PORT_TYPE
+|test_uni_dec
+dig[1] <= <GND>
+seg[1] <= bcd2ss:inst1.q[1]
+seg[2] <= bcd2ss:inst1.q[2]
+seg[3] <= bcd2ss:inst1.q[3]
+seg[4] <= bcd2ss:inst1.q[4]
+seg[5] <= bcd2ss:inst1.q[5]
+seg[6] <= bcd2ss:inst1.q[6]
+seg[7] <= bcd2ss:inst1.q[7]
+seg[8] <= bcd2ss:inst1.q[8]
+clk => bcd2ss:inst1.clk
+
+
+|test_uni_dec|bcd2ss:inst1
+d[0] => Mux0.IN19
+d[0] => Mux1.IN19
+d[0] => Mux2.IN10
+d[0] => Mux3.IN19
+d[0] => Mux4.IN10
+d[0] => Mux5.IN10
+d[0] => Mux6.IN19
+d[1] => Mux0.IN18
+d[1] => Mux1.IN18
+d[1] => Mux2.IN9
+d[1] => Mux3.IN18
+d[1] => Mux4.IN9
+d[1] => Mux5.IN9
+d[1] => Mux6.IN18
+d[2] => Mux0.IN17
+d[2] => Mux1.IN17
+d[2] => Mux2.IN8
+d[2] => Mux3.IN17
+d[2] => Mux4.IN8
+d[2] => Mux5.IN8
+d[2] => Mux6.IN17
+d[3] => Mux0.IN16
+d[3] => Mux1.IN16
+d[3] => Mux3.IN16
+d[3] => Mux6.IN16
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
+clk => q[7]~reg0.CLK
+clk => q[8]~reg0.CLK
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test_uni_dec|test_dec_uni:inst
+du[1] <= <VCC>
+du[2] <= <GND>
+du[3] <= <VCC>
+du[4] <= <GND>
+du[5] <= <GND>
+du[6] <= <VCC>
+du[7] <= <GND>
+du[8] <= <GND>
 
 
