@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100I5
-set_global_assignment -name TOP_LEVEL_ENTITY test_rng
+set_global_assignment -name TOP_LEVEL_ENTITY main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "06:00:23  MARCH 16, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -84,10 +84,10 @@ set_location_assignment PIN_42 -to key[6]
 
 
 #--------------------CKEY----------------------#
-set_location_assignment PIN_53 -to ckey[1]
-set_location_assignment PIN_52 -to ckey[2]
-set_location_assignment PIN_51 -to ckey[3]
-set_location_assignment PIN_50 -to ckey[4]
+set_location_assignment PIN_50 -to ckey[1]
+set_location_assignment PIN_51 -to ckey[2]
+set_location_assignment PIN_52 -to ckey[3]
+set_location_assignment PIN_53 -to ckey[4]
 
 
 #--------------------DIG----------------------#
@@ -200,3 +200,4 @@ set_global_assignment -name SEARCH_PATH /mnt/caio/General/UFPE/ED/ED/P3/Bomba/en
 set_global_assignment -name BDF_FILE /mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests/test_rng.bdf
 
 set_global_assignment -name VHDL_FILE /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/debouncer.vhd
+set_global_assignment -name VHDL_FILE /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd.vhd

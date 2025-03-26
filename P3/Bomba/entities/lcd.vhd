@@ -3,10 +3,12 @@
 --	driver
 ---------------------------------
 
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
 ENTITY lcd IS 
 	PORT(
-		clk, rst : ST
-	);
+		clk, rst : STD_LOGIC);
 END lcd;
 
 ARCHITECTURE behaviour OF lcd IS

@@ -74,7 +74,7 @@ RESERVED_INPUT               : 8         :        :                   :         
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 10        : gnd    :                   :         :           :                
 GNDINT                       : 11        : gnd    :                   :         :           :                
-clk                          : 12        : input  : 3.3-V LVTTL       :         : 1         : Y              
+RESERVED_INPUT               : 12        :        :                   :         : 1         :                
 VCCINT                       : 13        : power  :                   : 2.5V/3.3V :           :                
 RESERVED_INPUT               : 14        :        :                   :         : 1         :                
 RESERVED_INPUT               : 15        :        :                   :         : 1         :                
@@ -111,11 +111,11 @@ VCCIO1                       : 45        : power  :                   : 3.3V    
 GNDIO                        : 46        : gnd    :                   :         :           :                
 RESERVED_INPUT               : 47        :        :                   :         : 1         :                
 RESERVED_INPUT               : 48        :        :                   :         : 1         :                
-key[1]                       : 49        : input  : 3.3-V LVTTL       :         : 1         : Y              
-RESERVED_INPUT               : 50        :        :                   :         : 1         :                
-RESERVED_INPUT               : 51        :        :                   :         : 1         :                
-RESERVED_INPUT               : 52        :        :                   :         : 2         :                
-RESERVED_INPUT               : 53        :        :                   :         : 2         :                
+RESERVED_INPUT               : 49        :        :                   :         : 1         :                
+ckey[1]                      : 50        : input  : 3.3-V LVTTL       :         : 1         : Y              
+ckey[2]                      : 51        : input  : 3.3-V LVTTL       :         : 1         : Y              
+ckey[3]                      : 52        : input  : 3.3-V LVTTL       :         : 2         : Y              
+ckey[4]                      : 53        : input  : 3.3-V LVTTL       :         : 2         : Y              
 RESERVED_INPUT               : 54        :        :                   :         : 2         :                
 RESERVED_INPUT               : 55        :        :                   :         : 2         :                
 RESERVED_INPUT               : 56        :        :                   :         : 2         :                
@@ -136,20 +136,20 @@ RESERVED_INPUT               : 70        :        :                   :         
 RESERVED_INPUT               : 71        :        :                   :         : 2         :                
 RESERVED_INPUT               : 72        :        :                   :         : 2         :                
 RESERVED_INPUT               : 73        :        :                   :         : 2         :                
-seg[5]                       : 74        : output : 3.3-V LVTTL       :         : 2         : Y              
-seg[4]                       : 75        : output : 3.3-V LVTTL       :         : 2         : Y              
-seg[1]                       : 76        : output : 3.3-V LVTTL       :         : 2         : Y              
-seg[8]                       : 77        : output : 3.3-V LVTTL       :         : 2         : Y              
-seg[6]                       : 78        : output : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT               : 74        :        :                   :         : 2         :                
+RESERVED_INPUT               : 75        :        :                   :         : 2         :                
+RESERVED_INPUT               : 76        :        :                   :         : 2         :                
+RESERVED_INPUT               : 77        :        :                   :         : 2         :                
+RESERVED_INPUT               : 78        :        :                   :         : 2         :                
 GNDIO                        : 79        : gnd    :                   :         :           :                
 VCCIO2                       : 80        : power  :                   : 3.3V    : 2         :                
-seg[3]                       : 81        : output : 3.3-V LVTTL       :         : 2         : Y              
-seg[7]                       : 82        : output : 3.3-V LVTTL       :         : 2         : Y              
-seg[2]                       : 83        : output : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT               : 81        :        :                   :         : 2         :                
+RESERVED_INPUT               : 82        :        :                   :         : 2         :                
+RESERVED_INPUT               : 83        :        :                   :         : 2         :                
 RESERVED_INPUT               : 84        :        :                   :         : 2         :                
 RESERVED_INPUT               : 85        :        :                   :         : 2         :                
 RESERVED_INPUT               : 86        :        :                   :         : 2         :                
-dig[1]                       : 87        : output : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT               : 87        :        :                   :         : 2         :                
 RESERVED_INPUT               : 88        :        :                   :         : 2         :                
 RESERVED_INPUT               : 89        :        :                   :         : 2         :                
 RESERVED_INPUT               : 90        :        :                   :         : 2         :                
