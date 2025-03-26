@@ -1,0 +1,139 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/mnt/caio/General/UFPE/ED/ED/P3/Bomba/simulation/modelsim
+Eosc_ring
+Z0 w1742736764
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 5
+Z3 d/mnt/caio/General/UFPE/ED/ED/P3/Sim
+Z4 8/mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd
+Z5 F/mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd
+l0
+L10 1
+VDRBzLCA]aC_DL1oz@U=X>0
+!s100 H_;EjHe>^dJCVON7SXSO91
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1742994233
+!i10b 1
+Z8 !s108 1742994233.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd|
+Z10 !s107 /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abehaviour
+R1
+R2
+DEx4 work 8 osc_ring 0 22 DRBzLCA]aC_DL1oz@U=X>0
+!i122 5
+l22
+L16 13
+VK09R<WgQfcJADZPZK?bTb3
+!s100 kB`NGLkVE1NY5z370fNK;2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Erng
+Z13 w1742993603
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R1
+R2
+!i122 6
+R3
+Z15 8/mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/rng.vhd
+Z16 F/mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/rng.vhd
+l0
+L14 1
+VSG>zL?RDZZFKX0hPzlDOz1
+!s100 >J0T@?b7:mGambQjhIjzS0
+R6
+32
+R7
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/rng.vhd|
+Z18 !s107 /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/rng.vhd|
+!i113 1
+R11
+R12
+Abehaviour
+R14
+R1
+R2
+Z19 DEx4 work 3 rng 0 22 SG>zL?RDZZFKX0hPzlDOz1
+!i122 6
+l38
+L20 44
+V2m]9U7TiZE>@3>2YSJ^Lc1
+!s100 L3zkdfI2JNO7Ze=zUc:`D1
+R6
+32
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Erngtb
+Z20 w1742994230
+R14
+R1
+R2
+!i122 7
+R3
+Z21 8/mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests/rngTB.vhd
+Z22 F/mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests/rngTB.vhd
+l0
+L5 1
+VUMBkeRkEc2KCS:>eDYBIf3
+!s100 G:b=zejOX2>ba^]hQ8ca00
+R6
+32
+R7
+!i10b 1
+R8
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests/rngTB.vhd|
+!s107 /mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests/rngTB.vhd|
+!i113 1
+R11
+R12
+Asim
+R19
+R14
+R1
+R2
+DEx4 work 5 rngtb 0 22 UMBkeRkEc2KCS:>eDYBIf3
+!i122 7
+l15
+L8 30
+V?5hl2FBVzVE?e0h1>mlC<3
+!s100 bI8OX^8F>cm_HIP?EIJI51
+R6
+32
+R7
+!i10b 1
+R8
+R23
+Z24 !s107 /mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests/rngTB.vhd|
+!i113 1
+R11
+R12

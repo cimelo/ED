@@ -14,14 +14,14 @@ ENTITY cnt_modn IS
 	GENERIC(N : NATURAL := 10);
 	PORT(
 		clk, en, rst, inc, dec : IN STD_LOGIC;
-		q : OUT NATURAL RANGE N-1 DOWNTO 0;
+		q : OUT STD_LOGIC_VECTOR(ceil_log2(N) DOWNTO 1);
 		cout : OUT STD_LOGIC);
 END cnt_modn;
 
 ARCHITECTURE behaviour OF cnt_modn IS
 BEGIN
 	PROCESS (clk, rst)
-		VARIABLE cnt : NATURAL RANGE N DOWNTO 0 := 0;
+		VARIABLE cnt : NATURAL RANGE 0 TO N;
 		VARIABLE aux : STD_LOGIC := '0';
 	BEGIN
 		IF (rst = '1') THEN
@@ -45,7 +45,7 @@ BEGIN
 			END IF;
 		END IF;
 	
-		q <= cnt;
+		q <= STD_LOGIC_VECTOR( TO_UNSIGNED(cnt, ceil_log2(N)) );
 		cout <= aux;	
 	END PROCESS;
 END behaviour;

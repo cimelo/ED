@@ -13,8 +13,8 @@ USE IEEE.NUMERIC_STD.ALL;
 
 ENTITY rng IS
 	PORT(
-		clk, gen : IN STD_LOGIC;
-		q : OUT STD_LOGIC_VECTOR(4 DOWNTO 1));
+		clk, gen, rst : IN STD_LOGIC;
+		q 				: OUT STD_LOGIC_VECTOR(4 DOWNTO 1));
 END rng;
 
 ARCHITECTURE behaviour OF rng IS
@@ -36,10 +36,8 @@ ARCHITECTURE behaviour OF rng IS
 	SIGNAL tmp_r : STD_LOGIC_VECTOR(16 DOWNTO 1);
 	SIGNAL aux_xor : STD_LOGIC_VECTOR(4 DOWNTO 1);	
 BEGIN
-	-- Generating 16 osc_rings instances
-	-- that's the number cited in [1] to
-	-- have a probability of more than 35%
-	-- of reaching a transition region.
+	-- 16 osc_rings instances have a probability > 35%
+    -- of reaching a transition region.
 	i_ring : FOR i IN 1 TO 16 GENERATE
 		ringx: osc_ring PORT MAP (tmp_r(i));
 	END GENERATE i_ring;
@@ -50,10 +48,13 @@ BEGIN
 	
 	-- We then save the values inside a register 
 	-- for Unsigned Mod 10 operation to avoid overflow.
-	PROCESS(clk)
-		VARIABLE temp : STD_LOGIC_VECTOR(4 DOWNTO 1);
+	PROCESS (clk, gen, aux_xor, rst)
+		VARIABLE temp : STD_LOGIC_VECTOR(4 DOWNTO 1) 
+                                    := (OTHERS => '0');
 	BEGIN
-		IF (RISING_EDGE(clk)) THEN
+		IF (rst = '1') THEN
+			temp := (OTHERS => '0');
+		ELSIF (RISING_EDGE(clk) AND gen = '1') THEN
 			temp := aux_xor;
 		END IF;
 		

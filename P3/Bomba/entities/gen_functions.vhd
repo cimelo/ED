@@ -10,15 +10,15 @@ USE IEEE.NUMERIC_STD.ALL;
 
 PACKAGE gen_functions IS
 	FUNCTION ceil_log2(n : NATURAL) 
-						RETURN NATURAL;
-						
+        RETURN NATURAL;
+
 	-- Function that receives a 5-bit number N
 	-- and returns a 8-bit number where the 
 	-- 4 most significant bits represent the
 	-- decimal part of N and the 4 other bits
 	-- represent the unity.
-	FUNCTION dec_uni(N : NATURAL RANGE 0 TO 30) 
-						RETURN STD_LOGIC_VECTOR;
+	FUNCTION dec_uni(N : UNSIGNED) 
+        RETURN STD_LOGIC_VECTOR;
 END gen_functions;
 
 PACKAGE BODY gen_functions IS
@@ -35,15 +35,15 @@ PACKAGE BODY gen_functions IS
 		RETURN l;
 	END FUNCTION ceil_log2;
 	
-	FUNCTION dec_uni(n: NATURAL RANGE 0 TO 30) 
+	FUNCTION dec_uni(n: UNSIGNED) 
 		RETURN STD_LOGIC_VECTOR IS
 		VARIABLE du : STD_LOGIC_VECTOR(8 DOWNTO 1);
-		VARIABLE d, u : NATURAL RANGE 0 TO 9;
+		VARIABLE d, u : UNSIGNED(4 DOWNTO 1);
 	BEGIN
 		d := n / 10;
 		u := n MOD 10;
-		du(8 DOWNTO 5) := STD_LOGIC_VECTOR(TO_UNSIGNED(d, 4));
-		du(4 DOWNTO 1) := STD_LOGIC_VECTOR(TO_UNSIGNED(u, 4));
+		du(8 DOWNTO 5) := STD_LOGIC_VECTOR(d);
+		du(4 DOWNTO 1) := STD_LOGIC_VECTOR(u);
 		RETURN du;
 	END FUNCTION dec_uni;
 END gen_functions;
