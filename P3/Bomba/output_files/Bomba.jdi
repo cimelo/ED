@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="ca4c9696d4dd1d9b5a89"/>
+    <hash md5_digest_80b="1b3287c38e18e7f5b86e"/>
   </project>
   <file_info>
-    <file device="EPM240T100I5" path="Bomba.sof" usercode="0xFFFFFFFF"/>
+    <file device="EP4CE6E22C8" path="Bomba.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>

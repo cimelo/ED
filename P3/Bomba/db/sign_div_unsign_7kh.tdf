@@ -18,10 +18,10 @@
 --  https://fpgasoftware.intel.com/eula.
 
 
-FUNCTION alt_u_div_9ie (denominator[3..0], numerator[3..0])
+FUNCTION alt_u_div_24f (denominator[3..0], numerator[3..0])
 RETURNS ( quotient[3..0], remainder[3..0]);
 
---synthesis_resources = lut 7 
+--synthesis_resources = lut 9 
 SUBDESIGN sign_div_unsign_7kh
 ( 
 	denominator[3..0]	:	input;
@@ -30,7 +30,7 @@ SUBDESIGN sign_div_unsign_7kh
 	remainder[3..0]	:	output;
 ) 
 VARIABLE 
-	divider : alt_u_div_9ie;
+	divider : alt_u_div_24f;
 	norm_num[3..0]	: WIRE;
 	protect_quotient[3..0]	: WIRE;
 	protect_remainder[3..0]	: WIRE;
