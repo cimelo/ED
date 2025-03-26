@@ -200,9 +200,9 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 1360 160 1504 240)
+	(rect 1360 160 1504 272)
 	(text "rng" (rect 5 0 22 11)(font "Arial" ))
-	(text "inst1" (rect 8 64 32 75)(font "Arial" ))
+	(text "inst1" (rect 8 96 32 107)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -218,6 +218,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
+		(pt 0 64)
+		(input)
+		(text "n_rst" (rect 0 0 25 11)(font "Arial" ))
+		(text "n_rst" (rect 21 59 46 70)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
 		(pt 144 32)
 		(output)
 		(text "q[4..1]" (rect 0 0 30 11)(font "Arial" ))
@@ -225,7 +232,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 144 32)(pt 128 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 128 64))
+		(rectangle (rect 16 16 128 96))
 	)
 )
 (symbol
@@ -359,7 +366,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"LPM_DIRECTION"
-		""
+		"\"UP\""
 		"Selects between up/down, up, or down (\"DEFAULT\" \"UP\" \"DOWN\")"
 	)
 	(parameter
@@ -441,4 +448,14 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1504 296)
 	(pt 1416 296)
 	(bus)
+)
+(connector
+	(text "vcc" (rect 1326 192 1343 205)(font "Intel Clear" ))
+	(pt 1360 208)
+	(pt 1304 208)
+)
+(connector
+	(text "vcc" (rect 1312 208 1329 221)(font "Intel Clear" ))
+	(pt 1360 224)
+	(pt 1304 224)
 )
