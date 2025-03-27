@@ -21,7 +21,7 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 160 128)
+	(rect 16 16 152 128)
 	(text "rng" (rect 5 0 17 12)(font "Arial" ))
 	(text "inst" (rect 8 96 20 108)(font "Arial" ))
 	(port
@@ -46,13 +46,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port
-		(pt 144 32)
+		(pt 136 32)
 		(output)
-		(text "q[4..1]" (rect 0 0 24 12)(font "Arial" ))
-		(text "q[4..1]" (rect 99 27 123 39)(font "Arial" ))
-		(line (pt 144 32)(pt 128 32)(line_width 3))
+		(text "q[3..1]" (rect 0 0 23 12)(font "Arial" ))
+		(text "q[3..1]" (rect 92 27 115 39)(font "Arial" ))
+		(line (pt 136 32)(pt 120 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 128 96)(line_width 1))
+		(rectangle (rect 16 16 120 96)(line_width 1))
 	)
 )

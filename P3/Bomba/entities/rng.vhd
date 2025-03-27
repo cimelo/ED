@@ -14,7 +14,7 @@ USE IEEE.NUMERIC_STD.ALL;
 ENTITY rng IS
 	PORT(
 		clk, gen, rst : IN STD_LOGIC;
-		q 				: OUT STD_LOGIC_VECTOR(4 DOWNTO 1));
+		q 				: OUT STD_LOGIC_VECTOR(3 DOWNTO 1));
 END rng;
 
 ARCHITECTURE behaviour OF rng IS
@@ -58,6 +58,6 @@ BEGIN
 			temp := aux_xor;
 		END IF;
 		
-		q <= STD_LOGIC_VECTOR(UNSIGNED(temp) MOD 10);
+		q <= STD_LOGIC_VECTOR(RESIZE(UNSIGNED(temp) MOD 8, 3));
 	END PROCESS;
 END behaviour;
