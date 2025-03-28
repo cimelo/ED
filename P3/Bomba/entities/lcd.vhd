@@ -75,7 +75,7 @@ BEGIN
         VARIABLE tries      : NATURAL RANGE 0 TO 3  := 0;
         VARIABLE cnt_char   : NATURAL RANGE 0 TO 34 := 0;
 
-        -- 4 bits variable that results from a conversion of a 
+        -- 4 bits variable that results from a conversion of a
 		-- natural number into a 8 bits vects in wich the 4 most
 		-- significant bits are the decimal part and the others
 		-- represent the ones part
@@ -128,9 +128,17 @@ BEGIN
                     -- To convert a 4bits number into ascii you just need to concatenate
                     -- 0011 in front of it
                     WHEN 21 => 
-                        lcd_bus <= "10" & "0011" & du(8 DOWNTO 5);
+                        IF (st = CMP) THEN
+                           lcd_bus <= "10" & "0011" & du(8 DOWNTO 5);
+                        ELSE
+                           lcd_bus <= "10" & L2(103 DOWNTO 96);
+                        END IF;
                     WHEN 22 => 
-                        lcd_bus <= "10" & "0011" & du(4 DOWNTO 1);
+                        IF (st = CMP) THEN
+                            lcd_bus <= "10" & "0011" & du(4 DOWNTO 1);
+                        ELSE
+                           lcd_bus <= "10" & L2(95 DOWNTO 88);
+                        END IF;
 
                     WHEN 23 => lcd_bus <= "10" & L2(87 DOWNTO 80);
                     WHEN 24 => lcd_bus <= "10" & L2(79 DOWNTO 72);
@@ -195,10 +203,23 @@ BEGIN
                             st <= CMP;
                         END IF;
                     ELSE
-                        restart(0);
+                        restart(10e6*clk_freq);
                         st <= FAIL;
                     END IF;
                 WHEN SUCCESS =>
+                    cnt_time := cnt_time - 1;
+
+                    IF (cnt_time > 0) THEN
+                        l1 <= fs3_1;
+                        l2 <= fs3_2;
+                        send_strs;
+
+                        st <= SUCCESS;
+                    ELSE
+                        restart(0);
+                        st <= RESET;
+                    END IF;
+                WHEN FAIL =>
                     cnt_time := cnt_time - 1;
 
                     IF (cnt_time > 0) THEN
@@ -206,15 +227,11 @@ BEGIN
                         l2 <= fs2_2;
                         send_strs;
 
-                        st <= SUCCESS;
+                        st <= FAIL;
                     ELSE
                         restart(0);
-                        cnt_time := 0;
                         st <= RESET;
                     END IF;
-                WHEN FAIL =>
-					restart(30e6 * clk_freq);
-                    st <= CMP;
                 WHEN RESET =>
 					restart(30e6 * clk_freq);
                     st <= CMP;
