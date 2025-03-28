@@ -14,7 +14,7 @@ ENTITY cnt_modn IS
 	GENERIC(N : NATURAL := 10);
 	PORT(
 		clk, en, rst, inc, dec : IN STD_LOGIC;
-		q : OUT STD_LOGIC_VECTOR(ceil_log2(N) DOWNTO 1);
+		q : OUT STD_LOGIC_VECTOR(log2(N) DOWNTO 1);
 		cout : OUT STD_LOGIC);
 END cnt_modn;
 
@@ -45,7 +45,7 @@ BEGIN
 			END IF;
 		END IF;
 	
-		q <= STD_LOGIC_VECTOR( TO_UNSIGNED(cnt, ceil_log2(N)) );
+		q <= STD_LOGIC_VECTOR( TO_UNSIGNED(cnt, log2(N)) );
 		cout <= aux;	
 	END PROCESS;
 END behaviour;

@@ -1,5 +1,5 @@
 Flow report for Bomba
-Wed Mar 26 17:56:49 2025
+Fri Mar 28 15:09:27 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Mar 26 17:56:49 2025       ;
+; Flow Status                        ; Successful - Fri Mar 28 15:09:27 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Bomba                                       ;
-; Top-level Entity Name              ; test_rng                                    ;
+; Top-level Entity Name              ; test_lcd                                    ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 94 / 6,272 ( 1 % )                          ;
-;     Total combinational functions  ; 93 / 6,272 ( 1 % )                          ;
-;     Dedicated logic registers      ; 35 / 6,272 ( < 1 % )                        ;
-; Total registers                    ; 35                                          ;
+; Total logic elements               ; 763 / 6,272 ( 12 % )                        ;
+;     Total combinational functions  ; 763 / 6,272 ( 12 % )                        ;
+;     Dedicated logic registers      ; 97 / 6,272 ( 2 % )                          ;
+; Total registers                    ; 97                                          ;
 ; Total pins                         ; 15 / 92 ( 16 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/26/2025 17:56:25 ;
+; Start date & time ; 03/28/2025 15:08:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Bomba               ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 102021904028832.174302258506441        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 102021904028832.174318533412811        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -89,13 +89,13 @@ https://fpgasoftware.intel.com/eula.
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --                                ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --                                ;
 ; NUM_PARALLEL_PROCESSORS             ; 2                                      ; --            ; --          ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; test_rng    ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; test_rng    ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; test_rng    ; Top                               ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; test_lcd    ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; test_lcd    ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; test_lcd    ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                    ; test_rng                               ; Bomba         ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                    ; test_lcd                               ; Bomba         ; --          ; --                                ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -104,12 +104,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 430 MB              ; 00:00:28                           ;
-; Fitter               ; 00:00:05     ; 1.0                     ; 675 MB              ; 00:00:06                           ;
-; Assembler            ; 00:00:00     ; 1.0                     ; 352 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 414 MB              ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 593 MB              ; 00:00:00                           ;
-; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:37                           ;
+; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 459 MB              ; 00:00:32                           ;
+; Fitter               ; 00:00:10     ; 1.0                     ; 700 MB              ; 00:00:13                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 351 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 431 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 597 MB              ; 00:00:01                           ;
+; Total                ; 00:00:30     ; --                      ; --                  ; 00:00:49                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

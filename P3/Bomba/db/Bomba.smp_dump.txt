@@ -1,0 +1,15 @@
+
+State Machine - |test_lcd|lcd:inst|st
+Name st.RESET st.FAIL st.SUCCESS st.CMP st.INIT 
+st.INIT 0 0 0 0 0 
+st.CMP 0 0 0 1 1 
+st.SUCCESS 0 0 1 0 1 
+st.FAIL 0 1 0 0 1 
+st.RESET 1 0 0 0 1 
+
+State Machine - |test_lcd|lcd:inst|lcd_controller:i_lcd_ctrl|estado
+Name estado.ENVIAR estado.PRONTO estado.INICIALIZACAO estado.ENERGIZACAO 
+estado.ENERGIZACAO 0 0 0 0 
+estado.INICIALIZACAO 0 0 1 1 
+estado.PRONTO 0 1 0 1 
+estado.ENVIAR 1 0 0 1 

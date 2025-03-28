@@ -9,7 +9,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 
 PACKAGE gen_functions IS
-	FUNCTION ceil_log2(n : NATURAL) 
+	FUNCTION log2(n : NATURAL) 
         RETURN NATURAL;
 
 	-- Function that receives a 5-bit number N
@@ -22,7 +22,7 @@ PACKAGE gen_functions IS
 END gen_functions;
 
 PACKAGE BODY gen_functions IS
-	FUNCTION ceil_log2(n : NATURAL) RETURN
+	FUNCTION log2(n : NATURAL) RETURN
 		NATURAL IS
 		VARIABLE t : NATURAL := n;
 		VARIABLE l : NATURAL := 0;
@@ -33,17 +33,17 @@ PACKAGE BODY gen_functions IS
 		END LOOP;
 		
 		RETURN l;
-	END FUNCTION ceil_log2;
+	END FUNCTION log2;
 	
 	FUNCTION dec_uni(n: UNSIGNED) 
 		RETURN STD_LOGIC_VECTOR IS
 		VARIABLE du : STD_LOGIC_VECTOR(8 DOWNTO 1);
-		VARIABLE d, u : UNSIGNED(4 DOWNTO 1);
+		VARIABLE d, u : UNSIGNED(5 DOWNTO 1);
 	BEGIN
 		d := n / 10;
 		u := n MOD 10;
-		du(8 DOWNTO 5) := STD_LOGIC_VECTOR(d);
-		du(4 DOWNTO 1) := STD_LOGIC_VECTOR(u);
+		du(8 DOWNTO 5) := STD_LOGIC_VECTOR(d(4 DOWNTO 1));
+		du(4 DOWNTO 1) := STD_LOGIC_VECTOR(u(4 DOWNTO 1));
 		RETURN du;
 	END FUNCTION dec_uni;
 END gen_functions;

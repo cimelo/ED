@@ -1,5 +1,6 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
 USE WORK.gen_functions.ALL;
 
 ENTITY test_dec_uni IS
@@ -7,7 +8,7 @@ ENTITY test_dec_uni IS
 END test_dec_uni;
 
 ARCHITECTURE behaviour of test_dec_uni IS
-	CONSTANT c : NATURAL RANGE 0 to 30 := 25; 
+	CONSTANT c : NATURAL := 25; 
 BEGIN
-	du <= dec_uni(c);
+	du <= dec_uni(TO_UNSIGNED(c, 5));
 END behaviour;

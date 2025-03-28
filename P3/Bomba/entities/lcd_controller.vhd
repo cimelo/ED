@@ -1,5 +1,6 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
+
 ENTITY lcd_controller IS
   GENERIC(
     clk_freq        :  INTEGER    := 50;    --clock principal em MHz

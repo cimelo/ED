@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE6E22C8
-set_global_assignment -name TOP_LEVEL_ENTITY test_rng
+set_global_assignment -name TOP_LEVEL_ENTITY test_lcd
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:36:34  MARCH 26, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -185,22 +185,27 @@ set_global_assignment -name NUM_PARALLEL_PROCESSORS 2
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name BDF_FILE /mnt/caio/General/UFPE/ED/Projects/Bomba/tests/test_rng.bdf
-set_global_assignment -name VHDL_FILE /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/rng.vhd
-set_global_assignment -name VHDL_FILE /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd
-set_global_assignment -name SOURCE_FILE /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.cmp
-set_global_assignment -name BDF_FILE /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/main.bdf
-set_global_assignment -name VHDL_FILE /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/lcd.vhd
-set_global_assignment -name VHDL_FILE /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/gen_functions.vhd
-set_global_assignment -name VHDL_FILE /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/debouncer.vhd
-set_global_assignment -name VHDL_FILE /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/cnt_modn.vhd
-set_global_assignment -name VHDL_FILE /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/cnt_mod10.vhd
-set_global_assignment -name SOURCE_FILE /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/cnt_mod10.cmp
-set_global_assignment -name VHDL_FILE /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/bcd2ss.vhd
-set_global_assignment -name BDF_FILE /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/Bomba.bdf
+
+
+set_global_assignment -name VHDL_FILE entities/rng.vhd
+set_global_assignment -name VHDL_FILE entities/osc_ring.vhd
+set_global_assignment -name SOURCE_FILE entities/osc_ring.cmp
+set_global_assignment -name BDF_FILE entities/main.bdf
+set_global_assignment -name VHDL_FILE entities/lcd_controller.vhd
+set_global_assignment -name SOURCE_FILE entities/lcd_controller.cmp
+set_global_assignment -name VHDL_FILE entities/gen_functions.vhd
+set_global_assignment -name VHDL_FILE entities/driver_buzzer.vhd
+set_global_assignment -name VHDL_FILE entities/debouncer.vhd
+set_global_assignment -name VHDL_FILE entities/cnt_modn.vhd
+set_global_assignment -name VHDL_FILE entities/cnt_mod10.vhd
+set_global_assignment -name SOURCE_FILE entities/cnt_mod10.cmp
+set_global_assignment -name BDF_FILE entities/Bomba.bdf
+set_global_assignment -name VHDL_FILE entities/bcd2ss.vhd
+set_global_assignment -name VHDL_FILE entities/lcd.vhd
+set_global_assignment -name VHDL_FILE entities/lcd_vhdl_package.vhd
+
+set_global_assignment -name BDF_FILE tests/test_lcd.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-
-
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

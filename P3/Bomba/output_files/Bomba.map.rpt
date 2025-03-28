@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Bomba
-Wed Mar 26 17:56:38 2025
+Fri Mar 28 15:09:09 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,30 +13,40 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Source assignments for rng:inst7|osc_ring:\i_ring:1:ringx
- 12. Source assignments for rng:inst7|osc_ring:\i_ring:2:ringx
- 13. Source assignments for rng:inst7|osc_ring:\i_ring:3:ringx
- 14. Source assignments for rng:inst7|osc_ring:\i_ring:4:ringx
- 15. Source assignments for rng:inst7|osc_ring:\i_ring:5:ringx
- 16. Source assignments for rng:inst7|osc_ring:\i_ring:6:ringx
- 17. Source assignments for rng:inst7|osc_ring:\i_ring:7:ringx
- 18. Source assignments for rng:inst7|osc_ring:\i_ring:8:ringx
- 19. Source assignments for rng:inst7|osc_ring:\i_ring:9:ringx
- 20. Source assignments for rng:inst7|osc_ring:\i_ring:10:ringx
- 21. Source assignments for rng:inst7|osc_ring:\i_ring:11:ringx
- 22. Source assignments for rng:inst7|osc_ring:\i_ring:12:ringx
- 23. Source assignments for rng:inst7|osc_ring:\i_ring:13:ringx
- 24. Source assignments for rng:inst7|osc_ring:\i_ring:14:ringx
- 25. Source assignments for rng:inst7|osc_ring:\i_ring:15:ringx
- 26. Source assignments for rng:inst7|osc_ring:\i_ring:16:ringx
- 27. Parameter Settings for User Entity Instance: LPM_COUNTER:inst1
- 28. Parameter Settings for Inferred Entity Instance: rng:inst7|lpm_divide:Mod0
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
+  8. State Machine - |test_lcd|lcd:inst|st
+  9. State Machine - |test_lcd|lcd:inst|lcd_controller:i_lcd_ctrl|estado
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for rng:rng1|osc_ring:\i_ring:1:ringx
+ 16. Source assignments for rng:rng1|osc_ring:\i_ring:2:ringx
+ 17. Source assignments for rng:rng1|osc_ring:\i_ring:3:ringx
+ 18. Source assignments for rng:rng1|osc_ring:\i_ring:4:ringx
+ 19. Source assignments for rng:rng1|osc_ring:\i_ring:5:ringx
+ 20. Source assignments for rng:rng1|osc_ring:\i_ring:6:ringx
+ 21. Source assignments for rng:rng1|osc_ring:\i_ring:7:ringx
+ 22. Source assignments for rng:rng1|osc_ring:\i_ring:8:ringx
+ 23. Source assignments for rng:rng1|osc_ring:\i_ring:9:ringx
+ 24. Source assignments for rng:rng1|osc_ring:\i_ring:10:ringx
+ 25. Source assignments for rng:rng1|osc_ring:\i_ring:11:ringx
+ 26. Source assignments for rng:rng1|osc_ring:\i_ring:12:ringx
+ 27. Source assignments for rng:rng1|osc_ring:\i_ring:13:ringx
+ 28. Source assignments for rng:rng1|osc_ring:\i_ring:14:ringx
+ 29. Source assignments for rng:rng1|osc_ring:\i_ring:15:ringx
+ 30. Source assignments for rng:rng1|osc_ring:\i_ring:16:ringx
+ 31. Parameter Settings for User Entity Instance: lcd:inst|lcd_controller:i_lcd_ctrl
+ 32. Parameter Settings for Inferred Entity Instance: lcd:inst|lpm_divide:Div0
+ 33. Parameter Settings for Inferred Entity Instance: lcd:inst|lpm_divide:Div1
+ 34. Parameter Settings for Inferred Entity Instance: lcd:inst|lpm_divide:Mod0
+ 35. Port Connectivity Checks: "rng:rng1|osc_ring:\i_ring:16:ringx"
+ 36. Port Connectivity Checks: "rng:rng1|osc_ring:\i_ring:15:ringx"
+ 37. Port Connectivity Checks: "rng:rng1|osc_ring:\i_ring:14:ringx"
+ 38. Port Connectivity Checks: "rng:rng1|osc_ring:\i_ring:13:ringx"
+ 39. Post-Synthesis Netlist Statistics for Top Partition
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
 
 
 
@@ -63,15 +73,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 26 17:56:38 2025       ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 28 15:09:09 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Bomba                                       ;
-; Top-level Entity Name              ; test_rng                                    ;
+; Top-level Entity Name              ; test_lcd                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 93                                          ;
-;     Total combinational functions  ; 93                                          ;
-;     Dedicated logic registers      ; 35                                          ;
-; Total registers                    ; 35                                          ;
+; Total logic elements               ; 763                                         ;
+;     Total combinational functions  ; 763                                         ;
+;     Dedicated logic registers      ; 97                                          ;
+; Total registers                    ; 97                                          ;
 ; Total pins                         ; 15                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -86,7 +96,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE6E22C8        ;                    ;
-; Top-level entity name                                            ; test_rng           ; Bomba              ;
+; Top-level entity name                                            ; test_lcd           ; Bomba              ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation              ; 2                  ;                    ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -184,36 +194,34 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                           ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
-; tests/test_rng.bdf               ; yes             ; User Block Diagram/Schematic File  ; /mnt/caio/General/UFPE/ED/Projects/Bomba/tests/test_rng.bdf                            ;         ;
-; entities/rng.vhd                 ; yes             ; User VHDL File                     ; /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/rng.vhd                              ;         ;
-; entities/osc_ring.vhd            ; yes             ; User VHDL File                     ; /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd                         ;         ;
-; entities/debouncer.vhd           ; yes             ; User VHDL File                     ; /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/debouncer.vhd                        ;         ;
-; entities/bcd2ss.vhd              ; yes             ; User VHDL File                     ; /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/bcd2ss.vhd                           ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc          ;         ;
-; db/cntr_2kj.tdf                  ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/Projects/Bomba/db/cntr_2kj.tdf                               ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
-; db/lpm_divide_i9m.tdf            ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/Projects/Bomba/db/lpm_divide_i9m.tdf                         ;         ;
-; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/Projects/Bomba/db/sign_div_unsign_7kh.tdf                    ;         ;
-; db/alt_u_div_24f.tdf             ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/Projects/Bomba/db/alt_u_div_24f.tdf                          ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/Projects/Bomba/db/add_sub_7pc.tdf                            ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/Projects/Bomba/db/add_sub_8pc.tdf                            ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
+; entities/rng.vhd                 ; yes             ; User VHDL File                     ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/rng.vhd                             ;         ;
+; entities/osc_ring.vhd            ; yes             ; User VHDL File                     ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd                        ;         ;
+; entities/lcd_controller.vhd      ; yes             ; User VHDL File                     ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd_controller.vhd                  ;         ;
+; entities/gen_functions.vhd       ; yes             ; User VHDL File                     ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd                   ;         ;
+; entities/lcd.vhd                 ; yes             ; User VHDL File                     ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd.vhd                             ;         ;
+; entities/lcd_vhdl_package.vhd    ; yes             ; User VHDL File                     ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd_vhdl_package.vhd                ;         ;
+; tests/test_lcd.bdf               ; yes             ; User Block Diagram/Schematic File  ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/tests/test_lcd.bdf                           ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                       ; /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_jkm.tdf            ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/lpm_divide_jkm.tdf                        ;         ;
+; db/sign_div_unsign_bnh.tdf       ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/sign_div_unsign_bnh.tdf                   ;         ;
+; db/alt_u_div_aaf.tdf             ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/alt_u_div_aaf.tdf                         ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/add_sub_7pc.tdf                           ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/add_sub_8pc.tdf                           ;         ;
+; db/lpm_divide_ghm.tdf            ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/lpm_divide_ghm.tdf                        ;         ;
+; db/sign_div_unsign_8kh.tdf       ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/sign_div_unsign_8kh.tdf                   ;         ;
+; db/alt_u_div_44f.tdf             ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/alt_u_div_44f.tdf                         ;         ;
+; db/lpm_divide_k9m.tdf            ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/lpm_divide_k9m.tdf                        ;         ;
+; db/sign_div_unsign_9kh.tdf       ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/sign_div_unsign_9kh.tdf                   ;         ;
+; db/alt_u_div_64f.tdf             ; yes             ; Auto-Generated Megafunction        ; /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/alt_u_div_64f.tdf                         ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -221,20 +229,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 93        ;
+; Estimated Total logic elements              ; 763       ;
 ;                                             ;           ;
-; Total combinational functions               ; 93        ;
+; Total combinational functions               ; 763       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 9         ;
-;     -- 3 input functions                    ; 7         ;
-;     -- <=2 input functions                  ; 77        ;
+;     -- 4 input functions                    ; 285       ;
+;     -- 3 input functions                    ; 149       ;
+;     -- <=2 input functions                  ; 329       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 68        ;
-;     -- arithmetic mode                      ; 25        ;
+;     -- normal mode                          ; 540       ;
+;     -- arithmetic mode                      ; 223       ;
 ;                                             ;           ;
-; Total registers                             ; 35        ;
-;     -- Dedicated logic registers            ; 35        ;
+; Total registers                             ; 97        ;
+;     -- Dedicated logic registers            ; 97        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 15        ;
@@ -242,55 +250,104 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 23        ;
-; Total fan-out                               ; 257       ;
-; Average fan-out                             ; 1.63      ;
+; Maximum fan-out                             ; 97        ;
+; Total fan-out                               ; 2471      ;
+; Average fan-out                             ; 2.78      ;
 +---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                             ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Entity Name         ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |test_rng                                 ; 93 (1)              ; 35 (1)                    ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |test_rng                                                                                                           ; test_rng            ; work         ;
-;    |bcd2ss:inst|                          ; 9 (9)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|bcd2ss:inst                                                                                               ; bcd2ss              ; work         ;
-;    |debouncer:inst11|                     ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|debouncer:inst11                                                                                          ; debouncer           ; work         ;
-;    |lpm_counter:inst1|                    ; 23 (0)              ; 22 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|lpm_counter:inst1                                                                                         ; lpm_counter         ; work         ;
-;       |cntr_2kj:auto_generated|           ; 23 (23)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|lpm_counter:inst1|cntr_2kj:auto_generated                                                                 ; cntr_2kj            ; work         ;
-;    |rng:inst7|                            ; 59 (4)              ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7                                                                                                 ; rng                 ; work         ;
-;       |lpm_divide:Mod0|                   ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_i9m:auto_generated|  ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|lpm_divide:Mod0|lpm_divide_i9m:auto_generated                                                   ; lpm_divide_i9m      ; work         ;
-;             |sign_div_unsign_7kh:divider| ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|lpm_divide:Mod0|lpm_divide_i9m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
-;                |alt_u_div_24f:divider|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|lpm_divide:Mod0|lpm_divide_i9m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_24f:divider ; alt_u_div_24f       ; work         ;
-;       |osc_ring:\i_ring:10:ringx|         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:10:ringx                                                                       ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:11:ringx|         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:11:ringx                                                                       ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:12:ringx|         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:12:ringx                                                                       ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:13:ringx|         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:13:ringx                                                                       ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:14:ringx|         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:14:ringx                                                                       ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:15:ringx|         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:15:ringx                                                                       ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:16:ringx|         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:16:ringx                                                                       ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:1:ringx|          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:1:ringx                                                                        ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:2:ringx|          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:2:ringx                                                                        ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:3:ringx|          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:3:ringx                                                                        ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:4:ringx|          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:4:ringx                                                                        ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:5:ringx|          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:5:ringx                                                                        ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:6:ringx|          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:6:ringx                                                                        ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:7:ringx|          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:7:ringx                                                                        ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:8:ringx|          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:8:ringx                                                                        ; osc_ring            ; work         ;
-;       |osc_ring:\i_ring:9:ringx|          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_rng|rng:inst7|osc_ring:\i_ring:9:ringx                                                                        ; osc_ring            ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                            ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |test_lcd                                 ; 763 (0)             ; 97 (0)                    ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |test_lcd                                                                                                          ; test_lcd            ; work         ;
+;    |lcd:inst|                             ; 763 (220)           ; 97 (56)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_lcd|lcd:inst                                                                                                 ; lcd                 ; work         ;
+;       |lcd_controller:i_lcd_ctrl|         ; 164 (164)           ; 41 (41)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_lcd|lcd:inst|lcd_controller:i_lcd_ctrl                                                                       ; lcd_controller      ; work         ;
+;       |lpm_divide:Div0|                   ; 345 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_lcd|lcd:inst|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_jkm:auto_generated|  ; 345 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_lcd|lcd:inst|lpm_divide:Div0|lpm_divide_jkm:auto_generated                                                   ; lpm_divide_jkm      ; work         ;
+;             |sign_div_unsign_bnh:divider| ; 345 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_lcd|lcd:inst|lpm_divide:Div0|lpm_divide_jkm:auto_generated|sign_div_unsign_bnh:divider                       ; sign_div_unsign_bnh ; work         ;
+;                |alt_u_div_aaf:divider|    ; 345 (345)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_lcd|lcd:inst|lpm_divide:Div0|lpm_divide_jkm:auto_generated|sign_div_unsign_bnh:divider|alt_u_div_aaf:divider ; alt_u_div_aaf       ; work         ;
+;       |lpm_divide:Div1|                   ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_lcd|lcd:inst|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ghm:auto_generated|  ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_lcd|lcd:inst|lpm_divide:Div1|lpm_divide_ghm:auto_generated                                                   ; lpm_divide_ghm      ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_lcd|lcd:inst|lpm_divide:Div1|lpm_divide_ghm:auto_generated|sign_div_unsign_8kh:divider                       ; sign_div_unsign_8kh ; work         ;
+;                |alt_u_div_44f:divider|    ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_lcd|lcd:inst|lpm_divide:Div1|lpm_divide_ghm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_44f:divider ; alt_u_div_44f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_lcd|lcd:inst|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_k9m:auto_generated|  ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_lcd|lcd:inst|lpm_divide:Mod0|lpm_divide_k9m:auto_generated                                                   ; lpm_divide_k9m      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_lcd|lcd:inst|lpm_divide:Mod0|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
+;                |alt_u_div_64f:divider|    ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test_lcd|lcd:inst|lpm_divide:Mod0|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider ; alt_u_div_64f       ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; bcd2ss:inst|tmp[8]                    ; Stuck at VCC due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------+
+; State Machine - |test_lcd|lcd:inst|st                           ;
++------------+----------+---------+------------+--------+---------+
+; Name       ; st.RESET ; st.FAIL ; st.SUCCESS ; st.CMP ; st.INIT ;
++------------+----------+---------+------------+--------+---------+
+; st.INIT    ; 0        ; 0       ; 0          ; 0      ; 0       ;
+; st.CMP     ; 0        ; 0       ; 0          ; 1      ; 1       ;
+; st.SUCCESS ; 0        ; 0       ; 1          ; 0      ; 1       ;
+; st.FAIL    ; 0        ; 1       ; 0          ; 0      ; 1       ;
+; st.RESET   ; 1        ; 0       ; 0          ; 0      ; 1       ;
++------------+----------+---------+------------+--------+---------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------+
+; State Machine - |test_lcd|lcd:inst|lcd_controller:i_lcd_ctrl|estado                              ;
++----------------------+---------------+---------------+----------------------+--------------------+
+; Name                 ; estado.ENVIAR ; estado.PRONTO ; estado.INICIALIZACAO ; estado.ENERGIZACAO ;
++----------------------+---------------+---------------+----------------------+--------------------+
+; estado.ENERGIZACAO   ; 0             ; 0             ; 0                    ; 0                  ;
+; estado.INICIALIZACAO ; 0             ; 0             ; 1                    ; 1                  ;
+; estado.PRONTO        ; 0             ; 1             ; 0                    ; 1                  ;
+; estado.ENVIAR        ; 1             ; 0             ; 0                    ; 1                  ;
++----------------------+---------------+---------------+----------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                          ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
+; Register name                                                                                                                                                                 ; Reason for Removal                          ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
+; rng:rng1|temp[1..3]                                                                                                                                                           ; Stuck at GND due to stuck port clock_enable ;
+; lcd:inst|tries[1]                                                                                                                                                             ; Merged with lcd:inst|tries[0]               ;
+; lcd:inst|l1[1..4,7,8,10,11,15,17,18,20,23..25,27,28,31,36,39..41,44,47..51,55..58,63,65,67,68,71..76,78..84,86,87,89..92,95,101,103,108,109,111,116,117,119,120,122..125,127] ; Merged with lcd:inst|l1[100]                ;
+; lcd:inst|l2[0..4,6..12,14,15,18,19,23,28,31..33,35,36,39,40,44,47,49,51,55,59,60,63,65,67,68,71,74,75,79..84,86,87,104..108,110,111,113,116,119,121,123,124,127]              ; Merged with lcd:inst|l1[100]                ;
+; lcd:inst|l1[77,85,104,106,107,110,112..115,118,121,126]                                                                                                                       ; Merged with lcd:inst|l1[102]                ;
+; lcd:inst|l2[5,13,85,109]                                                                                                                                                      ; Merged with lcd:inst|l1[102]                ;
+; lcd:inst|l1[6,9,12,14,16,19,22,26,30,32..35,38,42,43,46,52,54,59,60,62,64,66,70,88,94,97]                                                                                     ; Merged with lcd:inst|l1[0]                  ;
+; lcd:inst|l2[16,17,20,22,24..27,30,34,38,41..43,46,48,50,52,54,56..58,62,64,66,70,72,73,76,78,112,114,115,118,120,122,126]                                                     ; Merged with lcd:inst|l1[0]                  ;
+; lcd:inst|l1[5,13,21,29,37,45,53,61,69,93,96,98,99]                                                                                                                            ; Merged with lcd:inst|l1[105]                ;
+; lcd:inst|l2[21,29,37,45,53,61,69,77,117,125]                                                                                                                                  ; Merged with lcd:inst|l1[105]                ;
+; lcd:inst|l1[100]                                                                                                                                                              ; Stuck at GND due to stuck port data_in      ;
+; lcd:inst|tries[0]                                                                                                                                                             ; Stuck at GND due to stuck port data_in      ;
+; lcd:inst|lcd_bus[9]                                                                                                                                                           ; Stuck at GND due to stuck port data_in      ;
+; lcd:inst|l1[102]                                                                                                                                                              ; Stuck at VCC due to stuck port data_in      ;
+; lcd:inst|lcd_controller:i_lcd_ctrl|rw                                                                                                                                         ; Stuck at GND due to stuck port data_in      ;
+; lcd:inst|l1[105]                                                                                                                                                              ; Merged with lcd:inst|l1[0]                  ;
+; lcd:inst|st.SUCCESS                                                                                                                                                           ; Stuck at GND due to stuck port data_in      ;
+; lcd:inst|l1[0]                                                                                                                                                                ; Stuck at VCC due to stuck port data_in      ;
+; lcd:inst|st.RESET                                                                                                                                                             ; Stuck at GND due to stuck port data_in      ;
+; lcd:inst|du[7,8]                                                                                                                                                              ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 251                                                                                                                                       ;                                             ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                   ;
++---------------------+--------------------------------+----------------------------------------+
+; Register name       ; Reason for Removal             ; Registers Removed due to This Register ;
++---------------------+--------------------------------+----------------------------------------+
+; lcd:inst|st.SUCCESS ; Stuck at GND                   ; lcd:inst|du[8], lcd:inst|du[7]         ;
+;                     ; due to stuck port data_in      ;                                        ;
+; rng:rng1|temp[3]    ; Stuck at GND                   ; lcd:inst|l1[0]                         ;
+;                     ; due to stuck port clock_enable ;                                        ;
+; lcd:inst|lcd_bus[9] ; Stuck at GND                   ; lcd:inst|lcd_controller:i_lcd_ctrl|rw  ;
+;                     ; due to stuck port data_in      ;                                        ;
++---------------------+--------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -298,28 +355,171 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 35    ;
+; Total registers                              ; 97    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 4     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Clock Enable       ; 28    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; bcd2ss:inst|tmp[7]                     ; 1       ;
-; Total number of inverted registers = 1 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; lcd:inst|lcd_controller:i_lcd_ctrl|busy ; 3       ;
+; Total number of inverted registers = 1  ;         ;
++-----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |test_lcd|lcd:inst|cnt_char[5]                             ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |test_lcd|lcd:inst|du[1]                                   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |test_lcd|lcd:inst|l1[0]                                   ;
+; 7:1                ; 26 bits   ; 104 LEs       ; 26 LEs               ; 78 LEs                 ; Yes        ; |test_lcd|lcd:inst|lcd_controller:i_lcd_ctrl|clk_count[25] ;
+; 66:1               ; 2 bits    ; 88 LEs        ; 10 LEs               ; 78 LEs                 ; Yes        ; |test_lcd|lcd:inst|lcd_bus[10]                             ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 120 LEs              ; 30 LEs                 ; Yes        ; |test_lcd|lcd:inst|cnt_time[29]                            ;
+; 13:1               ; 6 bits    ; 48 LEs        ; 42 LEs               ; 6 LEs                  ; Yes        ; |test_lcd|lcd:inst|lcd_controller:i_lcd_ctrl|lcd_data[6]   ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; Yes        ; |test_lcd|lcd:inst|lcd_controller:i_lcd_ctrl|lcd_data[4]   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |test_lcd|lcd:inst|lcd_controller:i_lcd_ctrl|lcd_data      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+
+
++----------------------------------------------------------+
+; Source assignments for rng:rng1|osc_ring:\i_ring:1:ringx ;
++------------------------------+-------+------+------------+
+; Assignment                   ; Value ; From ; To         ;
++------------------------------+-------+------+------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c          ;
++------------------------------+-------+------+------------+
+
+
++----------------------------------------------------------+
+; Source assignments for rng:rng1|osc_ring:\i_ring:2:ringx ;
++------------------------------+-------+------+------------+
+; Assignment                   ; Value ; From ; To         ;
++------------------------------+-------+------+------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c          ;
++------------------------------+-------+------+------------+
+
+
++----------------------------------------------------------+
+; Source assignments for rng:rng1|osc_ring:\i_ring:3:ringx ;
++------------------------------+-------+------+------------+
+; Assignment                   ; Value ; From ; To         ;
++------------------------------+-------+------+------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c          ;
++------------------------------+-------+------+------------+
+
+
++----------------------------------------------------------+
+; Source assignments for rng:rng1|osc_ring:\i_ring:4:ringx ;
++------------------------------+-------+------+------------+
+; Assignment                   ; Value ; From ; To         ;
++------------------------------+-------+------+------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c          ;
++------------------------------+-------+------+------------+
+
+
++----------------------------------------------------------+
+; Source assignments for rng:rng1|osc_ring:\i_ring:5:ringx ;
++------------------------------+-------+------+------------+
+; Assignment                   ; Value ; From ; To         ;
++------------------------------+-------+------+------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c          ;
++------------------------------+-------+------+------------+
+
+
++----------------------------------------------------------+
+; Source assignments for rng:rng1|osc_ring:\i_ring:6:ringx ;
++------------------------------+-------+------+------------+
+; Assignment                   ; Value ; From ; To         ;
++------------------------------+-------+------+------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c          ;
++------------------------------+-------+------+------------+
+
+
++----------------------------------------------------------+
+; Source assignments for rng:rng1|osc_ring:\i_ring:7:ringx ;
++------------------------------+-------+------+------------+
+; Assignment                   ; Value ; From ; To         ;
++------------------------------+-------+------+------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c          ;
++------------------------------+-------+------+------------+
+
+
++----------------------------------------------------------+
+; Source assignments for rng:rng1|osc_ring:\i_ring:8:ringx ;
++------------------------------+-------+------+------------+
+; Assignment                   ; Value ; From ; To         ;
++------------------------------+-------+------+------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c          ;
++------------------------------+-------+------+------------+
+
+
++----------------------------------------------------------+
+; Source assignments for rng:rng1|osc_ring:\i_ring:9:ringx ;
++------------------------------+-------+------+------------+
+; Assignment                   ; Value ; From ; To         ;
++------------------------------+-------+------+------------+
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c          ;
++------------------------------+-------+------+------------+
 
 
 +-----------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:1:ringx ;
+; Source assignments for rng:rng1|osc_ring:\i_ring:10:ringx ;
 +------------------------------+-------+------+-------------+
 ; Assignment                   ; Value ; From ; To          ;
 +------------------------------+-------+------+-------------+
@@ -333,7 +533,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-----------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:2:ringx ;
+; Source assignments for rng:rng1|osc_ring:\i_ring:11:ringx ;
 +------------------------------+-------+------+-------------+
 ; Assignment                   ; Value ; From ; To          ;
 +------------------------------+-------+------+-------------+
@@ -347,7 +547,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-----------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:3:ringx ;
+; Source assignments for rng:rng1|osc_ring:\i_ring:12:ringx ;
 +------------------------------+-------+------+-------------+
 ; Assignment                   ; Value ; From ; To          ;
 +------------------------------+-------+------+-------------+
@@ -361,7 +561,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-----------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:4:ringx ;
+; Source assignments for rng:rng1|osc_ring:\i_ring:13:ringx ;
 +------------------------------+-------+------+-------------+
 ; Assignment                   ; Value ; From ; To          ;
 +------------------------------+-------+------+-------------+
@@ -375,7 +575,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-----------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:5:ringx ;
+; Source assignments for rng:rng1|osc_ring:\i_ring:14:ringx ;
 +------------------------------+-------+------+-------------+
 ; Assignment                   ; Value ; From ; To          ;
 +------------------------------+-------+------+-------------+
@@ -389,7 +589,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-----------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:6:ringx ;
+; Source assignments for rng:rng1|osc_ring:\i_ring:15:ringx ;
 +------------------------------+-------+------+-------------+
 ; Assignment                   ; Value ; From ; To          ;
 +------------------------------+-------+------+-------------+
@@ -403,7 +603,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-----------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:7:ringx ;
+; Source assignments for rng:rng1|osc_ring:\i_ring:16:ringx ;
 +------------------------------+-------+------+-------------+
 ; Assignment                   ; Value ; From ; To          ;
 +------------------------------+-------+------+-------------+
@@ -416,180 +616,126 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+-------+------+-------------+
 
 
-+-----------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:8:ringx ;
-+------------------------------+-------+------+-------------+
-; Assignment                   ; Value ; From ; To          ;
-+------------------------------+-------+------+-------------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a           ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a           ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b           ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b           ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c           ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c           ;
-+------------------------------+-------+------+-------------+
-
-
-+-----------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:9:ringx ;
-+------------------------------+-------+------+-------------+
-; Assignment                   ; Value ; From ; To          ;
-+------------------------------+-------+------+-------------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a           ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a           ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b           ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b           ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c           ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c           ;
-+------------------------------+-------+------+-------------+
-
-
-+------------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:10:ringx ;
-+------------------------------+-------+------+--------------+
-; Assignment                   ; Value ; From ; To           ;
-+------------------------------+-------+------+--------------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a            ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b            ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c            ;
-+------------------------------+-------+------+--------------+
-
-
-+------------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:11:ringx ;
-+------------------------------+-------+------+--------------+
-; Assignment                   ; Value ; From ; To           ;
-+------------------------------+-------+------+--------------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a            ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b            ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c            ;
-+------------------------------+-------+------+--------------+
-
-
-+------------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:12:ringx ;
-+------------------------------+-------+------+--------------+
-; Assignment                   ; Value ; From ; To           ;
-+------------------------------+-------+------+--------------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a            ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b            ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c            ;
-+------------------------------+-------+------+--------------+
-
-
-+------------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:13:ringx ;
-+------------------------------+-------+------+--------------+
-; Assignment                   ; Value ; From ; To           ;
-+------------------------------+-------+------+--------------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a            ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b            ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c            ;
-+------------------------------+-------+------+--------------+
-
-
-+------------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:14:ringx ;
-+------------------------------+-------+------+--------------+
-; Assignment                   ; Value ; From ; To           ;
-+------------------------------+-------+------+--------------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a            ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b            ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c            ;
-+------------------------------+-------+------+--------------+
-
-
-+------------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:15:ringx ;
-+------------------------------+-------+------+--------------+
-; Assignment                   ; Value ; From ; To           ;
-+------------------------------+-------+------+--------------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a            ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b            ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c            ;
-+------------------------------+-------+------+--------------+
-
-
-+------------------------------------------------------------+
-; Source assignments for rng:inst7|osc_ring:\i_ring:16:ringx ;
-+------------------------------+-------+------+--------------+
-; Assignment                   ; Value ; From ; To           ;
-+------------------------------+-------+------+--------------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; a            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; a            ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; b            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; b            ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; c            ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; c            ;
-+------------------------------+-------+------+--------------+
-
-
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: LPM_COUNTER:inst1  ;
-+------------------------+-------------------+--------------------+
-; Parameter Name         ; Value             ; Type               ;
-+------------------------+-------------------+--------------------+
-; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY         ;
-; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY       ;
-; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE       ;
-; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE     ;
-; LPM_WIDTH              ; 22                ; Untyped            ;
-; LPM_DIRECTION          ; UP                ; Untyped            ;
-; LPM_MODULUS            ; 0                 ; Untyped            ;
-; LPM_AVALUE             ; 3125000           ; Untyped            ;
-; LPM_SVALUE             ; UNUSED            ; Untyped            ;
-; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped            ;
-; DEVICE_FAMILY          ; Cyclone IV E      ; Untyped            ;
-; CARRY_CHAIN            ; MANUAL            ; Untyped            ;
-; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH ;
-; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK ;
-; CARRY_CNT_EN           ; SMART             ; Untyped            ;
-; LABWIDE_SCLR           ; ON                ; Untyped            ;
-; USE_NEW_VERSION        ; TRUE              ; Untyped            ;
-; CBXI_PARAMETER         ; cntr_2kj          ; Untyped            ;
-+------------------------+-------------------+--------------------+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd:inst|lcd_controller:i_lcd_ctrl ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; clk_freq       ; 50    ; Signed Integer                                         ;
+; display_lines  ; '1'   ; Enumerated                                             ;
+; character_font ; '0'   ; Enumerated                                             ;
+; display_on_off ; '1'   ; Enumerated                                             ;
+; cursor         ; '0'   ; Enumerated                                             ;
+; blink          ; '0'   ; Enumerated                                             ;
+; inc_dec        ; '1'   ; Enumerated                                             ;
+; shift          ; '0'   ; Enumerated                                             ;
++----------------+-------+--------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: rng:inst7|lpm_divide:Mod0 ;
-+------------------------+----------------+----------------------------------+
-; Parameter Name         ; Value          ; Type                             ;
-+------------------------+----------------+----------------------------------+
-; LPM_WIDTHN             ; 4              ; Untyped                          ;
-; LPM_WIDTHD             ; 4              ; Untyped                          ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                          ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                          ;
-; LPM_PIPELINE           ; 0              ; Untyped                          ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                          ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                          ;
-; CBXI_PARAMETER         ; lpm_divide_i9m ; Untyped                          ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                          ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                          ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                       ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                     ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                     ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                   ;
-+------------------------+----------------+----------------------------------+
++---------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:inst|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------+
+; Parameter Name         ; Value          ; Type                            ;
++------------------------+----------------+---------------------------------+
+; LPM_WIDTHN             ; 31             ; Untyped                         ;
+; LPM_WIDTHD             ; 26             ; Untyped                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                         ;
+; CBXI_PARAMETER         ; lpm_divide_jkm ; Untyped                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                  ;
++------------------------+----------------+---------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:inst|lpm_divide:Div1 ;
++------------------------+----------------+---------------------------------+
+; Parameter Name         ; Value          ; Type                            ;
++------------------------+----------------+---------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                         ;
+; LPM_WIDTHD             ; 4              ; Untyped                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                         ;
+; CBXI_PARAMETER         ; lpm_divide_ghm ; Untyped                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                  ;
++------------------------+----------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:inst|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------+
+; Parameter Name         ; Value          ; Type                            ;
++------------------------+----------------+---------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                         ;
+; LPM_WIDTHD             ; 5              ; Untyped                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                         ;
+; CBXI_PARAMETER         ; lpm_divide_k9m ; Untyped                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                  ;
++------------------------+----------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rng:rng1|osc_ring:\i_ring:16:ringx"                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rng:rng1|osc_ring:\i_ring:15:ringx"                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rng:rng1|osc_ring:\i_ring:14:ringx"                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rng:rng1|osc_ring:\i_ring:13:ringx"                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -598,20 +744,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 15                          ;
-; cycloneiii_ff         ; 35                          ;
-;     ENA               ; 4                           ;
-;     plain             ; 31                          ;
-; cycloneiii_lcell_comb ; 96                          ;
-;     arith             ; 25                          ;
-;         2 data inputs ; 25                          ;
-;     normal            ; 71                          ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 51                          ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 9                           ;
+; cycloneiii_ff         ; 97                          ;
+;     ENA               ; 24                          ;
+;     ENA SLD           ; 4                           ;
+;     plain             ; 69                          ;
+; cycloneiii_lcell_comb ; 764                         ;
+;     arith             ; 223                         ;
+;         2 data inputs ; 115                         ;
+;         3 data inputs ; 108                         ;
+;     normal            ; 541                         ;
+;         0 data inputs ; 11                          ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 195                         ;
+;         3 data inputs ; 41                          ;
+;         4 data inputs ; 285                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.30                        ;
-; Average LUT depth     ; 2.53                        ;
+; Max LUT depth         ; 26.10                       ;
+; Average LUT depth     ; 17.21                       ;
 +-----------------------+-----------------------------+
 
 
@@ -620,7 +769,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -630,134 +779,156 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar 26 17:56:25 2025
+    Info: Processing started: Fri Mar 28 15:08:53 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Bomba -c Bomba
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
-Info (12021): Found 1 design units, including 1 entities, in source file tests/test_rng.bdf
-    Info (12023): Found entity 1: test_rng
 Info (12021): Found 2 design units, including 1 entities, in source file entities/rng.vhd
-    Info (12022): Found design unit 1: rng-behaviour File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/rng.vhd Line: 20
-    Info (12023): Found entity 1: rng File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/rng.vhd Line: 14
+    Info (12022): Found design unit 1: rng-behaviour File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/rng.vhd Line: 20
+    Info (12023): Found entity 1: rng File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/rng.vhd Line: 14
 Info (12021): Found 2 design units, including 1 entities, in source file entities/osc_ring.vhd
-    Info (12022): Found design unit 1: osc_ring-behaviour File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 16
-    Info (12023): Found entity 1: osc_ring File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 10
+    Info (12022): Found design unit 1: osc_ring-behaviour File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 16
+    Info (12023): Found entity 1: osc_ring File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file entities/main.bdf
     Info (12023): Found entity 1: main
-Info (12021): Found 2 design units, including 1 entities, in source file entities/lcd.vhd
-    Info (12022): Found design unit 1: lcd-behaviour File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/lcd.vhd Line: 14
-    Info (12023): Found entity 1: lcd File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/lcd.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file entities/lcd_controller.vhd
+    Info (12022): Found design unit 1: lcd_controller-bhv File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd_controller.vhd Line: 24
+    Info (12023): Found entity 1: lcd_controller File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd_controller.vhd Line: 4
 Info (12021): Found 2 design units, including 0 entities, in source file entities/gen_functions.vhd
-    Info (12022): Found design unit 1: gen_functions File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/gen_functions.vhd Line: 11
-    Info (12022): Found design unit 2: gen_functions-body File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/gen_functions.vhd Line: 24
+    Info (12022): Found design unit 1: gen_functions File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd Line: 11
+    Info (12022): Found design unit 2: gen_functions-body File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd Line: 24
+Info (12021): Found 2 design units, including 1 entities, in source file entities/driver_buzzer.vhd
+    Info (12022): Found design unit 1: driver_buzzer-behaviour File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/driver_buzzer.vhd Line: 10
+    Info (12023): Found entity 1: driver_buzzer File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/driver_buzzer.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file entities/debouncer.vhd
-    Info (12022): Found design unit 1: debouncer-behaviour File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/debouncer.vhd Line: 15
-    Info (12023): Found entity 1: debouncer File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/debouncer.vhd Line: 9
+    Info (12022): Found design unit 1: debouncer-behaviour File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/debouncer.vhd Line: 15
+    Info (12023): Found entity 1: debouncer File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/debouncer.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file entities/cnt_modn.vhd
-    Info (12022): Found design unit 1: cnt_modn-behaviour File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/cnt_modn.vhd Line: 21
-    Info (12023): Found entity 1: cnt_modn File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/cnt_modn.vhd Line: 13
+    Info (12022): Found design unit 1: cnt_modn-behaviour File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/cnt_modn.vhd Line: 21
+    Info (12023): Found entity 1: cnt_modn File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/cnt_modn.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file entities/cnt_mod10.vhd
-    Info (12022): Found design unit 1: cnt_mod10-behaviour File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/cnt_mod10.vhd Line: 20
-    Info (12023): Found entity 1: cnt_mod10 File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/cnt_mod10.vhd Line: 13
-Info (12021): Found 2 design units, including 1 entities, in source file entities/bcd2ss.vhd
-    Info (12022): Found design unit 1: bcd2ss-behaviour File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/bcd2ss.vhd Line: 18
-    Info (12023): Found entity 1: bcd2ss File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/bcd2ss.vhd Line: 11
+    Info (12022): Found design unit 1: cnt_mod10-behaviour File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/cnt_mod10.vhd Line: 20
+    Info (12023): Found entity 1: cnt_mod10 File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/cnt_mod10.vhd Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file entities/Bomba.bdf
     Info (12023): Found entity 1: Bomba
-Info (12127): Elaborating entity "test_rng" for the top level hierarchy
-Info (12128): Elaborating entity "rng" for hierarchy "rng:inst7"
-Info (12128): Elaborating entity "osc_ring" for hierarchy "rng:inst7|osc_ring:\i_ring:1:ringx" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/rng.vhd Line: 42
-Info (12128): Elaborating entity "LPM_COUNTER" for hierarchy "LPM_COUNTER:inst1"
-Info (12130): Elaborated megafunction instantiation "LPM_COUNTER:inst1"
-Info (12133): Instantiated megafunction "LPM_COUNTER:inst1" with the following parameter:
-    Info (12134): Parameter "LPM_AVALUE" = "3125000"
-    Info (12134): Parameter "LPM_DIRECTION" = "UP"
-    Info (12134): Parameter "LPM_WIDTH" = "22"
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_2kj.tdf
-    Info (12023): Found entity 1: cntr_2kj File: /mnt/caio/General/UFPE/ED/Projects/Bomba/db/cntr_2kj.tdf Line: 26
-Info (12128): Elaborating entity "cntr_2kj" for hierarchy "LPM_COUNTER:inst1|cntr_2kj:auto_generated" File: /home/caio/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
-Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:inst11"
-Info (12128): Elaborating entity "bcd2ss" for hierarchy "bcd2ss:inst"
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "rng:inst7|Mod0" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/rng.vhd Line: 61
-Info (12130): Elaborated megafunction instantiation "rng:inst7|lpm_divide:Mod0" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/rng.vhd Line: 61
-Info (12133): Instantiated megafunction "rng:inst7|lpm_divide:Mod0" with the following parameter: File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/rng.vhd Line: 61
-    Info (12134): Parameter "LPM_WIDTHN" = "4"
+Info (12021): Found 2 design units, including 1 entities, in source file entities/bcd2ss.vhd
+    Info (12022): Found design unit 1: bcd2ss-behaviour File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/bcd2ss.vhd Line: 18
+    Info (12023): Found entity 1: bcd2ss File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/bcd2ss.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file entities/lcd.vhd
+    Info (12022): Found design unit 1: lcd-behaviour File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd.vhd Line: 21
+    Info (12023): Found entity 1: lcd File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd.vhd Line: 11
+Info (12021): Found 2 design units, including 0 entities, in source file entities/lcd_vhdl_package.vhd
+    Info (12022): Found design unit 1: lcd_vhdl_package File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd_vhdl_package.vhd Line: 5
+    Info (12022): Found design unit 2: lcd_vhdl_package-body File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd_vhdl_package.vhd Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file tests/test_lcd.bdf
+    Info (12023): Found entity 1: test_lcd
+Info (12127): Elaborating entity "test_lcd" for the top level hierarchy
+Info (12128): Elaborating entity "lcd" for hierarchy "lcd:inst"
+Warning (10036): Verilog HDL or VHDL warning at lcd.vhd(73): object "cnt_op" assigned a value but never read File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd.vhd Line: 73
+Info (12128): Elaborating entity "lcd_controller" for hierarchy "lcd:inst|lcd_controller:i_lcd_ctrl" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd.vhd Line: 58
+Info (12128): Elaborating entity "rng" for hierarchy "rng:rng1"
+Info (12128): Elaborating entity "osc_ring" for hierarchy "rng:rng1|osc_ring:\i_ring:1:ringx" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/rng.vhd Line: 42
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following LCELL buffer node(s):
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:12:ringx|a" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:12:ringx|b" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:12:ringx|c" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:11:ringx|a" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:11:ringx|b" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:11:ringx|c" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:10:ringx|a" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:10:ringx|b" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:10:ringx|c" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:9:ringx|a" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:9:ringx|b" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:9:ringx|c" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:8:ringx|a" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:8:ringx|b" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:8:ringx|c" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:7:ringx|a" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:7:ringx|b" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:7:ringx|c" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:6:ringx|a" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:6:ringx|b" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:6:ringx|c" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:5:ringx|a" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:5:ringx|b" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:5:ringx|c" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:4:ringx|a" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:4:ringx|b" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:4:ringx|c" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:3:ringx|a" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:3:ringx|b" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:3:ringx|c" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:2:ringx|a" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:2:ringx|b" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:2:ringx|c" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:1:ringx|a" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:1:ringx|b" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+        Warning (14320): Synthesized away node "rng:rng1|osc_ring:\i_ring:1:ringx|c" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/osc_ring.vhd Line: 17
+Info (278001): Inferred 3 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:inst|Div0" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd.vhd Line: 125
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:inst|Div1" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd Line: 43
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:inst|Mod0" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd Line: 44
+Info (12130): Elaborated megafunction instantiation "lcd:inst|lpm_divide:Div0" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd.vhd Line: 125
+Info (12133): Instantiated megafunction "lcd:inst|lpm_divide:Div0" with the following parameter: File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/lcd.vhd Line: 125
+    Info (12134): Parameter "LPM_WIDTHN" = "31"
+    Info (12134): Parameter "LPM_WIDTHD" = "26"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jkm.tdf
+    Info (12023): Found entity 1: lpm_divide_jkm File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/lpm_divide_jkm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bnh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bnh File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/sign_div_unsign_bnh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_aaf.tdf
+    Info (12023): Found entity 1: alt_u_div_aaf File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/alt_u_div_aaf.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lcd:inst|lpm_divide:Div1" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd Line: 43
+Info (12133): Instantiated megafunction "lcd:inst|lpm_divide:Div1" with the following parameter: File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd Line: 43
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i9m.tdf
-    Info (12023): Found entity 1: lpm_divide_i9m File: /mnt/caio/General/UFPE/ED/Projects/Bomba/db/lpm_divide_i9m.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_7kh File: /mnt/caio/General/UFPE/ED/Projects/Bomba/db/sign_div_unsign_7kh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_24f.tdf
-    Info (12023): Found entity 1: alt_u_div_24f File: /mnt/caio/General/UFPE/ED/Projects/Bomba/db/alt_u_div_24f.tdf Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: /mnt/caio/General/UFPE/ED/Projects/Bomba/db/add_sub_7pc.tdf Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: /mnt/caio/General/UFPE/ED/Projects/Bomba/db/add_sub_8pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ghm.tdf
+    Info (12023): Found entity 1: lpm_divide_ghm File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/lpm_divide_ghm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_8kh File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/sign_div_unsign_8kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_44f.tdf
+    Info (12023): Found entity 1: alt_u_div_44f File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/alt_u_div_44f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "lcd:inst|lpm_divide:Mod0" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd Line: 44
+Info (12133): Instantiated megafunction "lcd:inst|lpm_divide:Mod0" with the following parameter: File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/entities/gen_functions.vhd Line: 44
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_k9m.tdf
+    Info (12023): Found entity 1: lpm_divide_k9m File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/lpm_divide_k9m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9kh File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/sign_div_unsign_9kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_64f.tdf
+    Info (12023): Found entity 1: alt_u_div_64f File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/alt_u_div_64f.tdf Line: 27
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "dig[1]" is stuck at GND
-    Warning (13410): Pin "seg[8]" is stuck at VCC
+    Warning (13410): Pin "lcd_rw" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:13:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:14:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:15:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:16:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:9:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:10:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:11:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:12:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:5:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:6:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:7:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:8:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:1:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:2:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:3:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:4:ringx|c" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:13:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:14:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:15:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:16:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:9:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:10:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:11:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:12:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:5:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:6:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:7:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:8:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:1:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:2:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:3:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:4:ringx|b" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:13:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:14:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:15:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:16:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:9:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:10:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:11:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:12:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:5:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:6:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:7:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:8:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:1:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:2:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:3:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
-    Info (17048): Logic cell "rng:inst7|osc_ring:\i_ring:4:ringx|a" File: /mnt/caio/General/UFPE/ED/Projects/Bomba/entities/osc_ring.vhd Line: 17
+    Info (17048): Logic cell "lcd:inst|lpm_divide:Mod0|lpm_divide_k9m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider|add_sub_3_result_int[0]~8" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/alt_u_div_64f.tdf Line: 42
+    Info (17048): Logic cell "lcd:inst|lpm_divide:Div1|lpm_divide_ghm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_44f:divider|add_sub_3_result_int[0]~8" File: /mnt/caio/General/UFPE/ED/ED/P3/Bomba/db/alt_u_div_44f.tdf Line: 42
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 108 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 93 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 430 megabytes
-    Info: Processing ended: Wed Mar 26 17:56:38 2025
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:29
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "keys[4]"
+    Warning (15610): No output dependent on input pin "keys[3]"
+    Warning (15610): No output dependent on input pin "keys[2]"
+Info (21057): Implemented 787 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 772 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
+    Info: Peak virtual memory: 459 megabytes
+    Info: Processing ended: Fri Mar 28 15:09:09 2025
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:33
 
 
