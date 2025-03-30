@@ -18,7 +18,7 @@ ENTITY cnt_modn IS
 		cout : OUT STD_LOGIC);
 END cnt_modn;
 
-ARCHITECTURE behaviour OF cnt_modn IS
+ARCHITECTURE behavior OF cnt_modn IS
 BEGIN
 	PROCESS (clk, rst)
 		VARIABLE cnt : NATURAL RANGE 0 TO N;
@@ -48,4 +48,4 @@ BEGIN
 		q <= STD_LOGIC_VECTOR( TO_UNSIGNED(cnt, log2(N)) );
 		cout <= aux;	
 	END PROCESS;
-END behaviour;
+END behavior;

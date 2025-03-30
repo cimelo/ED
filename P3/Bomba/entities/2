@@ -1,0 +1,55 @@
+---------------------------------
+-- This block is responsible for
+-- the debounce of the switches
+---------------------------------
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY debouncer IS
+	PORT(
+		clk, clk_db, k, rst   : IN STD_LOGIC;
+		q 			  : OUT STD_LOGIC);
+END debouncer;
+
+ARCHITECTURE behavior OF debouncer IS
+    SIGNAL db, d1, d2, d3, d4 : STD_LOGIC;
+    SIGNAL en : STD_LOGIC;
+    SIGNAL qb, q1, q2, p_db : STD_LOGIC;
+BEGIN
+   i_d1 : DFF PORT MAP (
+        clk => clk_db,
+        d   => d1,
+        q   => q1);
+
+    d1 <= NOT k;
+
+    i_d2 : DFF PORT MAP (
+        clk => clk_db,
+        d   => d2,
+        q   => q2);
+
+    d2 <= d1;
+    p_db <= NOT q2 AND q1; -- Generation of a pulse with width of db ms
+
+    i_d3 : DFFE PORT MAP (
+        clk => clk,
+        d   => d3,
+        q   => q3,
+        en  => en,
+        clrn => p_db);
+
+    en <= p_db AND NOT q4;
+    d3 <= p_db;
+
+    i_d4 : DFFE PORT MAP (
+        clk => clk,
+        d   => d4,
+        q   => q4,
+        en  => en,
+        clrn => p_db);
+
+    d4 <= p_db;
+    q <= NOT q4 AND q3; -- Generation of a pulse with width of 20 ns
+
+END behavior;

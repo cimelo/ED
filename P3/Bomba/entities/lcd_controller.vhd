@@ -21,6 +21,7 @@ ENTITY lcd_controller IS
     rw, rs, en  : OUT  STD_LOGIC;                     --leitura/escrita, instrução/dado, habilita LCD ativo-alto
     lcd_data    : OUT  STD_LOGIC_VECTOR(7 DOWNTO 0)); --sinal de dado (char) para o LCD
 END lcd_controller;
+
 ARCHITECTURE bhv OF lcd_controller IS
 	--Declaração de estados da FSM
 	TYPE ESTADOS IS(ENERGIZACAO, INICIALIZACAO, PRONTO, ENVIAR);

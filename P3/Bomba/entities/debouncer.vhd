@@ -8,21 +8,33 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY debouncer IS
 	PORT(
-		clk, k, rst   : IN STD_LOGIC;
-		q 			    : OUT STD_LOGIC);
+		clk, clk_db, k  : IN STD_LOGIC;
+		p_db, q 	: OUT STD_LOGIC);
 END debouncer;
 
-ARCHITECTURE behaviour OF debouncer IS
+ARCHITECTURE behavior OF debouncer IS
 BEGIN
-    PROCESS (clk, k, rst)
-        VARIABLE tmp : STD_LOGIC;
+    PROCESS (clk, clk_db)
+        VARIABLE q1, q2, q3, q4, pdb, flag : STD_LOGIC := '0';
     BEGIN
-        IF (rst = '1') THEN
-            tmp := '0';
-        ELSIF (RISING_EDGE(clk)) THEN
-            tmp := NOT k;
+        IF (RISING_EDGE(clk_db)) THEN
+            q1 := NOT k;
+        ELSIF (FALLING_EDGE(clk_db)) THEN
+            q2 := q1;
         END IF;
 
-        q <= tmp;
+        pdb := NOT q2 AND q1;
+
+        IF (RISING_EDGE(clk)) THEN
+            q3 := pdb;
+            IF (flag = '1') THEN
+                q4 := q3;
+            END IF;
+        ELSIF (FALLING_EDGE(clk)) THEN
+            flag := pdb;
+        END IF;
+        
+        p_db <= pdb;
+        q <= NOT q4 AND q3; -- Gerates a pulse of width of 20 ns
     END PROCESS;
-END behaviour;
+END behavior;

@@ -17,7 +17,7 @@ ENTITY rng IS
 		q 				: OUT STD_LOGIC_VECTOR(3 DOWNTO 1));
 END rng;
 
-ARCHITECTURE behaviour OF rng IS
+ARCHITECTURE behavior OF rng IS
 	COMPONENT osc_ring IS
 		PORT (y : OUT STD_LOGIC);
 	END COMPONENT;
@@ -60,4 +60,4 @@ BEGIN
 		
 		q <= STD_LOGIC_VECTOR(RESIZE(UNSIGNED(temp) MOD 8, 3));
 	END PROCESS;
-END behaviour;
+END behavior;

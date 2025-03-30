@@ -11,35 +11,21 @@ USE IEEE.NUMERIC_STD.ALL;
 ENTITY bcd2ss IS
 	PORT(
 		d 			: IN NATURAL RANGE 0 TO 7;
-		clk, rst 	: IN STD_LOGIC;
 		q 			: OUT STD_LOGIC_VECTOR(8 DOWNTO 1));
 END bcd2ss;
 
 ARCHITECTURE behaviour OF bcd2ss IS
 BEGIN
-	PROCESS (clk, rst)
-		VARIABLE tmp : UNSIGNED(8 DOWNTO 1) 
-								:= B"11000000";
-	BEGIN
-		IF (rst = '1') THEN
-			tmp := B"11000000";
-		ELSIF (rising_edge(clk)) THEN
-			CASE (d) IS
-				WHEN 0 => tmp := B"11000000";
-				WHEN 1 => tmp := B"11111001";
-				WHEN 2 => tmp := B"10100100";
-				WHEN 3 => tmp := B"10110000";
-				WHEN 4 => tmp := B"10011001";
-				WHEN 5 => tmp := B"10010010";
-				WHEN 6 => tmp := B"10000010";
-				WHEN 7 => tmp := B"11111000";
-				--WHEN 8 => tmp := B"10000000";
-				--WHEN 9 => tmp := B"10010000";
-				WHEN OTHERS => 
-					tmp := B"10000110";
-			END CASE;
-		END IF;
-
-        q <= STD_LOGIC_VECTOR(tmp);
-	END PROCESS;
+    WITH (d) SELECT
+        q <= B"11000000" WHEN 0,
+    	     B"11111001" WHEN 1,
+    	     B"10100100" WHEN 2,
+    	     B"10110000" WHEN 3,
+    	     B"10011001" WHEN 4,
+    	     B"10010010" WHEN 5,
+    	     B"10000010" WHEN 6,
+    	     B"11111000" WHEN 7,
+    	     --B"10000000" WHEN 8,
+    	     --B"10010000" WHEN 9,
+    	     B"10000110" WHEN OTHERS;
 END behaviour;

@@ -1,5 +1,5 @@
 --------------------------------------
---	State Machine for LCD behaviour
+--	State Machine for LCD behavior
 --------------------------------------
 
 LIBRARY IEEE;
@@ -14,12 +14,15 @@ ENTITY lcd IS
         keys            : IN STD_LOGIC_VECTOR(4 DOWNTO 2);
         rng             : IN STD_LOGIC_VECTOR(3 DOWNTO 1);
         eq             	: IN STD_LOGIC; -- Switch that compares the value of keys and rng
-        rs, rw, en      : OUT STD_LOGIC;
-        db              : OUT STD_LOGIC_VECTOR(8 DOWNTO 1));
+        rs, rw, en, agn : OUT STD_LOGIC; -- agn is responsible for restarting the system
+        db              : OUT STD_LOGIC_VECTOR(8 DOWNTO 1);
+        l               : OUT STD_LOGIC_VECTOR(4 DOWNTO 1); -- Signal to blink the leds
+        eb              : OUT STD_LOGIC); -- Signal to enable the buzzer
 END lcd;
 
-ARCHITECTURE behaviour OF lcd IS
-    CONSTANT clk_freq : NATURAL := 50; -- MHz
+ARCHITECTURE behavior OF lcd IS
+    CONSTANT clk_freq   : NATURAL := 50;        -- MHz
+    CONSTANT blink_per  : NATURAL := 500e3*clk_freq;     -- kHz
 
     CONSTANT fs1_1  : STD_LOGIC_VECTOR(127 DOWNTO 0) := to_std_logic_vector("BOMBA  EXPLODIRA");
     CONSTANT fs1_2  : STD_LOGIC_VECTOR(127 DOWNTO 0) := to_std_logic_vector("EM    SEGUNDOS  ");      
@@ -29,6 +32,9 @@ ARCHITECTURE behaviour OF lcd IS
 
     CONSTANT fs3_1  : STD_LOGIC_VECTOR(127 DOWNTO 0) := to_std_logic_vector("BOMBA           ");
     CONSTANT fs3_2  : STD_LOGIC_VECTOR(127 DOWNTO 0) := to_std_logic_vector("DESATIVADA      ");
+
+    CONSTANT fs4_1  : STD_LOGIC_VECTOR(127 DOWNTO 0) := to_std_logic_vector("                ");
+    CONSTANT fs4_2  : STD_LOGIC_VECTOR(127 DOWNTO 0) := to_std_logic_vector("                ");
 
     CONSTANT LOG2_30 : NATURAL := 5;
 
@@ -45,7 +51,7 @@ ARCHITECTURE behaviour OF lcd IS
     		lcd_data	:	 OUT STD_LOGIC_VECTOR(8 DOWNTO 1));
     END COMPONENT;
 
-    TYPE STATES IS (INIT, CMP, SUCCESS, FAIL, RESET);
+    TYPE STATES IS (INIT, CMP, SUCCESS, FAIL);
     SIGNAL st : STATES;
     SIGNAL lcd_enable : STD_LOGIC := '0';
 
@@ -70,10 +76,12 @@ BEGIN
         -- This variable counts the time that an operation takes
         -- the slowest operation possible is return home with a
         -- delay of 1.52 ms
-        VARIABLE cnt_op     : NATURAL RANGE 0 TO 20e3*clk_freq := 0;
         VARIABLE cnt_time   : NATURAL RANGE 0 TO 30e6*clk_freq := 0;
+        VARIABLE cnt_blink  : NATURAL RANGE 0 TO blink_per*clk_freq := 0; -- period of blink time
         VARIABLE tries      : NATURAL RANGE 0 TO 3  := 0;
         VARIABLE cnt_char   : NATURAL RANGE 0 TO 34 := 0;
+        VARIABLE leds       : STD_LOGIC_VECTOR(4 DOWNTO 1) := (OTHERS => '1'); -- Signal to blink the leds
+        VARIABLE ena_buzz   : STD_LOGIC;
 
         -- 4 bits variable that results from a conversion of a
 		-- natural number into a 8 bits vects in wich the 4 most
@@ -83,7 +91,8 @@ BEGIN
 
         PROCEDURE restart(rst_time : NATURAL) IS
         BEGIN
-            cnt_op := 0;
+            ena_buzz := '0';
+            cnt_blink := 0;
             tries := 0;
             cnt_time := rst_time;
         END PROCEDURE restart;
@@ -162,8 +171,8 @@ BEGIN
 
         if_re: IF (RISING_EDGE(clk)) THEN
             IF (rst = '1') THEN
-                st <= RESET;
                 cnt_time := 0;
+                st <= INIT;
             END IF;
 
             CASE st IS
@@ -171,21 +180,25 @@ BEGIN
                 WHEN INIT =>
                     cnt_time := cnt_time + 1;
                     -- Waits 55.2 ms for the lcd to power up
+                    -- or until the lcd is fully operational
+                    -- signified by the lcd_busy flag
                     IF (cnt_time < 55200*clk_freq AND 
                                             lcd_busy = '1') THEN
                         st <= INIT;
                     ELSE
                         cnt_time := 30e6 * clk_freq;
+                        agn <= '1'; -- Calls for another random number
                         st <= CMP;
                     END IF;
 
-                -- State of comparison between keys[4..2] and rng[3..1]
+                -- State of comparison between (NOT keys[4..2]) and rng[3..1]
                 -- 3 chances and 30 seconds are given to the user to 
                 -- guess the right number.
                 WHEN CMP =>
                     cnt_time := cnt_time - 1;
 
                     IF (cnt_time > 0) THEN
+						agn <= '0';
                         l1 <= fs1_1;
                         l2 <= fs1_2;
                         send_strs;
@@ -193,10 +206,10 @@ BEGIN
                         IF (tries = 3) THEN
                             restart(10e6 * clk_freq);
                             st <= FAIL;
-                        ELSIF ( rng = keys AND eq = '1' ) THEN
+                        ELSIF ( rng = (NOT keys) AND eq = '1' ) THEN
                             restart(10e6 * clk_freq);
                             st <= SUCCESS;
-                        ELSIF ( rng /= keys AND eq = '1' ) THEN
+                        ELSIF ( rng /= (NOT keys) AND eq = '1' ) THEN
                             tries := tries + 1;
                             st <= CMP;
                         ELSE
@@ -217,25 +230,38 @@ BEGIN
                         st <= SUCCESS;
                     ELSE
                         restart(0);
-                        st <= RESET;
+                        st <= INIT;
                     END IF;
                 WHEN FAIL =>
                     cnt_time := cnt_time - 1;
+                    cnt_blink := cnt_blink + 1;
+                    ena_buzz := '1';
 
                     IF (cnt_time > 0) THEN
-                        l1 <= fs2_1;
-                        l2 <= fs2_2;
                         send_strs;
+
+                        IF ( cnt_blink < blink_per/2 ) THEN
+                            leds := (OTHERS => '0');
+                            l1 <= fs2_1;
+                            l2 <= fs2_2;
+                        ELSIF ( cnt_blink > blink_per/2-1 AND 
+                                        cnt_blink < blink_per-1 ) THEN
+                            leds := (OTHERS => '1');
+                            l1 <= fs4_1;
+                            l2 <= fs4_2;
+                        ELSIF ( cnt_blink = blink_per ) THEN
+                            cnt_blink := 0;
+                        END IF;
 
                         st <= FAIL;
                     ELSE
                         restart(0);
-                        st <= RESET;
+                        st <= INIT;
                     END IF;
-                WHEN RESET =>
-					restart(30e6 * clk_freq);
-                    st <= CMP;
             END CASE;
         END IF if_re; -- If rising_edge()
+
+        l <= leds;
+        eb <= ena_buzz;
     END PROCESS;
-END behaviour;
+END behavior;

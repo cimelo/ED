@@ -13,7 +13,7 @@ ENTITY osc_ring IS
 	PORT(y : OUT STD_LOGIC);
 END osc_ring;
 
-ARCHITECTURE behaviour OF osc_ring IS
+ARCHITECTURE behavior OF osc_ring IS
 	SIGNAL a, b, c : STD_LOGIC;
 	-- The attribute keeps is used to avoid
 	-- syntesis optimizations
@@ -25,4 +25,4 @@ BEGIN
 	b <= NOT a;
 	c <= NOT b;
 	
-END behaviour;
+END behavior;

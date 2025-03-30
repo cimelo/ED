@@ -13,13 +13,13 @@ USE WORK.gen_functions.ALL;
 ENTITY cnt_mod10 IS
 	PORT(
 		clk, en, rst, inc, dec : IN STD_LOGIC;
-		q : OUT NATURAL RANGE 9 DOWNTO 0;
+		q : OUT STD_LOGIC_VECTOR(4 DOWNTO 1);
 		cout : OUT STD_LOGIC);
 END cnt_mod10;
 
 ARCHITECTURE behaviour OF cnt_mod10 IS
 BEGIN
-	PROCESS (clk, rst)
+	PROCESS (clk, rst, inc, dec)
 		VARIABLE cnt : NATURAL RANGE 10 DOWNTO 0 := 0;
 		VARIABLE aux : STD_LOGIC := '0';
 	BEGIN
@@ -44,7 +44,7 @@ BEGIN
 			END IF;
 		END IF;
 	
-		q <= cnt;
+		q <= STD_LOGIC_VECTOR(TO_UNSIGNED(cnt, 4));
 		cout <= aux;	
 	END PROCESS;
 END behaviour;
