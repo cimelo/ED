@@ -3,8 +3,8 @@ module controlador
 	output Clk_out = 1'b0,
 	output reg Disparo = 1'b0, 
 	output reg [27:0] Temp_out,
-	output reg [27:0] Freq_out,	
-    output reg menu,
+	output reg [27:0] Freq_out,
+    output reg [2:1] title,
 	input clk, Duracao,
     input [4:1] key,
     input ena, clk_db
@@ -13,36 +13,36 @@ module controlador
     wire clk_mus;
     reg pause_play;
     reg rst3;
-    reg [2:1] cnt3;
 
     initial
     begin
         pause_play = 1'b1;
-        cnt3 = 2'd0;
-        rst3 = 2'd0;
-        menu = 1'b0;
+        title = 2'd0;
+        rst3 = 1'd0;
     end
 
-    always @(posedge(key[2]))
-    begin
-        pause_play <= ~pause_play;
-    end
+    
 
     assign Clk_in = clk && pause_play && ena;
 
     assign clk_mus = ((estado == s1) || (estado == s34) || 
 						(estado == s58) || key[1] && ena);
-
-    always @(posedge(clk_mus), posedge(rst3))
+	
+	always @(posedge(clk))
+    begin
+		if (key[2]) pause_play <= ~pause_play;
+    end
+    
+	always @(posedge(clk_mus))
     begin
         if (rst3) begin
-            cnt3 <= 2'd0;
+            title <= 2'd0;
         end
         if (ena) begin
-            if (cnt3 == 2'd2) begin
-                cnt3 <= 2'd0;
+            if (title == 2'd2) begin
+                title <= 2'd0;
             end
-			else cnt3 <= cnt3 + 1;
+			else title <= title + 2'd1;
         end
     end
 
@@ -196,14 +196,8 @@ module controlador
 	//FSM Lógica para controle do próximo estado
 	always @ (posedge Clk_in)//Combinacional 
 	begin : L2
-        if (key[4]) begin // Go back to the main menu
-            prox_estado <= s0;
-            rst3 <= 1'b0;
-            pause_play <= 1'b0;
-            menu <= 1'b1;
-        end
-        else if (key[1]) begin // Change music
-            case (cnt3)
+        if (key[1]) begin // Change music
+            case (title)
                 2'd0 : prox_estado <= s0;
                 2'd1 : prox_estado <= s33;
                 2'd2 : prox_estado <= s57;

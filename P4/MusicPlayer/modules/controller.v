@@ -13,11 +13,13 @@ module controller
     input [8:1] t_data2,
     input [8:1] t_data3,
     input [2:1] flag_pass, // flag to be read from mod_pass
+    input [2:1] mus_title, // flag to be read from mod_pass
     output reg lcd_rs,
     output reg lcd_rw,
     output reg lcd_en,
     output reg [8:1] db,
-    output reg [2:1] f_pass // flag to be sent to mod_pass
+    output reg [2:1] f_pass, // flag to be sent to mod_pass
+    output reg ena_player
 );
 
     localparam CLK_FREQ = 50; // 50 MHz
@@ -58,6 +60,17 @@ module controller
     // New password msgs
     localparam scr_pass_1  = "DIGITE A NOVA   ";
     localparam scr_pass_2  = "SENHA           ";
+
+    // Player msgs
+    localparam scr_play_1_1= "FRERE JACQUE    ";
+    localparam scr_play_1_2= "POP FRANCES     ";
+
+    localparam scr_play_2_1= "OVER THE WAVES  ";
+    localparam scr_play_2_2= "J. JUVENTINO    ";
+
+    localparam scr_play_3_1= "OVER THE RAINBOW";
+    localparam scr_play_3_2= "YIP HARBURG     ";
+
 
     // LCD aux variables
     reg lcd_enable = 1'b0;
@@ -230,6 +243,7 @@ module controller
                         l2 <= empty_str;
 
                         if (key[2]) begin
+                            ena_player <= 1'b1;
                             next_state <= PLAYER;
                         end
                         else begin
@@ -240,7 +254,41 @@ module controller
             end
 
             PLAYER:
-				next_state <= MENU;
+			begin
+                case (mus_title)
+                    2'b00 :
+                    begin
+                        l1 <= scr_play_1_1;
+                        l2 <= scr_play_1_2;
+                    end
+                    2'b01 :
+                    begin
+                        l1 <= scr_play_2_1;
+                        l2 <= scr_play_2_2;
+                    end
+                    2'b10 :
+                    begin
+						l1 <= scr_play_3_1;
+                        l2 <= scr_play_3_2;
+                    end
+					default :
+					begin
+						l1 <= scr_play_1_1;
+                        l2 <= scr_play_1_2;
+					end
+				endcase
+
+                send_strs;
+                
+				if (key[4]) begin
+                    ena_player <= 1'b0;
+                    next_state <= MENU;
+                end
+                else begin
+                    ena_player <= 1'b1;
+                    next_state <= PLAYER;
+                end
+			end
             TEMP:
             begin
                 l1 <= scr_temp_1;

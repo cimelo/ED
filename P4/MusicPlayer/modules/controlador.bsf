@@ -90,9 +90,9 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 200 96)
 		(output)
-		(text "menu" (rect 0 0 22 12)(font "Arial" ))
-		(text "menu" (rect 157 91 179 103)(font "Arial" ))
-		(line (pt 200 96)(pt 184 96)(line_width 1))
+		(text "title[2..1]" (rect 0 0 30 12)(font "Arial" ))
+		(text "title[2..1]" (rect 149 91 179 103)(font "Arial" ))
+		(line (pt 200 96)(pt 184 96)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 184 128)(line_width 1))
